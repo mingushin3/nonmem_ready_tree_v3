@@ -217,3 +217,99 @@ def test_deterministic_regeneration():
     """★ 생성 근거 falsifiable: build_decision_tree.tree(재구성) == on-disk decision_tree.json."""
     import build_decision_tree
     assert build_decision_tree.tree == TREE
+
+
+# ═══════════════ GAP-13 정본 배선: backbone_routing (step 3) ═══════════════
+BR = TREE["backbone_routing"]
+BR_FROM = {e["from"] for e in BR}
+ALLOWED_IDS = (set(ANCHORS["nodes"]) | set(ANCHORS["axes"])
+               | set(ANCHORS["terminals"]) | set(ANCHORS["q_codes"]))
+
+
+def test_backbone_spine_full_chain_and_completion():
+    """★ GAP-13(축 onward + 완성 종착): N0→N1→…→N7 spine + N7→{AUTO,REPAIR}(universe_sm §2). 완주 골격."""
+    spine = {(e["from"], e["to"]) for e in BR if e["type"] == "spine" and e["role"] == "onward"}
+    N = list(ANCHORS["nodes"].keys())
+    for i in range(len(N) - 1):
+        assert (N[i], N[i + 1]) in spine, (N[i], N[i + 1])
+    comp = {(e["from"], e["to"]) for e in BR if e["role"] == "complete"}
+    assert comp == {("N7", "AUTO"), ("N7", "REPAIR")}, comp
+
+
+def test_axis_no_sink():
+    """★ 축 sink 해소: A0–A10 전부 outgoing edge ≥1 (현 sink 0). stats.axis_sinks==[]."""
+    for aid in ANCHORS["axes"]:
+        assert aid in BR_FROM, f"axis {aid} still a sink (outgoing 0)"
+    assert TREE["stats"]["axis_sinks"] == [], TREE["stats"]["axis_sinks"]
+
+
+def test_completion_reachable_from_n0_bfs():
+    """★ 완주 경로 도달: backbone_routing edge로 N0→{AUTO,REPAIR} 독립 BFS 도달(falsifiable)."""
+    assert TREE["stats"]["reaches_complete"] == {"AUTO": True, "REPAIR": True}
+    adj = {}
+    for e in BR:
+        adj.setdefault(e["from"], set()).add(e["to"])
+    seen, fr = {"N0"}, ["N0"]
+    while fr:
+        for nx in adj.get(fr.pop(), ()):
+            if nx not in seen:
+                seen.add(nx)
+                fr.append(nx)
+    assert "AUTO" in seen and "REPAIR" in seen
+
+
+def test_backbone_routing_no_foreign_identifiers():
+    """★ G1: 모든 backbone_routing from/to ∈ anchors(N/A/terminal/Q). 임의 식별자 0(hallucination 차단)."""
+    bad = [(e["from"], e["to"]) for e in BR
+           if e["from"] not in ALLOWED_IDS or e["to"] not in ALLOWED_IDS]
+    assert bad == [], bad
+
+
+def test_axis_branch_states_cite_verified():
+    """★ cite-verify(§3): 모든 axis_branch state ∈ anchors.axes[axis] + target ∈ terminal∪q_code."""
+    valid_t = set(ANCHORS["terminals"]) | set(ANCHORS["q_codes"])
+    bad_state = [(e["from"], e.get("state")) for e in BR if e["type"] == "axis_branch"
+                 and e.get("state") not in ANCHORS["axes"].get(e["from"], [])]
+    bad_tgt = [(e["from"], e["to"]) for e in BR if e["type"] == "axis_branch" and e["to"] not in valid_t]
+    assert bad_state == [], bad_state
+    assert bad_tgt == [], bad_tgt
+
+
+def test_gap13_a10_terminal_edges_realized():
+    """★ GAP-13 해소: A10 NON-TABULAR→UNSUPPORTED / CORRUPTED→INVALID axis_branch edge 실현(deferred→tree)."""
+    ab = {(e["from"], e.get("state"), e["to"]) for e in BR if e["type"] == "axis_branch"}
+    assert ("A10", "NON-TABULAR", "UNSUPPORTED") in ab
+    assert ("A10", "CORRUPTED", "INVALID") in ab
+
+
+# ═══════════════ 65 spec-only c 노드화 (step 4) ═══════════════
+SPEC = TREE["spec_only"]
+SPEC_NODES = SPEC["nodes"]
+SPEC_IDS = {n["id"] for n in SPEC_NODES}
+
+
+def test_spec_only_65_nodes_flagged():
+    """★ 65 미배선 c 전부 노드화(클릭 가능) + wired_status=spec_only·runnable=false. 배선 57과 disjoint."""
+    assert len(SPEC_NODES) == 65 and len(SPEC_IDS) == 65
+    assert SPEC_IDS.isdisjoint(set(REGISTRY.keys()))
+    assert SPEC_IDS | set(REGISTRY.keys()) == set(CUNITS)            # 합집합 = 122 전체
+    assert all(n["wired_status"] == "spec_only" and n["runnable"] is False for n in SPEC_NODES)
+    assert TREE["stats"]["c_nodes_spec_only"] == 65 and TREE["stats"]["c_nodes_total"] == 122
+
+
+def test_node_set_recontract_wired57_and_spec65():
+    """★ 재계약(사용자 결정): tree c-node = wired 57(REGISTRY, runnable) ∧ spec_only 65(미배선) = 122 전체."""
+    assert len(C_NODES) == 57 and set(C_NODES) == set(REGISTRY.keys())   # wired 불변(runnable)
+    assert len(SPEC_NODES) == 65
+    assert len(C_NODES) + len(SPEC_NODES) == 122
+
+
+def test_spec_only_declared_conditional_separated_partition_invariant():
+    """★ spec-only can_route_to_q는 declared_conditional(분리) → wired conditional_routing 미오염 +
+    unreached Q(Q15A/B/C/X) incoming 0 보존(Q-partition·scope_out 불변)."""
+    dc = SPEC["declared_conditional"]
+    assert dc, "declared_conditional 비어있음(65 c 중 can_route_to_q 보유 c 존재해야)"
+    assert all((e["from"], e["to"]) not in EDGESET for e in dc)      # wired conditional과 분리
+    assert all(e["realized"] is False for e in dc)
+    for q in PART["unreached"]:                                     # 불변: 미오염
+        assert [e for e in CR if e["to"] == q] == []

@@ -2,12 +2,13 @@
 
 ★ report-only 검증: 정본(spec/c_units.json)·엔진 무수정. 실데이터/Rscript 부재 시 graceful skip.
   (1) 5개 실데이터 ingest() == 기대(faithful/honest-stop·c_sequence·gap·recipe WU) + wizard==ingest
-  (2) 122개 python_snippet 전부 compile / r_snippet 전부 R parse(2개 frozen 정본 예외 문서화)
+  (2) 122개 python_snippet 전부 compile / r_snippet 전부 R parse(예외 0 — v3 GAP-13 Phase에서 c0200/c0216 수정)
   (3) 대표 transform 을 python·R 로 실제 실행 → before→after 일치
   (4) faithful 실데이터가 디스패치하는 c 는 모두 EASY 카드 보유
 
-발견(finding, 미수정 — frozen 정본): c0200 r_snippet=다중행 if/else 최상위 R parse 불가(의미는 정상),
-  c0216 r_snippet=R 문자열에 \\x00 포함 불가([^\\x00-\\x7F]). 둘 다 python_snippet 은 정상. → KNOWN_R_NONPARSE.
+해소(v3 GAP-13 Phase, 의미 무변경): c0200 r_snippet=다중행 if/else → 단일행 if/else(top-level parse OK),
+  c0216 r_snippet=[^\\x00-\\x7F](NUL escape) → [^[:ascii:]] perl=TRUE(동치, parse OK). python_snippet·schema delta 불변.
+  → KNOWN_R_NONPARSE = ∅(예외 0). 이제 122 r_snippet 전부 R parse.
 """
 import glob
 import json
@@ -30,8 +31,8 @@ from src.adapter.xlsx_ingester import read_workbook_structure  # noqa: E402
 _RAW = {e["c_id"]: e for e in json.loads((ROOT / "spec" / "c_units.json").read_text(encoding="utf-8"))}
 _RSCRIPT = shutil.which("Rscript")
 
-# frozen 정본 r_snippet 중 standalone R parse 불가(문서화된 finding, 본 세션 미수정)
-KNOWN_R_NONPARSE = {"c0200", "c0216"}
+# v3 GAP-13 Phase에서 c0200(단일행 if/else)·c0216([^[:ascii:]] perl=TRUE) 의미 무변경 수정 → 전부 parse. 예외 0(durable).
+KNOWN_R_NONPARSE = set()
 
 # ── 실데이터 기대값(실측 확정) ────────────────────────────────────────────────
 FAITHFUL_13 = ["c0201", "c0203", "c0205", "c0210", "c0211", "c0212", "c0214",
@@ -116,8 +117,9 @@ def test_all_r_snippets_parse_except_known():
     ) % td
     out = subprocess.run([_RSCRIPT, "-e", rcode], capture_output=True, text=True)
     failed = {ln.split()[1] for ln in out.stdout.splitlines() if ln.startswith("FAIL")}
-    # 새로 깨진 snippet 0 (frozen 정본 예외만 허용)
+    # ★ durable: KNOWN_R_NONPARSE=∅ → 122 r_snippet 전부 parse(예외 0).
     assert failed <= KNOWN_R_NONPARSE, ("신규 R parse 실패", failed - KNOWN_R_NONPARSE)
+    assert {"c0200", "c0216"} & failed == set(), ("c0200/c0216 R parse 회귀", {"c0200", "c0216"} & failed)
 
 
 # ===== (3) 대표 transform 실제 실행 (before→after) ==========================

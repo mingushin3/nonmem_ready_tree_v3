@@ -77,6 +77,8 @@ All 3 dead c-units are **route** kind (cost=0) handling **fail-path** branches. 
 
 > ★ **57-wired 시제 주의 ([[GAP-36]] honesty-ledger, 2026-06-03 Direction C):** 위 Option C / "Structural significance"의 "tree-live"·"유일한 경로"·"D-S4 구조상 필요"는 **배선 후** 성립하는 *forward-looking* 서술이다. 현 Phase 7 57-wired `spec/decision_tree.json`에서 c0042·c0043·c0333은 **전부 미배선 → incoming conditional edge 0 = tree 부재(미실현)**. ∴ DoD#3 **C1 = 119/122**(C_used 119 / C_all 122; 이 3 C_dead가 정확한 bound)는 현 경계의 **정직한 미구현**이다 — wired scope(57)는 무결. [[GAP-30]](상류 배선 백로그)·Batch E(c0042/c0043, L-1→L-2)·mess(c0333, L-4→L-5) 배선 시 각 `can_route_to_q`가 conditional edge로 편입되어 tree-live가 실현된다. C_dead 처분(Option A/B/C) 결정은 그 배선과 함께 일괄 pending(아래 §"다음 Phase 전 사용자 확인").
 
+> ★ **v3 GAP-13 정본 배선 갱신(2026-06-04):** 65 미배선 c(c0042/c0043/c0333 C_dead 3 포함)는 `spec/decision_tree.json` `spec_only.nodes`에 **노드화**됐다(클릭 가능, `wired_status=spec_only`·`runnable=false`). 단 이는 **가시화**이지 실현이 아니다 — 각 `can_route_to_q`는 `declared_conditional`(`realized=false`, wired `conditional_routing`과 분리)로 주입되어 **wired Q-partition(13/2/4)·scope_out 0 불변**. ∴ DoD#3 **C1 = 119/122 bound UNCHANGED**: C_dead 3은 strand 등장 0 + realized conditional incoming 0 = OR절 여전히 미충족(node 가시성 ≠ tree-live). 실배선(tree-live)·처분(Option A/B/C)은 [[GAP-30]] 백로그와 함께 pending. cite: `tests/test_decision_tree.py::test_spec_only_*`·`test_node_set_recontract_wired57_and_spec65`.
+
 ---
 
 ## INV-4: D-S1 Detection-Mandatory

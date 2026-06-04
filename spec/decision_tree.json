@@ -1,12 +1,14 @@
 {
-  "schema_version": "0.2-phase7-step1-2.6-decisionABC",
+  "schema_version": "0.3-phase7B-gap13-backbone-specnodes",
   "generated_by": "build_decision_tree.py (DETERMINISTIC; 재실행 시 동일)",
-  "scope": "step 1~2.6 골격 + Phase 7 결정 A(c0252/c0204 INFUSION-STOP-RESTART→Q04 spec-change)·결정 B(terminal_routing INVALID). bundles·재배선(①) 제외.",
+  "scope": "step 1~2.6 골격 + Phase 7 결정 A·B + ★GAP-13 정본 배선(step 3 backbone_routing §2 spine·§3 axis 분기·완성 종착 AUTO/REPAIR; step 4 spec_only 65 노드화 runnable=false). wired conditional/terminal/Q-partition·strands(①)·bundles 불변.",
   "provenance": {
     "backbone": "anchors.json (universe_sm §2–§5 N0–N7·A0–A10·terminals·q_codes)",
     "c_nodes": "spec/c_units.json ∩ src/orchestrator.py REGISTRY (wired 57)",
     "conditional_routing": "c.can_route_to_q + verify_visualization.fail_route_to (D-S4, PROMPTS step 2.5)",
     "terminal_routing": "wired ROUTE c.postcond routing_decision의 process-terminal(INVALID) ∩ strands 측정 (결정 B)",
+    "backbone_routing": "universe_sm §2 N-spine/완성종착(AUTO/REPAIR) + §2 gate 분기 + §3 axis 분기/onward (GAP-13)",
+    "spec_only": "spec/c_units.json − REGISTRY (65 미배선 c; runnable=false 가시화, declared_conditional 분리)",
     "q_meta": "spec/q_codes.json (trigger/recover/routing_cost)",
     "strand_counts": "spec/strands.json 5000 (last-c·q_code 실측; cost=Σc.cost)"
   },
@@ -2632,6 +2634,2258 @@
       "gap": []
     }
   ],
+  "backbone_routing": [
+    {
+      "from": "N0",
+      "to": "N1",
+      "type": "spine",
+      "role": "onward",
+      "ref": "universe_sm §2 (N0–N7 순서 = 상류 decision tree)"
+    },
+    {
+      "from": "N1",
+      "to": "N2",
+      "type": "spine",
+      "role": "onward",
+      "ref": "universe_sm §2 (N0–N7 순서 = 상류 decision tree)"
+    },
+    {
+      "from": "N2",
+      "to": "N3",
+      "type": "spine",
+      "role": "onward",
+      "ref": "universe_sm §2 (N0–N7 순서 = 상류 decision tree)"
+    },
+    {
+      "from": "N3",
+      "to": "N4",
+      "type": "spine",
+      "role": "onward",
+      "ref": "universe_sm §2 (N0–N7 순서 = 상류 decision tree)"
+    },
+    {
+      "from": "N4",
+      "to": "N5",
+      "type": "spine",
+      "role": "onward",
+      "ref": "universe_sm §2 (N0–N7 순서 = 상류 decision tree)"
+    },
+    {
+      "from": "N5",
+      "to": "N6",
+      "type": "spine",
+      "role": "onward",
+      "ref": "universe_sm §2 (N0–N7 순서 = 상류 decision tree)"
+    },
+    {
+      "from": "N6",
+      "to": "N7",
+      "type": "spine",
+      "role": "onward",
+      "ref": "universe_sm §2 (N0–N7 순서 = 상류 decision tree)"
+    },
+    {
+      "from": "N7",
+      "to": "AUTO",
+      "type": "spine",
+      "role": "complete",
+      "ref": "universe_sm §2 N7 (Yes→AUTO/REPAIR), §1 export-ready"
+    },
+    {
+      "from": "N7",
+      "to": "REPAIR",
+      "type": "spine",
+      "role": "complete",
+      "ref": "universe_sm §2 N7 (Yes→AUTO/REPAIR), §1 export-ready"
+    },
+    {
+      "from": "N0",
+      "to": "Q11",
+      "type": "gate_branch",
+      "role": "route",
+      "reason": "endpoint_data_type 미기재 → Q11",
+      "ref": "universe_sm §2 N0"
+    },
+    {
+      "from": "N1",
+      "to": "INVALID",
+      "type": "gate_branch",
+      "role": "route",
+      "reason": "Subject-level ID 구성 불가",
+      "ref": "universe_sm §2 N1"
+    },
+    {
+      "from": "N2",
+      "to": "INVALID",
+      "type": "gate_branch",
+      "role": "route",
+      "reason": "event sequence 완전 불가",
+      "ref": "universe_sm §2 N2"
+    },
+    {
+      "from": "N2",
+      "to": "Q04",
+      "type": "gate_branch",
+      "role": "route",
+      "reason": "row 유형 정책 필요",
+      "ref": "universe_sm §2 N2"
+    },
+    {
+      "from": "N2",
+      "to": "Q12",
+      "type": "gate_branch",
+      "role": "route",
+      "reason": "time anchor 복원 정책 필요",
+      "ref": "universe_sm §2 N2"
+    },
+    {
+      "from": "N3",
+      "to": "Q06",
+      "type": "gate_branch",
+      "role": "route",
+      "reason": "protocol deviation 정책 없음",
+      "ref": "universe_sm §2 N3"
+    },
+    {
+      "from": "N3",
+      "to": "Q08",
+      "type": "gate_branch",
+      "role": "route",
+      "reason": "dose 복원 정책 없음",
+      "ref": "universe_sm §2 N3"
+    },
+    {
+      "from": "N3",
+      "to": "INVALID",
+      "type": "gate_branch",
+      "role": "route",
+      "reason": "dose 복원 불가",
+      "ref": "universe_sm §2 N3"
+    },
+    {
+      "from": "N4",
+      "to": "Q01",
+      "type": "gate_branch",
+      "role": "route",
+      "reason": "BLQ/obs 정책 없음",
+      "ref": "universe_sm §2 N4"
+    },
+    {
+      "from": "N4",
+      "to": "Q09",
+      "type": "gate_branch",
+      "role": "route",
+      "reason": "CMT 정책 없음",
+      "ref": "universe_sm §2 N4"
+    },
+    {
+      "from": "N4",
+      "to": "INVALID",
+      "type": "gate_branch",
+      "role": "route",
+      "reason": "obs 전체 부재",
+      "ref": "universe_sm §2 N4"
+    },
+    {
+      "from": "N5",
+      "to": "Q01",
+      "type": "gate_branch",
+      "role": "route",
+      "reason": "BLQ policy 없음",
+      "ref": "universe_sm §2 N5"
+    },
+    {
+      "from": "N6",
+      "to": "Q07",
+      "type": "gate_branch",
+      "role": "route",
+      "reason": "공변량 imputation 정책 없음",
+      "ref": "universe_sm §2 N6"
+    },
+    {
+      "from": "N6",
+      "to": "Q13",
+      "type": "gate_branch",
+      "role": "route",
+      "reason": "공변량 linkage key 모호",
+      "ref": "universe_sm §2 N6"
+    },
+    {
+      "from": "A0",
+      "to": "Q11",
+      "type": "axis_branch",
+      "role": "route",
+      "state": "AIC-MISSING",
+      "ref": "universe_sm §3 A0 AIC-MISSING"
+    },
+    {
+      "from": "A1",
+      "to": "Q05",
+      "type": "axis_branch",
+      "role": "route",
+      "state": "MULTI-HOMO",
+      "ref": "universe_sm §3 A1 MULTI-HOMO"
+    },
+    {
+      "from": "A1",
+      "to": "Q05",
+      "type": "axis_branch",
+      "role": "route",
+      "state": "MULTI-HETERO",
+      "ref": "universe_sm §3 A1 MULTI-HETERO"
+    },
+    {
+      "from": "A1",
+      "to": "Q05",
+      "type": "axis_branch",
+      "role": "route",
+      "state": "MULTI-SITE",
+      "ref": "universe_sm §3 A1 MULTI-SITE"
+    },
+    {
+      "from": "A3",
+      "to": "Q02",
+      "type": "axis_branch",
+      "role": "route",
+      "state": "AMBIGUOUS",
+      "ref": "universe_sm §3 A3 AMBIGUOUS"
+    },
+    {
+      "from": "A3",
+      "to": "INVALID",
+      "type": "axis_branch",
+      "role": "route",
+      "state": "UNRECOVERABLE",
+      "ref": "universe_sm §3 A3 UNRECOVERABLE"
+    },
+    {
+      "from": "A4",
+      "to": "Q14",
+      "type": "axis_branch",
+      "role": "route",
+      "state": "ADDL-ACTUAL-CONFLICT",
+      "ref": "universe_sm §3 A4 ADDL-ACTUAL-CONFLICT"
+    },
+    {
+      "from": "A4",
+      "to": "Q08",
+      "type": "axis_branch",
+      "role": "route",
+      "state": "TITRATION-ADAPTIVE",
+      "ref": "universe_sm §3 A4 TITRATION-ADAPTIVE"
+    },
+    {
+      "from": "A4",
+      "to": "Q08",
+      "type": "axis_branch",
+      "role": "route",
+      "state": "LOADING-MAINTENANCE",
+      "ref": "universe_sm §3 A4 LOADING-MAINTENANCE"
+    },
+    {
+      "from": "A4",
+      "to": "Q04",
+      "type": "axis_branch",
+      "role": "route",
+      "state": "INFUSION-STOP-RESTART",
+      "ref": "universe_sm §3 A4 INFUSION-STOP-RESTART"
+    },
+    {
+      "from": "A4",
+      "to": "Q08",
+      "type": "axis_branch",
+      "role": "route",
+      "state": "MISSING-NO-POLICY",
+      "ref": "universe_sm §3 A4 MISSING-NO-POLICY"
+    },
+    {
+      "from": "A4",
+      "to": "INVALID",
+      "type": "axis_branch",
+      "role": "route",
+      "state": "UNRECOVERABLE",
+      "ref": "universe_sm §3 A4 UNRECOVERABLE"
+    },
+    {
+      "from": "A5",
+      "to": "Q01",
+      "type": "axis_branch",
+      "role": "route",
+      "state": "ABOVE-ULOQ-NO-POLICY",
+      "ref": "universe_sm §3 A5 ABOVE-ULOQ-NO-POLICY"
+    },
+    {
+      "from": "A5",
+      "to": "Q01",
+      "type": "axis_branch",
+      "role": "route",
+      "state": "REPLICATE-NO-POLICY",
+      "ref": "universe_sm §3 A5 REPLICATE-NO-POLICY"
+    },
+    {
+      "from": "A5",
+      "to": "Q01",
+      "type": "axis_branch",
+      "role": "route",
+      "state": "BLQ-NO-POLICY",
+      "ref": "universe_sm §3 A5 BLQ-NO-POLICY"
+    },
+    {
+      "from": "A5",
+      "to": "Q01",
+      "type": "axis_branch",
+      "role": "route",
+      "state": "LLOQ-MISSING",
+      "ref": "universe_sm §3 A5 LLOQ-MISSING"
+    },
+    {
+      "from": "A5",
+      "to": "Q15D",
+      "type": "axis_branch",
+      "role": "route",
+      "state": "BIOANALYTICAL-FINAL-FLAG-MISSING",
+      "ref": "universe_sm §3 A5 BIOANALYTICAL-FINAL-FLAG-MISSING"
+    },
+    {
+      "from": "A5",
+      "to": "INVALID",
+      "type": "axis_branch",
+      "role": "route",
+      "state": "ABSENT",
+      "ref": "universe_sm §3 A5 ABSENT"
+    },
+    {
+      "from": "A6",
+      "to": "Q04",
+      "type": "axis_branch",
+      "role": "route",
+      "state": "AMBIGUOUS",
+      "ref": "universe_sm §3 A6 AMBIGUOUS"
+    },
+    {
+      "from": "A7",
+      "to": "Q13",
+      "type": "axis_branch",
+      "role": "route",
+      "state": "KEY-MISSING",
+      "ref": "universe_sm §3 A7 KEY-MISSING"
+    },
+    {
+      "from": "A7",
+      "to": "Q07",
+      "type": "axis_branch",
+      "role": "route",
+      "state": "POLICY-MISSING",
+      "ref": "universe_sm §3 A7 POLICY-MISSING"
+    },
+    {
+      "from": "A8",
+      "to": "Q09",
+      "type": "axis_branch",
+      "role": "route",
+      "state": "CMT-POLICY-MISSING",
+      "ref": "universe_sm §3 A8 CMT-POLICY-MISSING"
+    },
+    {
+      "from": "A9",
+      "to": "Q15D",
+      "type": "axis_branch",
+      "role": "route",
+      "state": "REANALYSIS-FINAL-MISSING",
+      "ref": "universe_sm §3 A9 REANALYSIS-FINAL-MISSING"
+    },
+    {
+      "from": "A9",
+      "to": "Q06",
+      "type": "axis_branch",
+      "role": "route",
+      "state": "PROTOCOL-DEVIATION-NO-POLICY",
+      "ref": "universe_sm §3 A9 PROTOCOL-DEVIATION-NO-POLICY"
+    },
+    {
+      "from": "A9",
+      "to": "INVALID",
+      "type": "axis_branch",
+      "role": "route",
+      "state": "IRRECONCILABLE",
+      "ref": "universe_sm §3 A9 IRRECONCILABLE"
+    },
+    {
+      "from": "A10",
+      "to": "UNSUPPORTED",
+      "type": "axis_branch",
+      "role": "route",
+      "state": "NON-TABULAR",
+      "ref": "universe_sm §3 A10 NON-TABULAR"
+    },
+    {
+      "from": "A10",
+      "to": "INVALID",
+      "type": "axis_branch",
+      "role": "route",
+      "state": "CORRUPTED",
+      "ref": "universe_sm §3 A10 CORRUPTED"
+    },
+    {
+      "from": "A0",
+      "to": "N0",
+      "type": "axis_onward",
+      "role": "onward",
+      "basis": "section",
+      "ref": "universe_sm §2/§3 A0↔N0 (clean→backbone)"
+    },
+    {
+      "from": "A1",
+      "to": "N1",
+      "type": "axis_onward",
+      "role": "onward",
+      "basis": "section",
+      "ref": "universe_sm §2/§3 A1↔N1 (clean→backbone)"
+    },
+    {
+      "from": "A2",
+      "to": "N1",
+      "type": "axis_onward",
+      "role": "onward",
+      "basis": "section",
+      "ref": "universe_sm §2/§3 A2↔N1 (clean→backbone)"
+    },
+    {
+      "from": "A3",
+      "to": "N2",
+      "type": "axis_onward",
+      "role": "onward",
+      "basis": "co_n",
+      "ref": "universe_sm §2/§3 A3↔N2 (clean→backbone)"
+    },
+    {
+      "from": "A4",
+      "to": "N3",
+      "type": "axis_onward",
+      "role": "onward",
+      "basis": "co_n",
+      "ref": "universe_sm §2/§3 A4↔N3 (clean→backbone)"
+    },
+    {
+      "from": "A5",
+      "to": "N5",
+      "type": "axis_onward",
+      "role": "onward",
+      "basis": "co_n",
+      "ref": "universe_sm §2/§3 A5↔N5 (clean→backbone)"
+    },
+    {
+      "from": "A6",
+      "to": "N2",
+      "type": "axis_onward",
+      "role": "onward",
+      "basis": "section",
+      "ref": "universe_sm §2/§3 A6↔N2 (clean→backbone)"
+    },
+    {
+      "from": "A7",
+      "to": "N6",
+      "type": "axis_onward",
+      "role": "onward",
+      "basis": "co_n",
+      "ref": "universe_sm §2/§3 A7↔N6 (clean→backbone)"
+    },
+    {
+      "from": "A8",
+      "to": "N4",
+      "type": "axis_onward",
+      "role": "onward",
+      "basis": "co_n",
+      "ref": "universe_sm §2/§3 A8↔N4 (clean→backbone)"
+    },
+    {
+      "from": "A9",
+      "to": "N7",
+      "type": "axis_onward",
+      "role": "onward",
+      "basis": "section",
+      "ref": "universe_sm §2/§3 A9↔N7 (clean→backbone)"
+    },
+    {
+      "from": "A10",
+      "to": "N0",
+      "type": "axis_onward",
+      "role": "onward",
+      "basis": "section",
+      "ref": "universe_sm §2/§3 A10↔N0 (clean→backbone)"
+    }
+  ],
+  "spec_only": {
+    "note": "미배선 65 c 노드화(표현-only). wired_status=spec_only·runnable=false. can_route_to_q는 declared_conditional(realized와 분리) — wired Q-partition·scope_out 불변. 실배선=GAP-30 백로그, C_dead 3(c0042/c0043/c0333)=GAP-36.",
+    "nodes": [
+      {
+        "id": "c0030",
+        "type": "verify",
+        "kind": "verify",
+        "layer_pair": "L-1->L-2",
+        "cost": 1,
+        "srp_intent": "VERIFY ROW_ORDERING BY WITHIN_ID",
+        "skeleton_hook": "L-1->L-2 boundary (sorting verification)",
+        "requires_detection_by": null,
+        "wired_status": "spec_only",
+        "runnable": false,
+        "in_strand": true,
+        "ref": "c_units.c0030"
+      },
+      {
+        "id": "c0031",
+        "type": "transform",
+        "kind": "transform",
+        "layer_pair": "L-1->L-2",
+        "cost": 2,
+        "srp_intent": "ASSIGN ROW_ORDERING",
+        "skeleton_hook": "L-1->L-2 boundary (sorting)",
+        "requires_detection_by": "c0030",
+        "wired_status": "spec_only",
+        "runnable": false,
+        "in_strand": true,
+        "ref": "c_units.c0031"
+      },
+      {
+        "id": "c0040",
+        "type": "verify",
+        "kind": "verify",
+        "layer_pair": "L-1->L-2",
+        "cost": 1,
+        "srp_intent": "VERIFY ROW_LEVEL_INVARIANT",
+        "skeleton_hook": "L-1->L-2 boundary (final row-level verification)",
+        "requires_detection_by": null,
+        "wired_status": "spec_only",
+        "runnable": false,
+        "in_strand": true,
+        "ref": "c_units.c0040"
+      },
+      {
+        "id": "c0041",
+        "type": "verify",
+        "kind": "verify",
+        "layer_pair": "L-1->L-2",
+        "cost": 1,
+        "srp_intent": "VERIFY CROSS_COLUMN_INVARIANT",
+        "skeleton_hook": "L-1->L-2 boundary (final dataset-level verification)",
+        "requires_detection_by": null,
+        "wired_status": "spec_only",
+        "runnable": false,
+        "in_strand": true,
+        "ref": "c_units.c0041"
+      },
+      {
+        "id": "c0042",
+        "type": "route",
+        "kind": "route",
+        "layer_pair": "L-1->L-2",
+        "cost": 0,
+        "srp_intent": "ROUTE CROSS_COLUMN_INVARIANT",
+        "skeleton_hook": "N7 (final ambiguity check) routing",
+        "requires_detection_by": "c0041",
+        "wired_status": "spec_only",
+        "runnable": false,
+        "in_strand": false,
+        "ref": "c_units.c0042"
+      },
+      {
+        "id": "c0043",
+        "type": "route",
+        "kind": "route",
+        "layer_pair": "L-1->L-2",
+        "cost": 0,
+        "srp_intent": "ROUTE COLUMN_SCHEMA",
+        "skeleton_hook": "N0 (analysis intent) routing on schema failure",
+        "requires_detection_by": "c0001",
+        "wired_status": "spec_only",
+        "runnable": false,
+        "in_strand": false,
+        "ref": "c_units.c0043"
+      },
+      {
+        "id": "c0100",
+        "type": "verify",
+        "kind": "verify",
+        "layer_pair": "L-2->L-3",
+        "cost": 1,
+        "srp_intent": "VERIFY DOSE_SHEET",
+        "skeleton_hook": "N3 (dose record completion) + A10 multi-sheet",
+        "requires_detection_by": null,
+        "wired_status": "spec_only",
+        "runnable": false,
+        "in_strand": true,
+        "ref": "c_units.c0100"
+      },
+      {
+        "id": "c0101",
+        "type": "verify",
+        "kind": "verify",
+        "layer_pair": "L-2->L-3",
+        "cost": 1,
+        "srp_intent": "VERIFY COVARIATE_SHEET",
+        "skeleton_hook": "N6 (covariate attachment) + A10 multi-sheet",
+        "requires_detection_by": null,
+        "wired_status": "spec_only",
+        "runnable": false,
+        "in_strand": true,
+        "ref": "c_units.c0101"
+      },
+      {
+        "id": "c0102",
+        "type": "verify",
+        "kind": "verify",
+        "layer_pair": "L-2->L-3",
+        "cost": 1,
+        "srp_intent": "VERIFY ANALYTE_COLUMN",
+        "skeleton_hook": "N4 (observation completion) + A8 multi-drug",
+        "requires_detection_by": null,
+        "wired_status": "spec_only",
+        "runnable": false,
+        "in_strand": true,
+        "ref": "c_units.c0102"
+      },
+      {
+        "id": "c0110",
+        "type": "transform",
+        "kind": "transform",
+        "layer_pair": "L-2->L-3",
+        "cost": 5,
+        "srp_intent": "JOIN DOSE_SHEET BY ACROSS_SHEET",
+        "skeleton_hook": "N3 (dose record completion) + multi-sheet JOIN",
+        "requires_detection_by": "c0100",
+        "wired_status": "spec_only",
+        "runnable": false,
+        "in_strand": true,
+        "ref": "c_units.c0110"
+      },
+      {
+        "id": "c0111",
+        "type": "transform",
+        "kind": "transform",
+        "layer_pair": "L-2->L-3",
+        "cost": 5,
+        "srp_intent": "JOIN COVARIATE_SHEET BY ACROSS_SHEET",
+        "skeleton_hook": "N6 (covariate attachment) + multi-sheet JOIN",
+        "requires_detection_by": "c0101",
+        "wired_status": "spec_only",
+        "runnable": false,
+        "in_strand": true,
+        "ref": "c_units.c0111"
+      },
+      {
+        "id": "c0120",
+        "type": "transform",
+        "kind": "transform",
+        "layer_pair": "L-2->L-3",
+        "cost": 5,
+        "srp_intent": "PIVOT ANALYTE_COLUMN",
+        "skeleton_hook": "N4 (observation completion) + A8 MULTI-CMT-DEFINED",
+        "requires_detection_by": "c0102",
+        "wired_status": "spec_only",
+        "runnable": false,
+        "in_strand": true,
+        "ref": "c_units.c0120"
+      },
+      {
+        "id": "c0130",
+        "type": "detect",
+        "kind": "detect",
+        "layer_pair": "L-2->L-3",
+        "cost": 3,
+        "srp_intent": "CLASSIFY ANALYTE_COLUMN",
+        "skeleton_hook": "A8 axis evaluation support",
+        "requires_detection_by": null,
+        "wired_status": "spec_only",
+        "runnable": false,
+        "in_strand": true,
+        "ref": "c_units.c0130"
+      },
+      {
+        "id": "c0131",
+        "type": "detect",
+        "kind": "detect",
+        "layer_pair": "L-2->L-3",
+        "cost": 3,
+        "srp_intent": "CLASSIFY METABOLITE",
+        "skeleton_hook": "A8 METABOLITE-DEFINED evaluation",
+        "requires_detection_by": null,
+        "wired_status": "spec_only",
+        "runnable": false,
+        "in_strand": true,
+        "ref": "c_units.c0131"
+      },
+      {
+        "id": "c0150",
+        "type": "detect",
+        "kind": "detect",
+        "layer_pair": "L-2->L-3",
+        "cost": 3,
+        "srp_intent": "CLASSIFY REGIMEN_DESCRIPTOR",
+        "skeleton_hook": "N3/N4 (dose/obs classification) + A6 event row",
+        "requires_detection_by": null,
+        "wired_status": "spec_only",
+        "runnable": false,
+        "in_strand": true,
+        "ref": "c_units.c0150"
+      },
+      {
+        "id": "c0160",
+        "type": "verify",
+        "kind": "verify",
+        "layer_pair": "L-2->L-3",
+        "cost": 1,
+        "srp_intent": "VERIFY UNIT_CONSISTENCY",
+        "skeleton_hook": "L-2->L-3 boundary (unit verification)",
+        "requires_detection_by": null,
+        "wired_status": "spec_only",
+        "runnable": false,
+        "in_strand": true,
+        "ref": "c_units.c0160"
+      },
+      {
+        "id": "c0161",
+        "type": "transform",
+        "kind": "transform",
+        "layer_pair": "L-2->L-3",
+        "cost": 2,
+        "srp_intent": "CONVERT UNIT_CANONICAL",
+        "skeleton_hook": "A9 UNIT-CONVERSION + L-2->L-3",
+        "requires_detection_by": "c0160",
+        "wired_status": "spec_only",
+        "runnable": false,
+        "in_strand": true,
+        "ref": "c_units.c0161"
+      },
+      {
+        "id": "c0170",
+        "type": "route",
+        "kind": "route",
+        "layer_pair": "L-2->L-3",
+        "cost": 0,
+        "srp_intent": "ROUTE CROSS_COLUMN_INVARIANT",
+        "skeleton_hook": "Q10 routing",
+        "requires_detection_by": "c0160",
+        "wired_status": "spec_only",
+        "runnable": false,
+        "in_strand": true,
+        "ref": "c_units.c0170"
+      },
+      {
+        "id": "c0300",
+        "type": "detect",
+        "kind": "detect",
+        "layer_pair": "L-4->L-5",
+        "cost": 1,
+        "srp_intent": "DETECT NA_TOKEN",
+        "skeleton_hook": "mess:NA_TOKEN",
+        "requires_detection_by": null,
+        "wired_status": "spec_only",
+        "runnable": false,
+        "in_strand": true,
+        "ref": "c_units.c0300"
+      },
+      {
+        "id": "c0301",
+        "type": "transform",
+        "kind": "transform",
+        "layer_pair": "L-4->L-5",
+        "cost": 2,
+        "srp_intent": "NORMALIZE NA_TOKEN",
+        "skeleton_hook": "mess:NA_TOKEN",
+        "requires_detection_by": "c0300",
+        "wired_status": "spec_only",
+        "runnable": false,
+        "in_strand": true,
+        "ref": "c_units.c0301"
+      },
+      {
+        "id": "c0320",
+        "type": "detect",
+        "kind": "detect",
+        "layer_pair": "L-4->L-5",
+        "cost": 1,
+        "srp_intent": "DETECT ID_DTYPE",
+        "skeleton_hook": "mess:ID_DTYPE",
+        "requires_detection_by": null,
+        "wired_status": "spec_only",
+        "runnable": false,
+        "in_strand": true,
+        "ref": "c_units.c0320"
+      },
+      {
+        "id": "c0321",
+        "type": "transform",
+        "kind": "transform",
+        "layer_pair": "L-4->L-5",
+        "cost": 2,
+        "srp_intent": "CONVERT ID_DTYPE",
+        "skeleton_hook": "mess:ID_DTYPE",
+        "requires_detection_by": "c0320",
+        "wired_status": "spec_only",
+        "runnable": false,
+        "in_strand": true,
+        "ref": "c_units.c0321"
+      },
+      {
+        "id": "c0322",
+        "type": "detect",
+        "kind": "detect",
+        "layer_pair": "L-4->L-5",
+        "cost": 1,
+        "srp_intent": "DETECT ID_LEADING_ZERO",
+        "skeleton_hook": "mess:ID_LEADING_ZERO",
+        "requires_detection_by": null,
+        "wired_status": "spec_only",
+        "runnable": false,
+        "in_strand": true,
+        "ref": "c_units.c0322"
+      },
+      {
+        "id": "c0323",
+        "type": "transform",
+        "kind": "transform",
+        "layer_pair": "L-4->L-5",
+        "cost": 2,
+        "srp_intent": "NORMALIZE ID_LEADING_ZERO",
+        "skeleton_hook": "mess:ID_LEADING_ZERO",
+        "requires_detection_by": "c0322",
+        "wired_status": "spec_only",
+        "runnable": false,
+        "in_strand": true,
+        "ref": "c_units.c0323"
+      },
+      {
+        "id": "c0330",
+        "type": "detect",
+        "kind": "detect",
+        "layer_pair": "L-4->L-5",
+        "cost": 1,
+        "srp_intent": "DETECT UNIT_DECLARATION",
+        "skeleton_hook": "mess:UNIT_DECLARATION",
+        "requires_detection_by": null,
+        "wired_status": "spec_only",
+        "runnable": false,
+        "in_strand": true,
+        "ref": "c_units.c0330"
+      },
+      {
+        "id": "c0331",
+        "type": "transform",
+        "kind": "transform",
+        "layer_pair": "L-4->L-5",
+        "cost": 2,
+        "srp_intent": "CONVERT UNIT_CANONICAL",
+        "skeleton_hook": "mess:UNIT_DECLARATION",
+        "requires_detection_by": "c0330",
+        "wired_status": "spec_only",
+        "runnable": false,
+        "in_strand": true,
+        "ref": "c_units.c0331"
+      },
+      {
+        "id": "c0332",
+        "type": "detect",
+        "kind": "detect",
+        "layer_pair": "L-4->L-5",
+        "cost": 1,
+        "srp_intent": "DETECT MOLAR_MASS",
+        "skeleton_hook": "mess:MOLAR_MASS + Q10",
+        "requires_detection_by": null,
+        "wired_status": "spec_only",
+        "runnable": false,
+        "in_strand": true,
+        "ref": "c_units.c0332"
+      },
+      {
+        "id": "c0333",
+        "type": "route",
+        "kind": "route",
+        "layer_pair": "L-4->L-5",
+        "cost": 0,
+        "srp_intent": "ROUTE UNIT_DECLARATION",
+        "skeleton_hook": "Q10 routing",
+        "requires_detection_by": "c0330",
+        "wired_status": "spec_only",
+        "runnable": false,
+        "in_strand": false,
+        "ref": "c_units.c0333"
+      },
+      {
+        "id": "c0342",
+        "type": "detect",
+        "kind": "detect",
+        "layer_pair": "L-4->L-5",
+        "cost": 1,
+        "srp_intent": "DETECT MULTI_LEVEL_HEADER",
+        "skeleton_hook": "mess:MULTI_LEVEL_HEADER",
+        "requires_detection_by": null,
+        "wired_status": "spec_only",
+        "runnable": false,
+        "in_strand": true,
+        "ref": "c_units.c0342"
+      },
+      {
+        "id": "c0343",
+        "type": "transform",
+        "kind": "transform",
+        "layer_pair": "L-4->L-5",
+        "cost": 4,
+        "srp_intent": "SPLIT MULTI_LEVEL_HEADER",
+        "skeleton_hook": "mess:MULTI_LEVEL_HEADER",
+        "requires_detection_by": "c0342",
+        "wired_status": "spec_only",
+        "runnable": false,
+        "in_strand": true,
+        "ref": "c_units.c0343"
+      },
+      {
+        "id": "c0344",
+        "type": "detect",
+        "kind": "detect",
+        "layer_pair": "L-4->L-5",
+        "cost": 1,
+        "srp_intent": "DETECT TRAILING_BLANK",
+        "skeleton_hook": "mess:TRAILING_BLANK",
+        "requires_detection_by": null,
+        "wired_status": "spec_only",
+        "runnable": false,
+        "in_strand": true,
+        "ref": "c_units.c0344"
+      },
+      {
+        "id": "c0345",
+        "type": "transform",
+        "kind": "transform",
+        "layer_pair": "L-4->L-5",
+        "cost": 2,
+        "srp_intent": "FILTER TRAILING_BLANK",
+        "skeleton_hook": "mess:TRAILING_BLANK",
+        "requires_detection_by": "c0344",
+        "wired_status": "spec_only",
+        "runnable": false,
+        "in_strand": true,
+        "ref": "c_units.c0345"
+      },
+      {
+        "id": "c0346",
+        "type": "detect",
+        "kind": "detect",
+        "layer_pair": "L-4->L-5",
+        "cost": 1,
+        "srp_intent": "DETECT DUPLICATE_ROW",
+        "skeleton_hook": "mess:DUPLICATE_ROW",
+        "requires_detection_by": null,
+        "wired_status": "spec_only",
+        "runnable": false,
+        "in_strand": true,
+        "ref": "c_units.c0346"
+      },
+      {
+        "id": "c0347",
+        "type": "transform",
+        "kind": "transform",
+        "layer_pair": "L-4->L-5",
+        "cost": 2,
+        "srp_intent": "FILTER DUPLICATE_ROW",
+        "skeleton_hook": "mess:DUPLICATE_ROW",
+        "requires_detection_by": "c0346",
+        "wired_status": "spec_only",
+        "runnable": false,
+        "in_strand": true,
+        "ref": "c_units.c0347"
+      },
+      {
+        "id": "c0350",
+        "type": "detect",
+        "kind": "detect",
+        "layer_pair": "L-4->L-5",
+        "cost": 1,
+        "srp_intent": "DETECT NATURAL_LANGUAGE_DOSE",
+        "skeleton_hook": "mess:NATURAL_LANGUAGE_DOSE",
+        "requires_detection_by": null,
+        "wired_status": "spec_only",
+        "runnable": false,
+        "in_strand": true,
+        "ref": "c_units.c0350"
+      },
+      {
+        "id": "c0351",
+        "type": "transform",
+        "kind": "transform",
+        "layer_pair": "L-4->L-5",
+        "cost": 6,
+        "srp_intent": "EXTRACT NATURAL_LANGUAGE_DOSE",
+        "skeleton_hook": "mess:NATURAL_LANGUAGE_DOSE",
+        "requires_detection_by": "c0350",
+        "wired_status": "spec_only",
+        "runnable": false,
+        "in_strand": true,
+        "ref": "c_units.c0351"
+      },
+      {
+        "id": "c0352",
+        "type": "detect",
+        "kind": "detect",
+        "layer_pair": "L-4->L-5",
+        "cost": 1,
+        "srp_intent": "DETECT NATURAL_LANGUAGE_TIME",
+        "skeleton_hook": "mess:NATURAL_LANGUAGE_TIME",
+        "requires_detection_by": null,
+        "wired_status": "spec_only",
+        "runnable": false,
+        "in_strand": true,
+        "ref": "c_units.c0352"
+      },
+      {
+        "id": "c0353",
+        "type": "transform",
+        "kind": "transform",
+        "layer_pair": "L-4->L-5",
+        "cost": 6,
+        "srp_intent": "EXTRACT NATURAL_LANGUAGE_TIME",
+        "skeleton_hook": "mess:NATURAL_LANGUAGE_TIME",
+        "requires_detection_by": "c0352",
+        "wired_status": "spec_only",
+        "runnable": false,
+        "in_strand": true,
+        "ref": "c_units.c0353"
+      },
+      {
+        "id": "c0354",
+        "type": "detect",
+        "kind": "detect",
+        "layer_pair": "L-4->L-5",
+        "cost": 1,
+        "srp_intent": "DETECT FREETEXT_COMMENT",
+        "skeleton_hook": "mess:FREETEXT_COMMENT",
+        "requires_detection_by": null,
+        "wired_status": "spec_only",
+        "runnable": false,
+        "in_strand": true,
+        "ref": "c_units.c0354"
+      },
+      {
+        "id": "c0355",
+        "type": "transform",
+        "kind": "transform",
+        "layer_pair": "L-4->L-5",
+        "cost": 4,
+        "srp_intent": "SPLIT FREETEXT_COMMENT",
+        "skeleton_hook": "mess:FREETEXT_COMMENT",
+        "requires_detection_by": "c0354",
+        "wired_status": "spec_only",
+        "runnable": false,
+        "in_strand": true,
+        "ref": "c_units.c0355"
+      },
+      {
+        "id": "c0360",
+        "type": "detect",
+        "kind": "detect",
+        "layer_pair": "L-4->L-5",
+        "cost": 1,
+        "srp_intent": "DETECT ENCODING",
+        "skeleton_hook": "mess:ENCODING",
+        "requires_detection_by": null,
+        "wired_status": "spec_only",
+        "runnable": false,
+        "in_strand": true,
+        "ref": "c_units.c0360"
+      },
+      {
+        "id": "c0361",
+        "type": "transform",
+        "kind": "transform",
+        "layer_pair": "L-4->L-5",
+        "cost": 2,
+        "srp_intent": "CONVERT ENCODING",
+        "skeleton_hook": "mess:ENCODING",
+        "requires_detection_by": "c0360",
+        "wired_status": "spec_only",
+        "runnable": false,
+        "in_strand": true,
+        "ref": "c_units.c0361"
+      },
+      {
+        "id": "c0362",
+        "type": "detect",
+        "kind": "detect",
+        "layer_pair": "L-4->L-5",
+        "cost": 1,
+        "srp_intent": "DETECT BOM",
+        "skeleton_hook": "mess:BOM",
+        "requires_detection_by": null,
+        "wired_status": "spec_only",
+        "runnable": false,
+        "in_strand": true,
+        "ref": "c_units.c0362"
+      },
+      {
+        "id": "c0363",
+        "type": "transform",
+        "kind": "transform",
+        "layer_pair": "L-4->L-5",
+        "cost": 2,
+        "srp_intent": "NORMALIZE BOM",
+        "skeleton_hook": "mess:BOM",
+        "requires_detection_by": "c0362",
+        "wired_status": "spec_only",
+        "runnable": false,
+        "in_strand": true,
+        "ref": "c_units.c0363"
+      },
+      {
+        "id": "c0364",
+        "type": "detect",
+        "kind": "detect",
+        "layer_pair": "L-4->L-5",
+        "cost": 1,
+        "srp_intent": "DETECT LINE_ENDING",
+        "skeleton_hook": "mess:LINE_ENDING",
+        "requires_detection_by": null,
+        "wired_status": "spec_only",
+        "runnable": false,
+        "in_strand": true,
+        "ref": "c_units.c0364"
+      },
+      {
+        "id": "c0365",
+        "type": "transform",
+        "kind": "transform",
+        "layer_pair": "L-4->L-5",
+        "cost": 2,
+        "srp_intent": "NORMALIZE LINE_ENDING",
+        "skeleton_hook": "mess:LINE_ENDING",
+        "requires_detection_by": "c0364",
+        "wired_status": "spec_only",
+        "runnable": false,
+        "in_strand": true,
+        "ref": "c_units.c0365"
+      },
+      {
+        "id": "c0366",
+        "type": "detect",
+        "kind": "detect",
+        "layer_pair": "L-4->L-5",
+        "cost": 1,
+        "srp_intent": "DETECT DELIMITER",
+        "skeleton_hook": "mess:DELIMITER",
+        "requires_detection_by": null,
+        "wired_status": "spec_only",
+        "runnable": false,
+        "in_strand": true,
+        "ref": "c_units.c0366"
+      },
+      {
+        "id": "c0367",
+        "type": "transform",
+        "kind": "transform",
+        "layer_pair": "L-4->L-5",
+        "cost": 2,
+        "srp_intent": "CONVERT DELIMITER",
+        "skeleton_hook": "mess:DELIMITER",
+        "requires_detection_by": "c0366",
+        "wired_status": "spec_only",
+        "runnable": false,
+        "in_strand": true,
+        "ref": "c_units.c0367"
+      },
+      {
+        "id": "c0368",
+        "type": "detect",
+        "kind": "detect",
+        "layer_pair": "L-4->L-5",
+        "cost": 1,
+        "srp_intent": "DETECT SHEET_INVENTORY",
+        "skeleton_hook": "mess:SHEET_INVENTORY",
+        "requires_detection_by": null,
+        "wired_status": "spec_only",
+        "runnable": false,
+        "in_strand": true,
+        "ref": "c_units.c0368"
+      },
+      {
+        "id": "c0369",
+        "type": "verify",
+        "kind": "verify",
+        "layer_pair": "L-4->L-5",
+        "cost": 1,
+        "srp_intent": "VERIFY SHEET_INVENTORY",
+        "skeleton_hook": "mess:SHEET_INVENTORY",
+        "requires_detection_by": "c0368",
+        "wired_status": "spec_only",
+        "runnable": false,
+        "in_strand": true,
+        "ref": "c_units.c0369"
+      },
+      {
+        "id": "c0370",
+        "type": "detect",
+        "kind": "detect",
+        "layer_pair": "L-4->L-5",
+        "cost": 1,
+        "srp_intent": "DETECT EXCEL_FORMULA",
+        "skeleton_hook": "mess:EXCEL_FORMULA",
+        "requires_detection_by": null,
+        "wired_status": "spec_only",
+        "runnable": false,
+        "in_strand": true,
+        "ref": "c_units.c0370"
+      },
+      {
+        "id": "c0371",
+        "type": "transform",
+        "kind": "transform",
+        "layer_pair": "L-4->L-5",
+        "cost": 2,
+        "srp_intent": "NORMALIZE EXCEL_FORMULA",
+        "skeleton_hook": "mess:EXCEL_FORMULA",
+        "requires_detection_by": "c0370",
+        "wired_status": "spec_only",
+        "runnable": false,
+        "in_strand": true,
+        "ref": "c_units.c0371"
+      },
+      {
+        "id": "c0372",
+        "type": "detect",
+        "kind": "detect",
+        "layer_pair": "L-4->L-5",
+        "cost": 1,
+        "srp_intent": "DETECT EXCEL_DATE_SERIAL",
+        "skeleton_hook": "mess:EXCEL_DATE_SERIAL",
+        "requires_detection_by": null,
+        "wired_status": "spec_only",
+        "runnable": false,
+        "in_strand": true,
+        "ref": "c_units.c0372"
+      },
+      {
+        "id": "c0373",
+        "type": "transform",
+        "kind": "transform",
+        "layer_pair": "L-4->L-5",
+        "cost": 2,
+        "srp_intent": "CONVERT EXCEL_DATE_SERIAL",
+        "skeleton_hook": "mess:EXCEL_DATE_SERIAL",
+        "requires_detection_by": "c0372",
+        "wired_status": "spec_only",
+        "runnable": false,
+        "in_strand": true,
+        "ref": "c_units.c0373"
+      },
+      {
+        "id": "c0374",
+        "type": "detect",
+        "kind": "detect",
+        "layer_pair": "L-4->L-5",
+        "cost": 1,
+        "srp_intent": "DETECT NON_ASCII_DECIMAL",
+        "skeleton_hook": "mess:NON_ASCII_DECIMAL",
+        "requires_detection_by": null,
+        "wired_status": "spec_only",
+        "runnable": false,
+        "in_strand": true,
+        "ref": "c_units.c0374"
+      },
+      {
+        "id": "c0375",
+        "type": "transform",
+        "kind": "transform",
+        "layer_pair": "L-4->L-5",
+        "cost": 2,
+        "srp_intent": "NORMALIZE NON_ASCII_DECIMAL",
+        "skeleton_hook": "mess:NON_ASCII_DECIMAL",
+        "requires_detection_by": "c0374",
+        "wired_status": "spec_only",
+        "runnable": false,
+        "in_strand": true,
+        "ref": "c_units.c0375"
+      },
+      {
+        "id": "c0376",
+        "type": "detect",
+        "kind": "detect",
+        "layer_pair": "L-4->L-5",
+        "cost": 1,
+        "srp_intent": "DETECT SCIENTIFIC_NOTATION",
+        "skeleton_hook": "mess:SCIENTIFIC_NOTATION",
+        "requires_detection_by": null,
+        "wired_status": "spec_only",
+        "runnable": false,
+        "in_strand": true,
+        "ref": "c_units.c0376"
+      },
+      {
+        "id": "c0377",
+        "type": "transform",
+        "kind": "transform",
+        "layer_pair": "L-4->L-5",
+        "cost": 2,
+        "srp_intent": "NORMALIZE SCIENTIFIC_NOTATION",
+        "skeleton_hook": "mess:SCIENTIFIC_NOTATION",
+        "requires_detection_by": "c0376",
+        "wired_status": "spec_only",
+        "runnable": false,
+        "in_strand": true,
+        "ref": "c_units.c0377"
+      },
+      {
+        "id": "c0378",
+        "type": "detect",
+        "kind": "detect",
+        "layer_pair": "L-4->L-5",
+        "cost": 1,
+        "srp_intent": "DETECT LINEBREAK_IN_CELL",
+        "skeleton_hook": "mess:LINEBREAK_IN_CELL",
+        "requires_detection_by": null,
+        "wired_status": "spec_only",
+        "runnable": false,
+        "in_strand": true,
+        "ref": "c_units.c0378"
+      },
+      {
+        "id": "c0379",
+        "type": "transform",
+        "kind": "transform",
+        "layer_pair": "L-4->L-5",
+        "cost": 2,
+        "srp_intent": "NORMALIZE LINEBREAK_IN_CELL",
+        "skeleton_hook": "mess:LINEBREAK_IN_CELL",
+        "requires_detection_by": "c0378",
+        "wired_status": "spec_only",
+        "runnable": false,
+        "in_strand": true,
+        "ref": "c_units.c0379"
+      },
+      {
+        "id": "c0390",
+        "type": "detect",
+        "kind": "detect",
+        "layer_pair": "L-4->L-5",
+        "cost": 1,
+        "srp_intent": "DETECT PRE_DOSE_CODING",
+        "skeleton_hook": "mess:PRE_DOSE_CODING",
+        "requires_detection_by": null,
+        "wired_status": "spec_only",
+        "runnable": false,
+        "in_strand": true,
+        "ref": "c_units.c0390"
+      },
+      {
+        "id": "c0391",
+        "type": "transform",
+        "kind": "transform",
+        "layer_pair": "L-4->L-5",
+        "cost": 2,
+        "srp_intent": "NORMALIZE PRE_DOSE_CODING",
+        "skeleton_hook": "mess:PRE_DOSE_CODING",
+        "requires_detection_by": "c0390",
+        "wired_status": "spec_only",
+        "runnable": false,
+        "in_strand": true,
+        "ref": "c_units.c0391"
+      },
+      {
+        "id": "c0394",
+        "type": "detect",
+        "kind": "detect",
+        "layer_pair": "L-4->L-5",
+        "cost": 1,
+        "srp_intent": "DETECT LEGACY_FLAG_PRESENT",
+        "skeleton_hook": "mess:LEGACY_FLAG_PRESENT",
+        "requires_detection_by": null,
+        "wired_status": "spec_only",
+        "runnable": false,
+        "in_strand": true,
+        "ref": "c_units.c0394"
+      },
+      {
+        "id": "c0396",
+        "type": "detect",
+        "kind": "detect",
+        "layer_pair": "L-4->L-5",
+        "cost": 1,
+        "srp_intent": "DETECT RWD_ADHERENCE_UNRESOLVED",
+        "skeleton_hook": "mess:RWD_ADHERENCE_UNRESOLVED",
+        "requires_detection_by": null,
+        "wired_status": "spec_only",
+        "runnable": false,
+        "in_strand": true,
+        "ref": "c_units.c0396"
+      },
+      {
+        "id": "c0499",
+        "type": "route",
+        "kind": "route",
+        "layer_pair": "L-4->L-5",
+        "cost": 0,
+        "srp_intent": "ROUTE CROSS_COLUMN_INVARIANT",
+        "skeleton_hook": "Q15X catch-all",
+        "requires_detection_by": null,
+        "wired_status": "spec_only",
+        "runnable": false,
+        "in_strand": true,
+        "ref": "c_units.c0499"
+      }
+    ],
+    "attach_edges": [
+      {
+        "from": "c0042",
+        "to": "N7",
+        "type": "attach",
+        "via": "skeleton_hook",
+        "wired_status": "spec_only"
+      },
+      {
+        "from": "c0043",
+        "to": "N0",
+        "type": "attach",
+        "via": "skeleton_hook",
+        "wired_status": "spec_only"
+      },
+      {
+        "from": "c0100",
+        "to": "A10",
+        "type": "attach",
+        "via": "skeleton_hook",
+        "wired_status": "spec_only"
+      },
+      {
+        "from": "c0100",
+        "to": "N3",
+        "type": "attach",
+        "via": "skeleton_hook",
+        "wired_status": "spec_only"
+      },
+      {
+        "from": "c0101",
+        "to": "A10",
+        "type": "attach",
+        "via": "skeleton_hook",
+        "wired_status": "spec_only"
+      },
+      {
+        "from": "c0101",
+        "to": "N6",
+        "type": "attach",
+        "via": "skeleton_hook",
+        "wired_status": "spec_only"
+      },
+      {
+        "from": "c0102",
+        "to": "A8",
+        "type": "attach",
+        "via": "skeleton_hook",
+        "wired_status": "spec_only"
+      },
+      {
+        "from": "c0102",
+        "to": "N4",
+        "type": "attach",
+        "via": "skeleton_hook",
+        "wired_status": "spec_only"
+      },
+      {
+        "from": "c0110",
+        "to": "N3",
+        "type": "attach",
+        "via": "skeleton_hook",
+        "wired_status": "spec_only"
+      },
+      {
+        "from": "c0111",
+        "to": "N6",
+        "type": "attach",
+        "via": "skeleton_hook",
+        "wired_status": "spec_only"
+      },
+      {
+        "from": "c0120",
+        "to": "A8",
+        "type": "attach",
+        "via": "skeleton_hook",
+        "wired_status": "spec_only"
+      },
+      {
+        "from": "c0120",
+        "to": "N4",
+        "type": "attach",
+        "via": "skeleton_hook",
+        "wired_status": "spec_only"
+      },
+      {
+        "from": "c0130",
+        "to": "A8",
+        "type": "attach",
+        "via": "skeleton_hook",
+        "wired_status": "spec_only"
+      },
+      {
+        "from": "c0131",
+        "to": "A8",
+        "type": "attach",
+        "via": "skeleton_hook",
+        "wired_status": "spec_only"
+      },
+      {
+        "from": "c0150",
+        "to": "A6",
+        "type": "attach",
+        "via": "skeleton_hook",
+        "wired_status": "spec_only"
+      },
+      {
+        "from": "c0150",
+        "to": "N3",
+        "type": "attach",
+        "via": "skeleton_hook",
+        "wired_status": "spec_only"
+      },
+      {
+        "from": "c0150",
+        "to": "N4",
+        "type": "attach",
+        "via": "skeleton_hook",
+        "wired_status": "spec_only"
+      },
+      {
+        "from": "c0161",
+        "to": "A9",
+        "type": "attach",
+        "via": "skeleton_hook",
+        "wired_status": "spec_only"
+      },
+      {
+        "from": "c0300",
+        "to": "L-4->L-5",
+        "type": "attach",
+        "via": "layer_stage",
+        "wired_status": "spec_only",
+        "mess": "mess:NA_TOKEN"
+      },
+      {
+        "from": "c0301",
+        "to": "L-4->L-5",
+        "type": "attach",
+        "via": "layer_stage",
+        "wired_status": "spec_only",
+        "mess": "mess:NA_TOKEN"
+      },
+      {
+        "from": "c0320",
+        "to": "L-4->L-5",
+        "type": "attach",
+        "via": "layer_stage",
+        "wired_status": "spec_only",
+        "mess": "mess:ID_DTYPE"
+      },
+      {
+        "from": "c0321",
+        "to": "L-4->L-5",
+        "type": "attach",
+        "via": "layer_stage",
+        "wired_status": "spec_only",
+        "mess": "mess:ID_DTYPE"
+      },
+      {
+        "from": "c0322",
+        "to": "L-4->L-5",
+        "type": "attach",
+        "via": "layer_stage",
+        "wired_status": "spec_only",
+        "mess": "mess:ID_LEADING_ZERO"
+      },
+      {
+        "from": "c0323",
+        "to": "L-4->L-5",
+        "type": "attach",
+        "via": "layer_stage",
+        "wired_status": "spec_only",
+        "mess": "mess:ID_LEADING_ZERO"
+      },
+      {
+        "from": "c0330",
+        "to": "L-4->L-5",
+        "type": "attach",
+        "via": "layer_stage",
+        "wired_status": "spec_only",
+        "mess": "mess:UNIT_DECLARATION"
+      },
+      {
+        "from": "c0331",
+        "to": "L-4->L-5",
+        "type": "attach",
+        "via": "layer_stage",
+        "wired_status": "spec_only",
+        "mess": "mess:UNIT_DECLARATION"
+      },
+      {
+        "from": "c0332",
+        "to": "L-4->L-5",
+        "type": "attach",
+        "via": "layer_stage",
+        "wired_status": "spec_only",
+        "mess": "mess:MOLAR_MASS"
+      },
+      {
+        "from": "c0333",
+        "to": "L-4->L-5",
+        "type": "attach",
+        "via": "layer_stage",
+        "wired_status": "spec_only",
+        "mess": null
+      },
+      {
+        "from": "c0342",
+        "to": "L-4->L-5",
+        "type": "attach",
+        "via": "layer_stage",
+        "wired_status": "spec_only",
+        "mess": "mess:MULTI_LEVEL_HEADER"
+      },
+      {
+        "from": "c0343",
+        "to": "L-4->L-5",
+        "type": "attach",
+        "via": "layer_stage",
+        "wired_status": "spec_only",
+        "mess": "mess:MULTI_LEVEL_HEADER"
+      },
+      {
+        "from": "c0344",
+        "to": "L-4->L-5",
+        "type": "attach",
+        "via": "layer_stage",
+        "wired_status": "spec_only",
+        "mess": "mess:TRAILING_BLANK"
+      },
+      {
+        "from": "c0345",
+        "to": "L-4->L-5",
+        "type": "attach",
+        "via": "layer_stage",
+        "wired_status": "spec_only",
+        "mess": "mess:TRAILING_BLANK"
+      },
+      {
+        "from": "c0346",
+        "to": "L-4->L-5",
+        "type": "attach",
+        "via": "layer_stage",
+        "wired_status": "spec_only",
+        "mess": "mess:DUPLICATE_ROW"
+      },
+      {
+        "from": "c0347",
+        "to": "L-4->L-5",
+        "type": "attach",
+        "via": "layer_stage",
+        "wired_status": "spec_only",
+        "mess": "mess:DUPLICATE_ROW"
+      },
+      {
+        "from": "c0350",
+        "to": "L-4->L-5",
+        "type": "attach",
+        "via": "layer_stage",
+        "wired_status": "spec_only",
+        "mess": "mess:NATURAL_LANGUAGE_DOSE"
+      },
+      {
+        "from": "c0351",
+        "to": "L-4->L-5",
+        "type": "attach",
+        "via": "layer_stage",
+        "wired_status": "spec_only",
+        "mess": "mess:NATURAL_LANGUAGE_DOSE"
+      },
+      {
+        "from": "c0352",
+        "to": "L-4->L-5",
+        "type": "attach",
+        "via": "layer_stage",
+        "wired_status": "spec_only",
+        "mess": "mess:NATURAL_LANGUAGE_TIME"
+      },
+      {
+        "from": "c0353",
+        "to": "L-4->L-5",
+        "type": "attach",
+        "via": "layer_stage",
+        "wired_status": "spec_only",
+        "mess": "mess:NATURAL_LANGUAGE_TIME"
+      },
+      {
+        "from": "c0354",
+        "to": "L-4->L-5",
+        "type": "attach",
+        "via": "layer_stage",
+        "wired_status": "spec_only",
+        "mess": "mess:FREETEXT_COMMENT"
+      },
+      {
+        "from": "c0355",
+        "to": "L-4->L-5",
+        "type": "attach",
+        "via": "layer_stage",
+        "wired_status": "spec_only",
+        "mess": "mess:FREETEXT_COMMENT"
+      },
+      {
+        "from": "c0360",
+        "to": "L-4->L-5",
+        "type": "attach",
+        "via": "layer_stage",
+        "wired_status": "spec_only",
+        "mess": "mess:ENCODING"
+      },
+      {
+        "from": "c0361",
+        "to": "L-4->L-5",
+        "type": "attach",
+        "via": "layer_stage",
+        "wired_status": "spec_only",
+        "mess": "mess:ENCODING"
+      },
+      {
+        "from": "c0362",
+        "to": "L-4->L-5",
+        "type": "attach",
+        "via": "layer_stage",
+        "wired_status": "spec_only",
+        "mess": "mess:BOM"
+      },
+      {
+        "from": "c0363",
+        "to": "L-4->L-5",
+        "type": "attach",
+        "via": "layer_stage",
+        "wired_status": "spec_only",
+        "mess": "mess:BOM"
+      },
+      {
+        "from": "c0364",
+        "to": "L-4->L-5",
+        "type": "attach",
+        "via": "layer_stage",
+        "wired_status": "spec_only",
+        "mess": "mess:LINE_ENDING"
+      },
+      {
+        "from": "c0365",
+        "to": "L-4->L-5",
+        "type": "attach",
+        "via": "layer_stage",
+        "wired_status": "spec_only",
+        "mess": "mess:LINE_ENDING"
+      },
+      {
+        "from": "c0366",
+        "to": "L-4->L-5",
+        "type": "attach",
+        "via": "layer_stage",
+        "wired_status": "spec_only",
+        "mess": "mess:DELIMITER"
+      },
+      {
+        "from": "c0367",
+        "to": "L-4->L-5",
+        "type": "attach",
+        "via": "layer_stage",
+        "wired_status": "spec_only",
+        "mess": "mess:DELIMITER"
+      },
+      {
+        "from": "c0368",
+        "to": "L-4->L-5",
+        "type": "attach",
+        "via": "layer_stage",
+        "wired_status": "spec_only",
+        "mess": "mess:SHEET_INVENTORY"
+      },
+      {
+        "from": "c0369",
+        "to": "L-4->L-5",
+        "type": "attach",
+        "via": "layer_stage",
+        "wired_status": "spec_only",
+        "mess": "mess:SHEET_INVENTORY"
+      },
+      {
+        "from": "c0370",
+        "to": "L-4->L-5",
+        "type": "attach",
+        "via": "layer_stage",
+        "wired_status": "spec_only",
+        "mess": "mess:EXCEL_FORMULA"
+      },
+      {
+        "from": "c0371",
+        "to": "L-4->L-5",
+        "type": "attach",
+        "via": "layer_stage",
+        "wired_status": "spec_only",
+        "mess": "mess:EXCEL_FORMULA"
+      },
+      {
+        "from": "c0372",
+        "to": "L-4->L-5",
+        "type": "attach",
+        "via": "layer_stage",
+        "wired_status": "spec_only",
+        "mess": "mess:EXCEL_DATE_SERIAL"
+      },
+      {
+        "from": "c0373",
+        "to": "L-4->L-5",
+        "type": "attach",
+        "via": "layer_stage",
+        "wired_status": "spec_only",
+        "mess": "mess:EXCEL_DATE_SERIAL"
+      },
+      {
+        "from": "c0374",
+        "to": "L-4->L-5",
+        "type": "attach",
+        "via": "layer_stage",
+        "wired_status": "spec_only",
+        "mess": "mess:NON_ASCII_DECIMAL"
+      },
+      {
+        "from": "c0375",
+        "to": "L-4->L-5",
+        "type": "attach",
+        "via": "layer_stage",
+        "wired_status": "spec_only",
+        "mess": "mess:NON_ASCII_DECIMAL"
+      },
+      {
+        "from": "c0376",
+        "to": "L-4->L-5",
+        "type": "attach",
+        "via": "layer_stage",
+        "wired_status": "spec_only",
+        "mess": "mess:SCIENTIFIC_NOTATION"
+      },
+      {
+        "from": "c0377",
+        "to": "L-4->L-5",
+        "type": "attach",
+        "via": "layer_stage",
+        "wired_status": "spec_only",
+        "mess": "mess:SCIENTIFIC_NOTATION"
+      },
+      {
+        "from": "c0378",
+        "to": "L-4->L-5",
+        "type": "attach",
+        "via": "layer_stage",
+        "wired_status": "spec_only",
+        "mess": "mess:LINEBREAK_IN_CELL"
+      },
+      {
+        "from": "c0379",
+        "to": "L-4->L-5",
+        "type": "attach",
+        "via": "layer_stage",
+        "wired_status": "spec_only",
+        "mess": "mess:LINEBREAK_IN_CELL"
+      },
+      {
+        "from": "c0390",
+        "to": "L-4->L-5",
+        "type": "attach",
+        "via": "layer_stage",
+        "wired_status": "spec_only",
+        "mess": "mess:PRE_DOSE_CODING"
+      },
+      {
+        "from": "c0391",
+        "to": "L-4->L-5",
+        "type": "attach",
+        "via": "layer_stage",
+        "wired_status": "spec_only",
+        "mess": "mess:PRE_DOSE_CODING"
+      },
+      {
+        "from": "c0394",
+        "to": "L-4->L-5",
+        "type": "attach",
+        "via": "layer_stage",
+        "wired_status": "spec_only",
+        "mess": "mess:LEGACY_FLAG_PRESENT"
+      },
+      {
+        "from": "c0396",
+        "to": "L-4->L-5",
+        "type": "attach",
+        "via": "layer_stage",
+        "wired_status": "spec_only",
+        "mess": "mess:RWD_ADHERENCE_UNRESOLVED"
+      },
+      {
+        "from": "c0499",
+        "to": "L-4->L-5",
+        "type": "attach",
+        "via": "layer_stage",
+        "wired_status": "spec_only",
+        "mess": null
+      }
+    ],
+    "declared_conditional": [
+      {
+        "from": "c0030",
+        "to": "Q02",
+        "type": "declared_conditional",
+        "source": "can_route_to_q",
+        "from_kind": "verify",
+        "q_status": "exercised",
+        "realized": false,
+        "note": "spec-only c 선언(미배선) — wired Q-partition 비참여(realized와 분리)"
+      },
+      {
+        "from": "c0030",
+        "to": "Q04",
+        "type": "declared_conditional",
+        "source": "can_route_to_q",
+        "from_kind": "verify",
+        "q_status": "exercised",
+        "realized": false,
+        "note": "spec-only c 선언(미배선) — wired Q-partition 비참여(realized와 분리)"
+      },
+      {
+        "from": "c0042",
+        "to": "Q01",
+        "type": "declared_conditional",
+        "source": "can_route_to_q",
+        "from_kind": "route",
+        "q_status": "exercised",
+        "realized": false,
+        "note": "spec-only c 선언(미배선) — wired Q-partition 비참여(realized와 분리)"
+      },
+      {
+        "from": "c0042",
+        "to": "Q04",
+        "type": "declared_conditional",
+        "source": "can_route_to_q",
+        "from_kind": "route",
+        "q_status": "exercised",
+        "realized": false,
+        "note": "spec-only c 선언(미배선) — wired Q-partition 비참여(realized와 분리)"
+      },
+      {
+        "from": "c0042",
+        "to": "Q08",
+        "type": "declared_conditional",
+        "source": "can_route_to_q",
+        "from_kind": "route",
+        "q_status": "exercised",
+        "realized": false,
+        "note": "spec-only c 선언(미배선) — wired Q-partition 비참여(realized와 분리)"
+      },
+      {
+        "from": "c0042",
+        "to": "Q09",
+        "type": "declared_conditional",
+        "source": "can_route_to_q",
+        "from_kind": "route",
+        "q_status": "exercised",
+        "realized": false,
+        "note": "spec-only c 선언(미배선) — wired Q-partition 비참여(realized와 분리)"
+      },
+      {
+        "from": "c0043",
+        "to": "Q11",
+        "type": "declared_conditional",
+        "source": "can_route_to_q",
+        "from_kind": "route",
+        "q_status": "exercised",
+        "realized": false,
+        "note": "spec-only c 선언(미배선) — wired Q-partition 비참여(realized와 분리)"
+      },
+      {
+        "from": "c0043",
+        "to": "Q15X",
+        "type": "declared_conditional",
+        "source": "can_route_to_q",
+        "from_kind": "route",
+        "q_status": "unreached",
+        "realized": false,
+        "note": "spec-only c 선언(미배선) — wired Q-partition 비참여(realized와 분리)"
+      },
+      {
+        "from": "c0100",
+        "to": "Q08",
+        "type": "declared_conditional",
+        "source": "can_route_to_q",
+        "from_kind": "verify",
+        "q_status": "exercised",
+        "realized": false,
+        "note": "spec-only c 선언(미배선) — wired Q-partition 비참여(realized와 분리)"
+      },
+      {
+        "from": "c0100",
+        "to": "Q15A",
+        "type": "declared_conditional",
+        "source": "can_route_to_q",
+        "from_kind": "verify",
+        "q_status": "unreached",
+        "realized": false,
+        "note": "spec-only c 선언(미배선) — wired Q-partition 비참여(realized와 분리)"
+      },
+      {
+        "from": "c0101",
+        "to": "Q13",
+        "type": "declared_conditional",
+        "source": "can_route_to_q",
+        "from_kind": "verify",
+        "q_status": "exercised",
+        "realized": false,
+        "note": "spec-only c 선언(미배선) — wired Q-partition 비참여(realized와 분리)"
+      },
+      {
+        "from": "c0101",
+        "to": "Q07",
+        "type": "declared_conditional",
+        "source": "can_route_to_q",
+        "from_kind": "verify",
+        "q_status": "exercised",
+        "realized": false,
+        "note": "spec-only c 선언(미배선) — wired Q-partition 비참여(realized와 분리)"
+      },
+      {
+        "from": "c0102",
+        "to": "Q09",
+        "type": "declared_conditional",
+        "source": "can_route_to_q",
+        "from_kind": "verify",
+        "q_status": "exercised",
+        "realized": false,
+        "note": "spec-only c 선언(미배선) — wired Q-partition 비참여(realized와 분리)"
+      },
+      {
+        "from": "c0110",
+        "to": "Q13",
+        "type": "declared_conditional",
+        "source": "can_route_to_q",
+        "from_kind": "transform",
+        "q_status": "exercised",
+        "realized": false,
+        "note": "spec-only c 선언(미배선) — wired Q-partition 비참여(realized와 분리)"
+      },
+      {
+        "from": "c0110",
+        "to": "Q08",
+        "type": "declared_conditional",
+        "source": "can_route_to_q",
+        "from_kind": "transform",
+        "q_status": "exercised",
+        "realized": false,
+        "note": "spec-only c 선언(미배선) — wired Q-partition 비참여(realized와 분리)"
+      },
+      {
+        "from": "c0111",
+        "to": "Q13",
+        "type": "declared_conditional",
+        "source": "can_route_to_q",
+        "from_kind": "transform",
+        "q_status": "exercised",
+        "realized": false,
+        "note": "spec-only c 선언(미배선) — wired Q-partition 비참여(realized와 분리)"
+      },
+      {
+        "from": "c0111",
+        "to": "Q07",
+        "type": "declared_conditional",
+        "source": "can_route_to_q",
+        "from_kind": "transform",
+        "q_status": "exercised",
+        "realized": false,
+        "note": "spec-only c 선언(미배선) — wired Q-partition 비참여(realized와 분리)"
+      },
+      {
+        "from": "c0120",
+        "to": "Q09",
+        "type": "declared_conditional",
+        "source": "can_route_to_q",
+        "from_kind": "transform",
+        "q_status": "exercised",
+        "realized": false,
+        "note": "spec-only c 선언(미배선) — wired Q-partition 비참여(realized와 분리)"
+      },
+      {
+        "from": "c0130",
+        "to": "Q09",
+        "type": "declared_conditional",
+        "source": "can_route_to_q",
+        "from_kind": "detect",
+        "q_status": "exercised",
+        "realized": false,
+        "note": "spec-only c 선언(미배선) — wired Q-partition 비참여(realized와 분리)"
+      },
+      {
+        "from": "c0131",
+        "to": "Q09",
+        "type": "declared_conditional",
+        "source": "can_route_to_q",
+        "from_kind": "detect",
+        "q_status": "exercised",
+        "realized": false,
+        "note": "spec-only c 선언(미배선) — wired Q-partition 비참여(realized와 분리)"
+      },
+      {
+        "from": "c0150",
+        "to": "Q04",
+        "type": "declared_conditional",
+        "source": "can_route_to_q",
+        "from_kind": "detect",
+        "q_status": "exercised",
+        "realized": false,
+        "note": "spec-only c 선언(미배선) — wired Q-partition 비참여(realized와 분리)"
+      },
+      {
+        "from": "c0160",
+        "to": "Q10",
+        "type": "declared_conditional",
+        "source": "can_route_to_q",
+        "from_kind": "verify",
+        "q_status": "static-no-strand",
+        "realized": false,
+        "note": "spec-only c 선언(미배선) — wired Q-partition 비참여(realized와 분리)"
+      },
+      {
+        "from": "c0161",
+        "to": "Q10",
+        "type": "declared_conditional",
+        "source": "can_route_to_q",
+        "from_kind": "transform",
+        "q_status": "static-no-strand",
+        "realized": false,
+        "note": "spec-only c 선언(미배선) — wired Q-partition 비참여(realized와 분리)"
+      },
+      {
+        "from": "c0170",
+        "to": "Q10",
+        "type": "declared_conditional",
+        "source": "can_route_to_q",
+        "from_kind": "route",
+        "q_status": "static-no-strand",
+        "realized": false,
+        "note": "spec-only c 선언(미배선) — wired Q-partition 비참여(realized와 분리)"
+      },
+      {
+        "from": "c0301",
+        "to": "Q15X",
+        "type": "declared_conditional",
+        "source": "can_route_to_q",
+        "from_kind": "transform",
+        "q_status": "unreached",
+        "realized": false,
+        "note": "spec-only c 선언(미배선) — wired Q-partition 비참여(realized와 분리)"
+      },
+      {
+        "from": "c0330",
+        "to": "Q10",
+        "type": "declared_conditional",
+        "source": "can_route_to_q",
+        "from_kind": "detect",
+        "q_status": "static-no-strand",
+        "realized": false,
+        "note": "spec-only c 선언(미배선) — wired Q-partition 비참여(realized와 분리)"
+      },
+      {
+        "from": "c0331",
+        "to": "Q10",
+        "type": "declared_conditional",
+        "source": "can_route_to_q",
+        "from_kind": "transform",
+        "q_status": "static-no-strand",
+        "realized": false,
+        "note": "spec-only c 선언(미배선) — wired Q-partition 비참여(realized와 분리)"
+      },
+      {
+        "from": "c0332",
+        "to": "Q10",
+        "type": "declared_conditional",
+        "source": "can_route_to_q",
+        "from_kind": "detect",
+        "q_status": "static-no-strand",
+        "realized": false,
+        "note": "spec-only c 선언(미배선) — wired Q-partition 비참여(realized와 분리)"
+      },
+      {
+        "from": "c0333",
+        "to": "Q10",
+        "type": "declared_conditional",
+        "source": "can_route_to_q",
+        "from_kind": "route",
+        "q_status": "static-no-strand",
+        "realized": false,
+        "note": "spec-only c 선언(미배선) — wired Q-partition 비참여(realized와 분리)"
+      },
+      {
+        "from": "c0351",
+        "to": "Q08",
+        "type": "declared_conditional",
+        "source": "can_route_to_q",
+        "from_kind": "transform",
+        "q_status": "exercised",
+        "realized": false,
+        "note": "spec-only c 선언(미배선) — wired Q-partition 비참여(realized와 분리)"
+      },
+      {
+        "from": "c0353",
+        "to": "Q02",
+        "type": "declared_conditional",
+        "source": "can_route_to_q",
+        "from_kind": "transform",
+        "q_status": "exercised",
+        "realized": false,
+        "note": "spec-only c 선언(미배선) — wired Q-partition 비참여(realized와 분리)"
+      },
+      {
+        "from": "c0369",
+        "to": "Q15A",
+        "type": "declared_conditional",
+        "source": "can_route_to_q",
+        "from_kind": "verify",
+        "q_status": "unreached",
+        "realized": false,
+        "note": "spec-only c 선언(미배선) — wired Q-partition 비참여(realized와 분리)"
+      },
+      {
+        "from": "c0394",
+        "to": "Q15B",
+        "type": "declared_conditional",
+        "source": "can_route_to_q",
+        "from_kind": "detect",
+        "q_status": "unreached",
+        "realized": false,
+        "note": "spec-only c 선언(미배선) — wired Q-partition 비참여(realized와 분리)"
+      },
+      {
+        "from": "c0396",
+        "to": "Q15C",
+        "type": "declared_conditional",
+        "source": "can_route_to_q",
+        "from_kind": "detect",
+        "q_status": "unreached",
+        "realized": false,
+        "note": "spec-only c 선언(미배선) — wired Q-partition 비참여(realized와 분리)"
+      },
+      {
+        "from": "c0499",
+        "to": "Q15X",
+        "type": "declared_conditional",
+        "source": "can_route_to_q",
+        "from_kind": "route",
+        "q_status": "unreached",
+        "realized": false,
+        "note": "spec-only c 선언(미배선) — wired Q-partition 비참여(realized와 분리)"
+      }
+    ]
+  },
   "bundles": [],
   "deferred": {
     "spec_decisions": [
@@ -2639,7 +4893,8 @@
         "id": "GAP-13",
         "c": "c0210",
         "missing_edge": "A10(NON-TABULAR→UNSUPPORTED / CORRUPTED→INVALID)",
-        "reason": "fail_route_to=UNSUPPORTED/INVALID(terminal, Q 아님) + A10 실행 위치(front vs chain 끝) 결정 필요."
+        "resolved_in_tree": "backbone_routing axis_branch (A10 NON-TABULAR→UNSUPPORTED / CORRUPTED→INVALID 실현)",
+        "reason": "★ tree terminal edge는 step 3 backbone_routing(§3 A10)로 실현됨. 잔존=A10 실행 위치(front vs chain 끝) = Phase 5 orchestrator 소관(strand/런타임 경로). 본 Phase는 tree 표현만 해소."
       },
       {
         "id": "GAP-27B",
@@ -2651,7 +4906,8 @@
         "id": "c0040-placeholder",
         "c": "c0040",
         "missing_edge": "(미배선)",
-        "reason": "REGISTRY 미배선 c. node 부재 → 부착·라우팅 보류."
+        "resolved_in_tree": "spec_only.nodes (runnable=false 노드로 가시화; 클릭 가능)",
+        "reason": "REGISTRY 미배선 c. step 4에서 spec_only 노드로 가시화(미배선·미실행 유지). 실배선=GAP-30 백로그."
       }
     ],
     "scope_out_edges": [],
@@ -2741,6 +4997,38 @@
       "expanded_worst_nodes": 190,
       "replaces_synthetic": "spike 248/236",
       "gate_10s": "PASS(노드 ~190 ≪ 5000; dagre sub-second)"
+    },
+    "backbone_routing_edges": 61,
+    "backbone_routing": {
+      "spine_onward": 7,
+      "completion": 2,
+      "gate_branch": 14,
+      "axis_branch": 27,
+      "axis_onward": 11
+    },
+    "axis_sinks": [],
+    "complete_terminals": [
+      "AUTO",
+      "REPAIR"
+    ],
+    "reaches_complete": {
+      "AUTO": true,
+      "REPAIR": true
+    },
+    "c_nodes_wired": 57,
+    "c_nodes_spec_only": 65,
+    "c_nodes_total": 122,
+    "spec_only_in_strand": 62,
+    "spec_only_dead": [
+      "c0042",
+      "c0043",
+      "c0333"
+    ],
+    "spec_only_attach_edges": 65,
+    "declared_conditional_edges": 35,
+    "render_budget_v3": {
+      "collapsed_with_spec_only": 165,
+      "gate_10s": "PASS(165 ≪ 5000; dagre sub-second)"
     }
   }
 }
