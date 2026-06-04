@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Phase 5 slice-1 partial view — MERGED_CELL</title>
+<!-- Lock 6: Cytoscape.js + dagre, 단일 HTML, CDN, 외부 image 금지(shape only). Phase 8 아님(부분 점검용). -->
+<script src="https://unpkg.com/cytoscape@3.30.2/dist/cytoscape.min.js"></script>
+<script src="https://unpkg.com/dagre@0.8.5/dist/dagre.min.js"></script>
+<script src="https://unpkg.com/cytoscape-dagre@2.5.0/cytoscape-dagre.js"></script>
+<style>
+  html, body { margin: 0; height: 100%; font-family: "Malgun Gothic", system-ui, sans-serif; }
+  header { padding: 12px 16px; border-bottom: 1px solid #ddd; }
+  header h1 { font-size: 16px; margin: 0 0 4px; }
+  header p { font-size: 12px; color: #555; margin: 2px 0; }
+  code { background: #f3f3f3; padding: 1px 4px; border-radius: 3px; }
+  #cy { width: 100%; height: calc(100% - 150px); }
+  #legend { font-size: 12px; padding: 6px 16px; border-top: 1px solid #ddd; color: #444; }
+  #legend span { margin-right: 16px; white-space: nowrap; }
+  .sw { display: inline-block; width: 12px; height: 12px; vertical-align: middle; margin-right: 4px; border: 1px solid #888; }
+  #err { color: #b00; padding: 16px; font-size: 13px; display: none; }
+</style>
+</head>
+<body>
+<header>
+  <h1>Phase 5 · slice 1 — MERGED_CELL family (부분 tree, 점검용)</h1>
+  <p>D-S3: §6 mess-normalization(<code>c0340</code>→<code>c0341</code>)은 N0–N7 backbone 앞단 전처리.
+     549 strand 모두 backbone(<code>c0200</code>) 앞에 위치.</p>
+  <p>전체 tree 아님 — 이 슬라이스가 닿는 노드만 표시. detection=cut-vertex(D-S1): <code>c0341</code>은 <code>c0340</code>(pass·has_merged_cells)로만 도달.</p>
+</header>
+<div id="cy"></div>
+<div id="err">Cytoscape CDN 로드 실패 — 인터넷 연결 확인 후 새로고침.</div>
+<div id="legend">
+  <span><span class="sw" style="background:#e0e0e0;"></span>entry (L-5 raw)</span>
+  <span><span class="sw" style="background:#bcd9ff; border-style:dashed;"></span>detect (원+dashed)</span>
+  <span><span class="sw" style="background:#7fb2ff;"></span>transform (원)</span>
+  <span><span class="sw" style="background:#ffcf80; transform:rotate(45deg);"></span>conditional/backbone (육각·N0)</span>
+</div>
+<script>
+(function () {
+  if (typeof cytoscape === "undefined") { document.getElementById("err").style.display = "block"; return; }
+  if (window.cytoscapeDagre) { cytoscape.use(window.cytoscapeDagre); }
+
+  var elements = [
+    { data: { id: "raw",   label: "L-5 raw\n(원시 mess)",                     type: "entry" } },
+    { data: { id: "c0340", label: "c0340\n병합 셀 감지\nDETECT MERGED_CELL",   type: "detect" } },
+    { data: { id: "c0341", label: "c0341\n병합 셀 전파\nPROPAGATE MERGED_CELL", type: "transform" } },
+    { data: { id: "n0",    label: "N0 · A0\nc0200 (backbone 진입)",            type: "conditional" } },
+    { data: { id: "e0", source: "raw",   target: "c0340", label: "L-5 로드 직후" } },
+    { data: { id: "e1", source: "c0340", target: "c0341", label: "pass · has_merged_cells" } },
+    { data: { id: "e2", source: "c0341", target: "n0",    label: "→ N0–N7 backbone" } }
+  ];
+
+  var cy = cytoscape({
+    container: document.getElementById("cy"),
+    elements: elements,
+    style: [
+      { selector: "node", style: {
+          "label": "data(label)", "text-wrap": "wrap", "text-max-width": 150,
+          "text-valign": "center", "text-halign": "center", "font-size": 11,
+          "width": 130, "height": 64, "border-width": 2, "border-color": "#5b6b80" } },
+      { selector: 'node[type="entry"]',       style: { "shape": "round-rectangle", "background-color": "#e0e0e0" } },
+      { selector: 'node[type="detect"]',      style: { "shape": "ellipse", "background-color": "#bcd9ff", "border-style": "dashed" } },
+      { selector: 'node[type="transform"]',   style: { "shape": "ellipse", "background-color": "#7fb2ff" } },
+      { selector: 'node[type="conditional"]', style: { "shape": "hexagon", "background-color": "#ffcf80" } },
+      { selector: "edge", style: {
+          "label": "data(label)", "font-size": 10, "color": "#333",
+          "text-background-color": "#fff", "text-background-opacity": 1, "text-background-padding": 2,
+          "curve-style": "bezier", "target-arrow-shape": "triangle",
+          "line-color": "#9aa7b8", "target-arrow-color": "#9aa7b8", "width": 2 } }
+    ],
+    layout: { name: (window.cytoscapeDagre ? "dagre" : "breadthfirst"), rankDir: "LR", nodeSep: 40, rankSep: 70, fit: true, padding: 30 }
+  });
+  cy.fit(undefined, 30);
+})();
+</script>
+</body>
+</html>

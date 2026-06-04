@@ -1,0 +1,13 @@
+{
+  "sc_id": "slice4_covariate_activation",
+  "actual_c_sequence": [
+    "c0380",
+    "c0381",
+    "c0207",
+    "c0121"
+  ],
+  "total_cost": 11,
+  "terminal": null,
+  "q_code": null,
+  "boundary_at": null
+}

@@ -1,0 +1,11 @@
+{
+  "sc_id": "slice2_route_unrecoverable",
+  "actual_c_sequence": [
+    "c0203",
+    "c0251"
+  ],
+  "total_cost": 1,
+  "terminal": "QUARANTINE",
+  "q_code": "Q12",
+  "boundary_at": null
+}

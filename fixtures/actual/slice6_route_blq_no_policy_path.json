@@ -1,0 +1,11 @@
+{
+  "sc_id": "slice6_route_blq_no_policy",
+  "actual_c_sequence": [
+    "c0205",
+    "c0253"
+  ],
+  "total_cost": 1,
+  "terminal": "QUARANTINE",
+  "q_code": "Q01",
+  "boundary_at": null
+}

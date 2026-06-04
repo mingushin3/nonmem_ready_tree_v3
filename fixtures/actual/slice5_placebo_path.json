@@ -1,0 +1,11 @@
+{
+  "sc_id": "slice5_placebo",
+  "actual_c_sequence": [
+    "c0392",
+    "c0393"
+  ],
+  "total_cost": 4,
+  "terminal": null,
+  "q_code": null,
+  "boundary_at": null
+}

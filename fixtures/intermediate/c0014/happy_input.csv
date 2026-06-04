@@ -1,0 +1,6 @@
+subject_id,EVID,AMT,infusion_rate,rate_type
+1,1,100.0,,
+1,1,500.0,10.0,
+1,1,300.0,,model_rate
+1,1,200.0,,model_duration
+2,0,0.0,,

@@ -1,0 +1,306 @@
+[
+  {
+    "q_id": "Q01",
+    "name": "BLQ/LLOQ handling policy not specified",
+    "subtypes": ["blq", "uloq", "replicate"],
+    "trigger_condition": "A5 ∈ {BLQ-NO-POLICY, LLOQ-MISSING, ABOVE-ULOQ-NO-POLICY, REPLICATE-NO-POLICY}",
+    "clarification_to_sponsor": [
+      "BLQ handling method(M1/M3/M4/M5/M6/M7) 지정",
+      "LLOQ 수치 제공 (analyte별)",
+      "ULOQ 초과 시 처리 방법 지정: 희석 factor 적용 또는 right-censor flag (subtype=uloq)",
+      "동일 (ID,TIME) 반복 측정 처리: 평균/우선/둘다 유지 (subtype=replicate)"
+    ],
+    "human_decision_point": "sponsor가 BLQ/LLOQ/ULOQ handling policy를 결정하고 LLOQ 값을 제공해야 한다",
+    "recover_to_c_id": "c0205",
+    "routing_cost": 20,
+    "human_effort_score": 3,
+    "ref": "universe_sm §4 Q01, §3 A5 + P1/P3"
+  },
+  {
+    "q_id": "Q02",
+    "name": "Time policy not specified / ELAPSED anchor 모호",
+    "subtypes": null,
+    "trigger_condition": "A3 = AMBIGUOUS",
+    "clarification_to_sponsor": [
+      "actual vs nominal time 사용 정책 결정",
+      "ELAPSED time 기준점(첫 투약 vs 직전 투약) 명확화",
+      "시간 변환 규칙(protocol dosing schedule 참조) 제공"
+    ],
+    "human_decision_point": "시간 정책(actual/nominal/elapsed)과 time anchor point를 명확히 결정해야 한다",
+    "recover_to_c_id": "c0203",
+    "routing_cost": 20,
+    "human_effort_score": 4,
+    "ref": "universe_sm §4 Q02, §3 A3"
+  },
+  {
+    "q_id": "Q03",
+    "name": "Occasion definition not specified",
+    "subtypes": null,
+    "trigger_condition": "AIC-POPPK + occasion partition rule 미기재",
+    "clarification_to_sponsor": [
+      "popPK occasion membership 정의(period/visit/subject별)",
+      "occasion 구분 기준 문서 제공"
+    ],
+    "human_decision_point": "popPK 분석을 위한 occasion 구분 기준을 정의해야 한다",
+    "recover_to_c_id": "c0206",
+    "routing_cost": 20,
+    "human_effort_score": 3,
+    "ref": "universe_sm §4 Q03"
+  },
+  {
+    "q_id": "Q04",
+    "name": "Dose-sample linkage 또는 row 유형 모호",
+    "subtypes": null,
+    "trigger_condition": "A6 = AMBIGUOUS OR (A4 = INFUSION-STOP-RESTART AND policy 부재)",
+    "clarification_to_sponsor": [
+      "row type(dose/obs/covariate/reset) 결정 규칙 제공",
+      "dose record-sample linkage 명확화",
+      "infusion stop-restart 처리 정책(해당 시)"
+    ],
+    "human_decision_point": "dose record와 sample의 linkage 규칙, row type 결정 기준을 정의해야 한다",
+    "recover_to_c_id": "c0206",
+    "routing_cost": 50,
+    "human_effort_score": 5,
+    "ref": "universe_sm §4 Q04, §3 A6/A4"
+  },
+  {
+    "q_id": "Q05",
+    "name": "Multi-study ID conflict, harmonization rule 없음",
+    "subtypes": null,
+    "trigger_condition": "A1 ∈ {MULTI-HOMO, MULTI-HETERO, MULTI-SITE} AND harmonization policy 부재",
+    "clarification_to_sponsor": [
+      "cross-study subject ID harmonization rule 정의(예: study prefix)",
+      "ID recoding scheme 제공",
+      "study-level metadata 통합 규칙"
+    ],
+    "human_decision_point": "다중 연구 통합 시 subject ID 충돌 해결 규칙을 정의해야 한다",
+    "recover_to_c_id": "c0202",
+    "routing_cost": 50,
+    "human_effort_score": 5,
+    "ref": "universe_sm §4 Q05, §3 A1"
+  },
+  {
+    "q_id": "Q06",
+    "name": "Protocol deviation handling policy 없음",
+    "subtypes": null,
+    "trigger_condition": "A9 = PROTOCOL-DEVIATION-NO-POLICY",
+    "clarification_to_sponsor": [
+      "protocol deviation SOP 제공",
+      "deviation 기록의 inclusion/exclusion/flagging 규칙 결정",
+      "영향받는 subject의 처리 방침"
+    ],
+    "human_decision_point": "protocol deviation handling SOP를 제공하거나 inclusion/exclusion 규칙을 결정해야 한다",
+    "recover_to_c_id": "c0209",
+    "routing_cost": 100,
+    "human_effort_score": 6,
+    "ref": "universe_sm §4 Q06, §3 A9"
+  },
+  {
+    "q_id": "Q07",
+    "name": "Missing covariate imputation policy 없음",
+    "subtypes": null,
+    "trigger_condition": "A7 = POLICY-MISSING",
+    "clarification_to_sponsor": [
+      "결측 covariate imputation 전략 결정(LOCF/mean/median/per-group)",
+      "imputation 적용 대상 covariate 목록",
+      "결측 비율 threshold(imputation 포기 기준)"
+    ],
+    "human_decision_point": "covariate 결측값 imputation 전략을 결정해야 한다",
+    "recover_to_c_id": "c0207",
+    "routing_cost": 20,
+    "human_effort_score": 3,
+    "ref": "universe_sm §4 Q07, §3 A7"
+  },
+  {
+    "q_id": "Q08",
+    "name": "Dose source conflict / 복원 정책 없음",
+    "subtypes": null,
+    "trigger_condition": "A4 ∈ {MISSING-NO-POLICY, TITRATION-ADAPTIVE(policy 부재), LOADING-MAINTENANCE(policy 부재)}",
+    "clarification_to_sponsor": [
+      "dose source 우선순위 hierarchy 정의(diary/visit record/pharmacy)",
+      "dose 복원 규칙 제공",
+      "titration/loading dose 처리 정책(해당 시)"
+    ],
+    "human_decision_point": "다수 dose source 간 우선순위 또는 dose 복원 정책을 결정해야 한다",
+    "recover_to_c_id": "c0204",
+    "routing_cost": 50,
+    "human_effort_score": 5,
+    "ref": "universe_sm §4 Q08, §3 A4"
+  },
+  {
+    "q_id": "Q09",
+    "name": "Analyte/CMT assignment policy 없음 (CMT 번호 부재)",
+    "subtypes": null,
+    "trigger_condition": "A8 = CMT-POLICY-MISSING",
+    "clarification_to_sponsor": [
+      "analyte별 CMT 번호 할당 규칙 정의",
+      "parent drug vs metabolite CMT mapping",
+      "route-differentiated CMT(IV/PO) 구분 정책(P2 해당 시)"
+    ],
+    "human_decision_point": "parent/metabolite/multi-drug CMT mapping을 정의해야 한다",
+    "recover_to_c_id": "c0208",
+    "routing_cost": 50,
+    "human_effort_score": 5,
+    "ref": "universe_sm §4 Q09, §3 A8 + P2"
+  },
+  {
+    "q_id": "Q10",
+    "name": "Unit dictionary incomplete (molar↔mass MW 부재 포함)",
+    "subtypes": null,
+    "trigger_condition": "unit annotation 누락 OR molar↔mass 변환에 MW 부재(P5)",
+    "clarification_to_sponsor": [
+      "전체 analyte unit mapping table 제공",
+      "약물별 molecular weight(MW) 제공(molar↔mass 변환용)",
+      "단위 통일 기준(target unit) 결정"
+    ],
+    "human_decision_point": "단위 사전(unit dictionary)과 분자량(MW) 정보를 제공해야 한다",
+    "recover_to_c_id": "c0330",
+    "routing_cost": 50,
+    "human_effort_score": 4,
+    "ref": "universe_sm §4 Q10, P5"
+  },
+  {
+    "q_id": "Q11",
+    "name": "Analysis intent insufficient (endpoint_data_type 미기재 포함)",
+    "subtypes": null,
+    "trigger_condition": "A0 = AIC-MISSING OR endpoint_data_type 미선언",
+    "clarification_to_sponsor": [
+      "analysis intent(A0 code: AIC-PK/AIC-POPPK/AIC-PKPD/AIC-ER/...) 선언",
+      "endpoint_data_type ∈ {PK_CONCENTRATION, EXPOSURE_METRIC, CONTINUOUS_PD} 명시",
+      "분석 목적 policy 문서 첨부"
+    ],
+    "human_decision_point": "분석 목적(analysis intent)과 endpoint data type을 선언해야 한다",
+    "recover_to_c_id": "c0200",
+    "routing_cost": 100,
+    "human_effort_score": 7,
+    "ref": "universe_sm §4 Q11, §3 A0, §2 N0"
+  },
+  {
+    "q_id": "Q12",
+    "name": "Time anchor irrecoverable",
+    "subtypes": null,
+    "trigger_condition": "A3 = UNRECOVERABLE",
+    "clarification_to_sponsor": [
+      "누락된 시간 데이터 제공(원본 CRF/EDC 참조)",
+      "외부 adjudication을 통한 시간 복원",
+      "복원 불가 시 INVALID 판정 수용 여부 확인"
+    ],
+    "human_decision_point": "시간 anchor를 복원할 추가 데이터를 제공하거나 INVALID 판정을 수용해야 한다",
+    "recover_to_c_id": "c0203",
+    "routing_cost": 200,
+    "human_effort_score": 8,
+    "ref": "universe_sm §4 Q12, §3 A3"
+  },
+  {
+    "q_id": "Q13",
+    "name": "External covariate linkage key 모호",
+    "subtypes": null,
+    "trigger_condition": "A7 = KEY-MISSING",
+    "clarification_to_sponsor": [
+      "외부 covariate table merge key 정의(subject ID, study ID 등)",
+      "join cardinality 검증(1:1 또는 m:1)",
+      "key mismatch 처리 규칙"
+    ],
+    "human_decision_point": "외부 covariate table 연결 key를 명확히 정의해야 한다",
+    "recover_to_c_id": "c0207",
+    "routing_cost": 50,
+    "human_effort_score": 5,
+    "ref": "universe_sm §4 Q13, §3 A7"
+  },
+  {
+    "q_id": "Q14",
+    "name": "ADDL/II vs actual dose conflict, resolution policy 없음",
+    "subtypes": null,
+    "trigger_condition": "A4 = ADDL-ACTUAL-CONFLICT",
+    "clarification_to_sponsor": [
+      "implied dose(ADDL+II) vs actual dose 충돌 해결 규칙 정의",
+      "scheduled dose 우선 vs actual deviation 우선 결정",
+      "충돌 기록 flagging 규칙"
+    ],
+    "human_decision_point": "ADDL/II 반복 dose와 실제 투약 이력 충돌 시 우선순위를 결정해야 한다",
+    "recover_to_c_id": "c0204",
+    "routing_cost": 100,
+    "human_effort_score": 6,
+    "ref": "universe_sm §4 Q14, §3 A4"
+  },
+  {
+    "q_id": "Q15A",
+    "name": "Data package incomplete",
+    "subtypes": null,
+    "trigger_condition": "필수 deliverable(ISS, data dictionary, visit window 등) 부재",
+    "clarification_to_sponsor": [
+      "누락 deliverable 목록 확인 및 제공 요청",
+      "data dictionary/visit window definition 확보",
+      "upstream adjudication 완료 확인"
+    ],
+    "human_decision_point": "누락된 데이터 패키지 구성요소를 data owner에게 요청해야 한다",
+    "recover_to_c_id": "c0368",
+    "routing_cost": 50,
+    "human_effort_score": 4,
+    "ref": "universe_sm §4 Q15A"
+  },
+  {
+    "q_id": "Q15B",
+    "name": "Legacy flag undocumented",
+    "subtypes": null,
+    "trigger_condition": "legacy marker column(예: OLD_DATA=1) 의미 미정의",
+    "clarification_to_sponsor": [
+      "legacy flag 정의 문서 확보",
+      "flag 값별 의미(inclusion/exclusion) 확인",
+      "flag 부재 행의 처리 규칙"
+    ],
+    "human_decision_point": "legacy flag의 의미를 정의하는 문서를 확보해야 한다",
+    "recover_to_c_id": "c0209",
+    "routing_cost": 100,
+    "human_effort_score": 6,
+    "ref": "universe_sm §4 Q15B"
+  },
+  {
+    "q_id": "Q15C",
+    "name": "Real-world adherence/administration unresolved",
+    "subtypes": null,
+    "trigger_condition": "A2 = TDM-RWD AND dose sourced from patient recall only",
+    "clarification_to_sponsor": [
+      "subject-level dose uncertainty 문서화",
+      "dose source(환자 진술/처방 기록/약국 기록) 표기",
+      "불확실 subject exclusion 또는 uncertainty flag 결정"
+    ],
+    "human_decision_point": "실제 투약 이력 불확실성을 인정하고 dose source flagging 정책을 결정해야 한다",
+    "recover_to_c_id": "c0209",
+    "routing_cost": 200,
+    "human_effort_score": 8,
+    "ref": "universe_sm §4 Q15C"
+  },
+  {
+    "q_id": "Q15D",
+    "name": "Assay reanalysis/final-result adjudication missing",
+    "subtypes": null,
+    "trigger_condition": "A5 = BIOANALYTICAL-FINAL-FLAG-MISSING OR A9 = REANALYSIS-FINAL-MISSING",
+    "clarification_to_sponsor": [
+      "final adjudication document 제공",
+      "FINAL column 표기(다수 assay 결과 중 최종 선택)",
+      "reanalysis reconciliation 완료 확인"
+    ],
+    "human_decision_point": "재분석 결과 중 최종 결과를 결정하는 adjudication 문서를 제공해야 한다",
+    "recover_to_c_id": "c0209",
+    "routing_cost": 100,
+    "human_effort_score": 6,
+    "ref": "universe_sm §4 Q15D, §3 A5/A9"
+  },
+  {
+    "q_id": "Q15X",
+    "name": "catch-all unknown defect (강한 페널티)",
+    "subtypes": null,
+    "trigger_condition": "Q01–Q15D 어디에도 매칭 안 되는 정체불명 결함",
+    "clarification_to_sponsor": [
+      "novel defect type 상세 문서화",
+      "universe definition 확장 검토 의뢰",
+      "PMX team escalation"
+    ],
+    "human_decision_point": "알려지지 않은 결함 유형을 문서화하고 PMX team에 escalation해야 한다",
+    "recover_to_c_id": "c0499",
+    "routing_cost": 500,
+    "human_effort_score": 10,
+    "ref": "universe_sm §4 Q15X"
+  }
+]

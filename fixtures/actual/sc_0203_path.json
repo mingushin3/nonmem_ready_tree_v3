@@ -1,0 +1,11 @@
+{
+  "sc_id": "sc_0203",
+  "actual_c_sequence": [
+    "c0340",
+    "c0341"
+  ],
+  "total_cost": 4,
+  "terminal": null,
+  "q_code": null,
+  "boundary_at": null
+}

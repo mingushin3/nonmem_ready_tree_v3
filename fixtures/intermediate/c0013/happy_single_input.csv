@@ -1,0 +1,5 @@
+subject_id,event_type,time_value,dv_value,EVID,analyte_label,admin_route
+1,dose,0.0,,1,DrugA,PO
+1,obs,1.0,5.2,0,DrugA,PO
+1,ss_dose,24.0,,4,DrugA,PO
+2,obs,2.0,3.1,0,DrugA,PO

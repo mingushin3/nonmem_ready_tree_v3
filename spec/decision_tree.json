@@ -1,0 +1,2746 @@
+{
+  "schema_version": "0.2-phase7-step1-2.6-decisionABC",
+  "generated_by": "build_decision_tree.py (DETERMINISTIC; 재실행 시 동일)",
+  "scope": "step 1~2.6 골격 + Phase 7 결정 A(c0252/c0204 INFUSION-STOP-RESTART→Q04 spec-change)·결정 B(terminal_routing INVALID). bundles·재배선(①) 제외.",
+  "provenance": {
+    "backbone": "anchors.json (universe_sm §2–§5 N0–N7·A0–A10·terminals·q_codes)",
+    "c_nodes": "spec/c_units.json ∩ src/orchestrator.py REGISTRY (wired 57)",
+    "conditional_routing": "c.can_route_to_q + verify_visualization.fail_route_to (D-S4, PROMPTS step 2.5)",
+    "terminal_routing": "wired ROUTE c.postcond routing_decision의 process-terminal(INVALID) ∩ strands 측정 (결정 B)",
+    "q_meta": "spec/q_codes.json (trigger/recover/routing_cost)",
+    "strand_counts": "spec/strands.json 5000 (last-c·q_code 실측; cost=Σc.cost)"
+  },
+  "backbone": {
+    "process_nodes": [
+      "N0",
+      "N1",
+      "N2",
+      "N3",
+      "N4",
+      "N5",
+      "N6",
+      "N7"
+    ],
+    "axes": {
+      "A0": [
+        "AIC-MISSING",
+        "AIC-PK",
+        "AIC-POPPK",
+        "AIC-PKPD",
+        "AIC-ER",
+        "AIC-DDI",
+        "AIC-PEDS",
+        "AIC-SPECIAL",
+        "AIC-CUSTOM"
+      ],
+      "A1": [
+        "SINGLE",
+        "MULTI-HOMO",
+        "MULTI-HETERO",
+        "MULTI-SITE",
+        "INTERIM"
+      ],
+      "A2": [
+        "PARALLEL",
+        "SAD-MAD",
+        "CROSSOVER",
+        "BE",
+        "DDI",
+        "FOOD-EFFECT",
+        "SPECIAL-POP",
+        "PEDIATRIC",
+        "TDM-RWD",
+        "PRECLINICAL"
+      ],
+      "A3": [
+        "ACTUAL",
+        "NOMINAL-ONLY",
+        "ACTUAL-PREFERRED",
+        "NOMINAL-PREFERRED",
+        "ELAPSED",
+        "INTERVAL",
+        "AMBIGUOUS",
+        "UNRECOVERABLE"
+      ],
+      "A4": [
+        "COMPLETE",
+        "WEIGHT-BASED",
+        "BSA-BASED",
+        "PLANNED-FALLBACK",
+        "ADDL-II",
+        "ADDL-ACTUAL-CONFLICT",
+        "TITRATION-ADAPTIVE",
+        "LOADING-MAINTENANCE",
+        "INFUSION-STOP-RESTART",
+        "PARTIAL-RECOVERY",
+        "COMBINATION",
+        "MISSING-NO-POLICY",
+        "UNRECOVERABLE"
+      ],
+      "A5": [
+        "CLEAN",
+        "BLQ-FLAGGED",
+        "BLQ-TEXT",
+        "BLQ-ZERO",
+        "MULTI-ANALYTE",
+        "LLOQ-CHANGED",
+        "MISSING-MDV1",
+        "BIOANALYTICAL-FINAL-FLAG-MISSING",
+        "ABOVE-ULOQ",
+        "ABOVE-ULOQ-NO-POLICY",
+        "REPLICATE-SAME-TIME",
+        "REPLICATE-NO-POLICY",
+        "BLQ-NO-POLICY",
+        "LLOQ-MISSING",
+        "ABSENT"
+      ],
+      "A6": [
+        "SEPARABLE",
+        "SAME-TIME-RESOLVABLE",
+        "COVARIATE-CHANGE",
+        "RESET-NEEDED",
+        "URINE-INTERVAL",
+        "AMBIGUOUS"
+      ],
+      "A7": [
+        "NONE-REQUIRED",
+        "BASELINE-CLEAN",
+        "BASELINE-IMPUTABLE",
+        "TIME-VARYING",
+        "EXTERNAL-JOIN",
+        "PEDIATRIC-MATURATION",
+        "KEY-MISSING",
+        "POLICY-MISSING"
+      ],
+      "A8": [
+        "SINGLE-DRUG",
+        "MULTI-CMT-DEFINED",
+        "DDI-VICTIM-ONLY",
+        "DDI-VICTIM-PERPETRATOR",
+        "METABOLITE-DEFINED",
+        "CMT-POLICY-MISSING"
+      ],
+      "A9": [
+        "CLEAN",
+        "DUPLICATE-EXACT",
+        "UNSORTED",
+        "COLUMN-SYNONYM",
+        "UNIT-CONVERSION",
+        "ENCODING-FIX",
+        "PRE-DOSE-SAMPLE",
+        "PLANNED-VS-ACTUAL",
+        "PROTOCOL-DEVIATION",
+        "REANALYSIS-FINAL-DEFINED",
+        "REANALYSIS-FINAL-MISSING",
+        "PROTOCOL-DEVIATION-NO-POLICY",
+        "IRRECONCILABLE"
+      ],
+      "A10": [
+        "SDTM-ADaM",
+        "EDC-STRUCTURED",
+        "CRO-VENDOR",
+        "FLAT-TABULAR",
+        "LEGACY-NM",
+        "SEMI-STRUCTURED",
+        "NON-TABULAR",
+        "CORRUPTED"
+      ]
+    },
+    "terminals_process": [
+      "AUTO",
+      "REPAIR",
+      "QUARANTINE",
+      "UNSUPPORTED",
+      "INVALID"
+    ],
+    "terminals_q": [
+      "Q01",
+      "Q02",
+      "Q03",
+      "Q04",
+      "Q05",
+      "Q06",
+      "Q07",
+      "Q08",
+      "Q09",
+      "Q10",
+      "Q11",
+      "Q12",
+      "Q13",
+      "Q14",
+      "Q15A",
+      "Q15B",
+      "Q15C",
+      "Q15D",
+      "Q15X"
+    ]
+  },
+  "nodes": [
+    {
+      "id": "N0",
+      "type": "branch",
+      "role": "process_gate",
+      "label": "Analysis intent action-resolving? + endpoint_data_type 기재",
+      "ref": "anchors.nodes.N0"
+    },
+    {
+      "id": "N1",
+      "type": "branch",
+      "role": "process_gate",
+      "label": "Subject-level ID 구성 가능?",
+      "ref": "anchors.nodes.N1"
+    },
+    {
+      "id": "N2",
+      "type": "branch",
+      "role": "process_gate",
+      "label": "시간순 event sequence 구성 가능?",
+      "ref": "anchors.nodes.N2"
+    },
+    {
+      "id": "N3",
+      "type": "branch",
+      "role": "process_gate",
+      "label": "Dose records 완성 가능?",
+      "ref": "anchors.nodes.N3"
+    },
+    {
+      "id": "N4",
+      "type": "branch",
+      "role": "process_gate",
+      "label": "Observation records 완성 가능? (P4: subject-level obs 부재 ≠ dataset INVALID)",
+      "ref": "anchors.nodes.N4"
+    },
+    {
+      "id": "N5",
+      "type": "branch",
+      "role": "process_gate",
+      "label": "BLQ/missing/MDV 처리 가능? (P1: ABOVE-ULOQ 포함)",
+      "ref": "anchors.nodes.N5"
+    },
+    {
+      "id": "N6",
+      "type": "branch",
+      "role": "process_gate",
+      "label": "공변량 attach 가능?",
+      "ref": "anchors.nodes.N6"
+    },
+    {
+      "id": "N7",
+      "type": "branch",
+      "role": "process_gate",
+      "label": "잔여 모호성 threshold 이하?",
+      "ref": "anchors.nodes.N7"
+    },
+    {
+      "id": "A0",
+      "type": "conditional",
+      "role": "axis",
+      "states": [
+        "AIC-MISSING",
+        "AIC-PK",
+        "AIC-POPPK",
+        "AIC-PKPD",
+        "AIC-ER",
+        "AIC-DDI",
+        "AIC-PEDS",
+        "AIC-SPECIAL",
+        "AIC-CUSTOM"
+      ],
+      "state_count": 9,
+      "ref": "anchors.axes.A0"
+    },
+    {
+      "id": "A1",
+      "type": "conditional",
+      "role": "axis",
+      "states": [
+        "SINGLE",
+        "MULTI-HOMO",
+        "MULTI-HETERO",
+        "MULTI-SITE",
+        "INTERIM"
+      ],
+      "state_count": 5,
+      "ref": "anchors.axes.A1"
+    },
+    {
+      "id": "A2",
+      "type": "conditional",
+      "role": "axis",
+      "states": [
+        "PARALLEL",
+        "SAD-MAD",
+        "CROSSOVER",
+        "BE",
+        "DDI",
+        "FOOD-EFFECT",
+        "SPECIAL-POP",
+        "PEDIATRIC",
+        "TDM-RWD",
+        "PRECLINICAL"
+      ],
+      "state_count": 10,
+      "ref": "anchors.axes.A2"
+    },
+    {
+      "id": "A3",
+      "type": "conditional",
+      "role": "axis",
+      "states": [
+        "ACTUAL",
+        "NOMINAL-ONLY",
+        "ACTUAL-PREFERRED",
+        "NOMINAL-PREFERRED",
+        "ELAPSED",
+        "INTERVAL",
+        "AMBIGUOUS",
+        "UNRECOVERABLE"
+      ],
+      "state_count": 8,
+      "ref": "anchors.axes.A3"
+    },
+    {
+      "id": "A4",
+      "type": "conditional",
+      "role": "axis",
+      "states": [
+        "COMPLETE",
+        "WEIGHT-BASED",
+        "BSA-BASED",
+        "PLANNED-FALLBACK",
+        "ADDL-II",
+        "ADDL-ACTUAL-CONFLICT",
+        "TITRATION-ADAPTIVE",
+        "LOADING-MAINTENANCE",
+        "INFUSION-STOP-RESTART",
+        "PARTIAL-RECOVERY",
+        "COMBINATION",
+        "MISSING-NO-POLICY",
+        "UNRECOVERABLE"
+      ],
+      "state_count": 13,
+      "ref": "anchors.axes.A4"
+    },
+    {
+      "id": "A5",
+      "type": "conditional",
+      "role": "axis",
+      "states": [
+        "CLEAN",
+        "BLQ-FLAGGED",
+        "BLQ-TEXT",
+        "BLQ-ZERO",
+        "MULTI-ANALYTE",
+        "LLOQ-CHANGED",
+        "MISSING-MDV1",
+        "BIOANALYTICAL-FINAL-FLAG-MISSING",
+        "ABOVE-ULOQ",
+        "ABOVE-ULOQ-NO-POLICY",
+        "REPLICATE-SAME-TIME",
+        "REPLICATE-NO-POLICY",
+        "BLQ-NO-POLICY",
+        "LLOQ-MISSING",
+        "ABSENT"
+      ],
+      "state_count": 15,
+      "ref": "anchors.axes.A5"
+    },
+    {
+      "id": "A6",
+      "type": "conditional",
+      "role": "axis",
+      "states": [
+        "SEPARABLE",
+        "SAME-TIME-RESOLVABLE",
+        "COVARIATE-CHANGE",
+        "RESET-NEEDED",
+        "URINE-INTERVAL",
+        "AMBIGUOUS"
+      ],
+      "state_count": 6,
+      "ref": "anchors.axes.A6"
+    },
+    {
+      "id": "A7",
+      "type": "conditional",
+      "role": "axis",
+      "states": [
+        "NONE-REQUIRED",
+        "BASELINE-CLEAN",
+        "BASELINE-IMPUTABLE",
+        "TIME-VARYING",
+        "EXTERNAL-JOIN",
+        "PEDIATRIC-MATURATION",
+        "KEY-MISSING",
+        "POLICY-MISSING"
+      ],
+      "state_count": 8,
+      "ref": "anchors.axes.A7"
+    },
+    {
+      "id": "A8",
+      "type": "conditional",
+      "role": "axis",
+      "states": [
+        "SINGLE-DRUG",
+        "MULTI-CMT-DEFINED",
+        "DDI-VICTIM-ONLY",
+        "DDI-VICTIM-PERPETRATOR",
+        "METABOLITE-DEFINED",
+        "CMT-POLICY-MISSING"
+      ],
+      "state_count": 6,
+      "ref": "anchors.axes.A8"
+    },
+    {
+      "id": "A9",
+      "type": "conditional",
+      "role": "axis",
+      "states": [
+        "CLEAN",
+        "DUPLICATE-EXACT",
+        "UNSORTED",
+        "COLUMN-SYNONYM",
+        "UNIT-CONVERSION",
+        "ENCODING-FIX",
+        "PRE-DOSE-SAMPLE",
+        "PLANNED-VS-ACTUAL",
+        "PROTOCOL-DEVIATION",
+        "REANALYSIS-FINAL-DEFINED",
+        "REANALYSIS-FINAL-MISSING",
+        "PROTOCOL-DEVIATION-NO-POLICY",
+        "IRRECONCILABLE"
+      ],
+      "state_count": 13,
+      "ref": "anchors.axes.A9"
+    },
+    {
+      "id": "A10",
+      "type": "conditional",
+      "role": "axis",
+      "states": [
+        "SDTM-ADaM",
+        "EDC-STRUCTURED",
+        "CRO-VENDOR",
+        "FLAT-TABULAR",
+        "LEGACY-NM",
+        "SEMI-STRUCTURED",
+        "NON-TABULAR",
+        "CORRUPTED"
+      ],
+      "state_count": 8,
+      "ref": "anchors.axes.A10"
+    },
+    {
+      "id": "AUTO",
+      "type": "terminal",
+      "terminal_class": "process",
+      "ref": "anchors.terminals.AUTO"
+    },
+    {
+      "id": "REPAIR",
+      "type": "terminal",
+      "terminal_class": "process",
+      "ref": "anchors.terminals.REPAIR"
+    },
+    {
+      "id": "QUARANTINE",
+      "type": "terminal",
+      "terminal_class": "process",
+      "ref": "anchors.terminals.QUARANTINE"
+    },
+    {
+      "id": "UNSUPPORTED",
+      "type": "terminal",
+      "terminal_class": "process",
+      "ref": "anchors.terminals.UNSUPPORTED"
+    },
+    {
+      "id": "INVALID",
+      "type": "terminal",
+      "terminal_class": "process",
+      "ref": "anchors.terminals.INVALID"
+    },
+    {
+      "id": "Q01",
+      "type": "terminal",
+      "terminal_class": "q_code",
+      "label": "BLQ/LLOQ handling policy not specified",
+      "trigger": "A5 ∈ {BLQ-NO-POLICY, LLOQ-MISSING, ABOVE-ULOQ-NO-POLICY, REPLICATE-NO-POLICY}",
+      "recover_to_c_id": "c0205",
+      "routing_cost": 20,
+      "routing_cost_added_to_path": false,
+      "q_status": "exercised",
+      "incoming_wired_c": [
+        "c0306",
+        "c0205",
+        "c0253",
+        "c0020",
+        "c0021",
+        "c0211",
+        "c0212"
+      ],
+      "ref": "anchors.q_codes.Q01"
+    },
+    {
+      "id": "Q02",
+      "type": "terminal",
+      "terminal_class": "q_code",
+      "label": "Time policy not specified / ELAPSED anchor 모호",
+      "trigger": "A3 = AMBIGUOUS",
+      "recover_to_c_id": "c0203",
+      "routing_cost": 20,
+      "routing_cost_added_to_path": false,
+      "q_status": "exercised",
+      "incoming_wired_c": [
+        "c0203",
+        "c0213",
+        "c0251",
+        "c0311",
+        "c0315",
+        "c0019"
+      ],
+      "ref": "anchors.q_codes.Q02"
+    },
+    {
+      "id": "Q03",
+      "type": "terminal",
+      "terminal_class": "q_code",
+      "label": "Occasion definition not specified",
+      "trigger": "AIC-POPPK + occasion partition rule 미기재",
+      "recover_to_c_id": "c0206",
+      "routing_cost": 20,
+      "routing_cost_added_to_path": false,
+      "q_status": "exercised",
+      "incoming_wired_c": [
+        "c0206",
+        "c0257"
+      ],
+      "ref": "anchors.q_codes.Q03"
+    },
+    {
+      "id": "Q04",
+      "type": "terminal",
+      "terminal_class": "q_code",
+      "label": "Dose-sample linkage 또는 row 유형 모호",
+      "trigger": "A6 = AMBIGUOUS OR (A4 = INFUSION-STOP-RESTART AND policy 부재)",
+      "recover_to_c_id": "c0206",
+      "routing_cost": 50,
+      "routing_cost_added_to_path": false,
+      "q_status": "exercised",
+      "incoming_wired_c": [
+        "c0204",
+        "c0206",
+        "c0010",
+        "c0252",
+        "c0257"
+      ],
+      "ref": "anchors.q_codes.Q04"
+    },
+    {
+      "id": "Q05",
+      "type": "terminal",
+      "terminal_class": "q_code",
+      "label": "Multi-study ID conflict, harmonization rule 없음",
+      "trigger": "A1 ∈ {MULTI-HOMO, MULTI-HETERO, MULTI-SITE} AND harmonization policy 부재",
+      "recover_to_c_id": "c0202",
+      "routing_cost": 50,
+      "routing_cost_added_to_path": false,
+      "q_status": "static-no-strand",
+      "incoming_wired_c": [
+        "c0201"
+      ],
+      "ref": "anchors.q_codes.Q05"
+    },
+    {
+      "id": "Q06",
+      "type": "terminal",
+      "terminal_class": "q_code",
+      "label": "Protocol deviation handling policy 없음",
+      "trigger": "A9 = PROTOCOL-DEVIATION-NO-POLICY",
+      "recover_to_c_id": "c0209",
+      "routing_cost": 100,
+      "routing_cost_added_to_path": false,
+      "q_status": "exercised",
+      "incoming_wired_c": [
+        "c0209",
+        "c0256"
+      ],
+      "ref": "anchors.q_codes.Q06"
+    },
+    {
+      "id": "Q07",
+      "type": "terminal",
+      "terminal_class": "q_code",
+      "label": "Missing covariate imputation policy 없음",
+      "trigger": "A7 = POLICY-MISSING",
+      "recover_to_c_id": "c0207",
+      "routing_cost": 20,
+      "routing_cost_added_to_path": false,
+      "q_status": "exercised",
+      "incoming_wired_c": [
+        "c0207",
+        "c0022",
+        "c0023",
+        "c0140",
+        "c0141",
+        "c0254"
+      ],
+      "ref": "anchors.q_codes.Q07"
+    },
+    {
+      "id": "Q08",
+      "type": "terminal",
+      "terminal_class": "q_code",
+      "label": "Dose source conflict / 복원 정책 없음",
+      "trigger": "A4 ∈ {MISSING-NO-POLICY, TITRATION-ADAPTIVE(policy 부재), LOADING-MAINTENANCE(policy 부재)}",
+      "recover_to_c_id": "c0204",
+      "routing_cost": 50,
+      "routing_cost_added_to_path": false,
+      "q_status": "exercised",
+      "incoming_wired_c": [
+        "c0204",
+        "c0012",
+        "c0252"
+      ],
+      "ref": "anchors.q_codes.Q08"
+    },
+    {
+      "id": "Q09",
+      "type": "terminal",
+      "terminal_class": "q_code",
+      "label": "Analyte/CMT assignment policy 없음 (CMT 번호 부재)",
+      "trigger": "A8 = CMT-POLICY-MISSING",
+      "recover_to_c_id": "c0208",
+      "routing_cost": 50,
+      "routing_cost_added_to_path": false,
+      "q_status": "exercised",
+      "incoming_wired_c": [
+        "c0208",
+        "c0013",
+        "c0255"
+      ],
+      "ref": "anchors.q_codes.Q09"
+    },
+    {
+      "id": "Q10",
+      "type": "terminal",
+      "terminal_class": "q_code",
+      "label": "Unit dictionary incomplete (molar↔mass MW 부재 포함)",
+      "trigger": "unit annotation 누락 OR molar↔mass 변환에 MW 부재(P5)",
+      "recover_to_c_id": "c0330",
+      "routing_cost": 50,
+      "routing_cost_added_to_path": false,
+      "q_status": "static-no-strand",
+      "incoming_wired_c": [
+        "c0214"
+      ],
+      "ref": "anchors.q_codes.Q10"
+    },
+    {
+      "id": "Q11",
+      "type": "terminal",
+      "terminal_class": "q_code",
+      "label": "Analysis intent insufficient (endpoint_data_type 미기재 포함)",
+      "trigger": "A0 = AIC-MISSING OR endpoint_data_type 미선언",
+      "recover_to_c_id": "c0200",
+      "routing_cost": 100,
+      "routing_cost_added_to_path": false,
+      "q_status": "exercised",
+      "incoming_wired_c": [
+        "c0200",
+        "c0250"
+      ],
+      "ref": "anchors.q_codes.Q11"
+    },
+    {
+      "id": "Q12",
+      "type": "terminal",
+      "terminal_class": "q_code",
+      "label": "Time anchor irrecoverable",
+      "trigger": "A3 = UNRECOVERABLE",
+      "recover_to_c_id": "c0203",
+      "routing_cost": 200,
+      "routing_cost_added_to_path": false,
+      "q_status": "exercised",
+      "incoming_wired_c": [
+        "c0203",
+        "c0251",
+        "c0019"
+      ],
+      "ref": "anchors.q_codes.Q12"
+    },
+    {
+      "id": "Q13",
+      "type": "terminal",
+      "terminal_class": "q_code",
+      "label": "External covariate linkage key 모호",
+      "trigger": "A7 = KEY-MISSING",
+      "recover_to_c_id": "c0207",
+      "routing_cost": 50,
+      "routing_cost_added_to_path": false,
+      "q_status": "exercised",
+      "incoming_wired_c": [
+        "c0207",
+        "c0022",
+        "c0254"
+      ],
+      "ref": "anchors.q_codes.Q13"
+    },
+    {
+      "id": "Q14",
+      "type": "terminal",
+      "terminal_class": "q_code",
+      "label": "ADDL/II vs actual dose conflict, resolution policy 없음",
+      "trigger": "A4 = ADDL-ACTUAL-CONFLICT",
+      "recover_to_c_id": "c0204",
+      "routing_cost": 100,
+      "routing_cost_added_to_path": false,
+      "q_status": "exercised",
+      "incoming_wired_c": [
+        "c0204",
+        "c0015",
+        "c0016",
+        "c0252"
+      ],
+      "ref": "anchors.q_codes.Q14"
+    },
+    {
+      "id": "Q15A",
+      "type": "terminal",
+      "terminal_class": "q_code",
+      "label": "Data package incomplete",
+      "trigger": "필수 deliverable(ISS, data dictionary, visit window 등) 부재",
+      "recover_to_c_id": "c0368",
+      "routing_cost": 50,
+      "routing_cost_added_to_path": false,
+      "q_status": "unreached",
+      "incoming_wired_c": [],
+      "ref": "anchors.q_codes.Q15A"
+    },
+    {
+      "id": "Q15B",
+      "type": "terminal",
+      "terminal_class": "q_code",
+      "label": "Legacy flag undocumented",
+      "trigger": "legacy marker column(예: OLD_DATA=1) 의미 미정의",
+      "recover_to_c_id": "c0209",
+      "routing_cost": 100,
+      "routing_cost_added_to_path": false,
+      "q_status": "unreached",
+      "incoming_wired_c": [],
+      "ref": "anchors.q_codes.Q15B"
+    },
+    {
+      "id": "Q15C",
+      "type": "terminal",
+      "terminal_class": "q_code",
+      "label": "Real-world adherence/administration unresolved",
+      "trigger": "A2 = TDM-RWD AND dose sourced from patient recall only",
+      "recover_to_c_id": "c0209",
+      "routing_cost": 200,
+      "routing_cost_added_to_path": false,
+      "q_status": "unreached",
+      "incoming_wired_c": [],
+      "ref": "anchors.q_codes.Q15C"
+    },
+    {
+      "id": "Q15D",
+      "type": "terminal",
+      "terminal_class": "q_code",
+      "label": "Assay reanalysis/final-result adjudication missing",
+      "trigger": "A5 = BIOANALYTICAL-FINAL-FLAG-MISSING OR A9 = REANALYSIS-FINAL-MISSING",
+      "recover_to_c_id": "c0209",
+      "routing_cost": 100,
+      "routing_cost_added_to_path": false,
+      "q_status": "exercised",
+      "incoming_wired_c": [
+        "c0205",
+        "c0253",
+        "c0209",
+        "c0256"
+      ],
+      "ref": "anchors.q_codes.Q15D"
+    },
+    {
+      "id": "Q15X",
+      "type": "terminal",
+      "terminal_class": "q_code",
+      "label": "catch-all unknown defect (강한 페널티)",
+      "trigger": "Q01–Q15D 어디에도 매칭 안 되는 정체불명 결함",
+      "recover_to_c_id": "c0499",
+      "routing_cost": 500,
+      "routing_cost_added_to_path": false,
+      "q_status": "unreached",
+      "incoming_wired_c": [],
+      "ref": "anchors.q_codes.Q15X"
+    },
+    {
+      "id": "c0340",
+      "type": "detect",
+      "kind": "detect",
+      "layer_pair": "L-4->L-5",
+      "cost": 1,
+      "srp_intent": "DETECT MERGED_CELL",
+      "skeleton_hook": "mess:MERGED_CELL",
+      "requires_detection_by": null,
+      "ref": "c_units.c0340"
+    },
+    {
+      "id": "c0341",
+      "type": "transform",
+      "kind": "transform",
+      "layer_pair": "L-4->L-5",
+      "cost": 3,
+      "srp_intent": "PROPAGATE MERGED_CELL",
+      "skeleton_hook": "mess:MERGED_CELL",
+      "requires_detection_by": "c0340",
+      "ref": "c_units.c0341"
+    },
+    {
+      "id": "c0203",
+      "type": "detect",
+      "kind": "detect",
+      "layer_pair": "L-3->L-4",
+      "cost": 1,
+      "srp_intent": "DETECT TIME_FORMAT",
+      "skeleton_hook": "N2 (time sequence) + A3 axis evaluation",
+      "requires_detection_by": null,
+      "ref": "c_units.c0203"
+    },
+    {
+      "id": "c0213",
+      "type": "verify",
+      "kind": "verify",
+      "layer_pair": "L-3->L-4",
+      "cost": 1,
+      "srp_intent": "VERIFY TIME_ANCHOR",
+      "skeleton_hook": "A3 time anchor sub-check",
+      "requires_detection_by": null,
+      "ref": "c_units.c0213"
+    },
+    {
+      "id": "c0251",
+      "type": "route",
+      "kind": "route",
+      "layer_pair": "L-3->L-4",
+      "cost": 0,
+      "srp_intent": "ROUTE TIME_FORMAT",
+      "skeleton_hook": "N2→Q02/INVALID",
+      "requires_detection_by": "c0203",
+      "ref": "c_units.c0251"
+    },
+    {
+      "id": "c0310",
+      "type": "detect",
+      "kind": "detect",
+      "layer_pair": "L-4->L-5",
+      "cost": 1,
+      "srp_intent": "DETECT TIME_FORMAT",
+      "skeleton_hook": "mess:TIME_FORMAT",
+      "requires_detection_by": null,
+      "ref": "c_units.c0310"
+    },
+    {
+      "id": "c0311",
+      "type": "transform",
+      "kind": "transform",
+      "layer_pair": "L-4->L-5",
+      "cost": 2,
+      "srp_intent": "CONVERT TIME_FORMAT",
+      "skeleton_hook": "mess:TIME_FORMAT",
+      "requires_detection_by": "c0310",
+      "ref": "c_units.c0311"
+    },
+    {
+      "id": "c0314",
+      "type": "detect",
+      "kind": "detect",
+      "layer_pair": "L-4->L-5",
+      "cost": 1,
+      "srp_intent": "DETECT TIME_ANCHOR",
+      "skeleton_hook": "mess:TIME_ANCHOR",
+      "requires_detection_by": null,
+      "ref": "c_units.c0314"
+    },
+    {
+      "id": "c0315",
+      "type": "transform",
+      "kind": "transform",
+      "layer_pair": "L-4->L-5",
+      "cost": 2,
+      "srp_intent": "CONVERT TIME_ANCHOR",
+      "skeleton_hook": "mess:TIME_ANCHOR",
+      "requires_detection_by": "c0314",
+      "ref": "c_units.c0315"
+    },
+    {
+      "id": "c0312",
+      "type": "detect",
+      "kind": "detect",
+      "layer_pair": "L-4->L-5",
+      "cost": 1,
+      "srp_intent": "DETECT TIMEZONE",
+      "skeleton_hook": "mess:TIMEZONE",
+      "requires_detection_by": null,
+      "ref": "c_units.c0312"
+    },
+    {
+      "id": "c0313",
+      "type": "transform",
+      "kind": "transform",
+      "layer_pair": "L-4->L-5",
+      "cost": 2,
+      "srp_intent": "NORMALIZE TIMEZONE",
+      "skeleton_hook": "mess:TIMEZONE",
+      "requires_detection_by": "c0312",
+      "ref": "c_units.c0313"
+    },
+    {
+      "id": "c0380",
+      "type": "detect",
+      "kind": "detect",
+      "layer_pair": "L-4->L-5",
+      "cost": 1,
+      "srp_intent": "DETECT COVARIATE_LAYOUT",
+      "skeleton_hook": "mess:COVARIATE_LAYOUT",
+      "requires_detection_by": null,
+      "ref": "c_units.c0380"
+    },
+    {
+      "id": "c0381",
+      "type": "detect",
+      "kind": "detect",
+      "layer_pair": "L-4->L-5",
+      "cost": 3,
+      "srp_intent": "CLASSIFY COVARIATE_LAYOUT",
+      "skeleton_hook": "mess:COVARIATE_LAYOUT",
+      "requires_detection_by": "c0380",
+      "ref": "c_units.c0381"
+    },
+    {
+      "id": "c0207",
+      "type": "detect",
+      "kind": "detect",
+      "layer_pair": "L-3->L-4",
+      "cost": 3,
+      "srp_intent": "CLASSIFY COVARIATE_LAYOUT",
+      "skeleton_hook": "N6 (covariate attachment) + A7 axis evaluation",
+      "requires_detection_by": null,
+      "ref": "c_units.c0207"
+    },
+    {
+      "id": "c0121",
+      "type": "transform",
+      "kind": "transform",
+      "layer_pair": "L-2->L-3",
+      "cost": 4,
+      "srp_intent": "PIVOT COVARIATE_LAYOUT",
+      "skeleton_hook": "N6 (covariate attachment) + A7 TIME-VARYING",
+      "requires_detection_by": "c0207",
+      "ref": "c_units.c0121"
+    },
+    {
+      "id": "c0392",
+      "type": "detect",
+      "kind": "detect",
+      "layer_pair": "L-4->L-5",
+      "cost": 1,
+      "srp_intent": "DETECT PLACEBO_SUBJECT",
+      "skeleton_hook": "mess:PLACEBO_SUBJECT",
+      "requires_detection_by": null,
+      "ref": "c_units.c0392"
+    },
+    {
+      "id": "c0393",
+      "type": "detect",
+      "kind": "detect",
+      "layer_pair": "L-4->L-5",
+      "cost": 3,
+      "srp_intent": "CLASSIFY PLACEBO_SUBJECT",
+      "skeleton_hook": "mess:PLACEBO_SUBJECT",
+      "requires_detection_by": "c0392",
+      "ref": "c_units.c0393"
+    },
+    {
+      "id": "c0305",
+      "type": "detect",
+      "kind": "detect",
+      "layer_pair": "L-4->L-5",
+      "cost": 1,
+      "srp_intent": "DETECT BLQ_TOKEN",
+      "skeleton_hook": "mess:BLQ_TOKEN",
+      "requires_detection_by": null,
+      "ref": "c_units.c0305"
+    },
+    {
+      "id": "c0306",
+      "type": "transform",
+      "kind": "transform",
+      "layer_pair": "L-4->L-5",
+      "cost": 2,
+      "srp_intent": "NORMALIZE BLQ_TOKEN",
+      "skeleton_hook": "mess:BLQ_TOKEN",
+      "requires_detection_by": "c0305",
+      "ref": "c_units.c0306"
+    },
+    {
+      "id": "c0205",
+      "type": "detect",
+      "kind": "detect",
+      "layer_pair": "L-3->L-4",
+      "cost": 1,
+      "srp_intent": "DETECT BLQ_TOKEN",
+      "skeleton_hook": "N4/N5 (observation + BLQ) + A5 axis evaluation",
+      "requires_detection_by": null,
+      "ref": "c_units.c0205"
+    },
+    {
+      "id": "c0253",
+      "type": "route",
+      "kind": "route",
+      "layer_pair": "L-3->L-4",
+      "cost": 0,
+      "srp_intent": "ROUTE BLQ_TOKEN",
+      "skeleton_hook": "N4/N5→Q01/Q15D/INVALID",
+      "requires_detection_by": "c0205",
+      "ref": "c_units.c0253"
+    },
+    {
+      "id": "c0020",
+      "type": "transform",
+      "kind": "transform",
+      "layer_pair": "L-1->L-2",
+      "cost": 2,
+      "srp_intent": "ASSIGN BLQ_FLAG",
+      "skeleton_hook": "N5 (BLQ/missing/MDV) + A5 observation/BLQ states",
+      "requires_detection_by": "c0205",
+      "ref": "c_units.c0020"
+    },
+    {
+      "id": "c0021",
+      "type": "transform",
+      "kind": "transform",
+      "layer_pair": "L-1->L-2",
+      "cost": 2,
+      "srp_intent": "ASSIGN LLOQ",
+      "skeleton_hook": "N5 (BLQ/missing/MDV) + A5 LLOQ states",
+      "requires_detection_by": "c0205",
+      "ref": "c_units.c0021"
+    },
+    {
+      "id": "c0200",
+      "type": "verify",
+      "kind": "verify",
+      "layer_pair": "L-3->L-4",
+      "cost": 1,
+      "srp_intent": "VERIFY COLUMN_SCHEMA",
+      "skeleton_hook": "N0 (analysis intent)",
+      "requires_detection_by": null,
+      "ref": "c_units.c0200"
+    },
+    {
+      "id": "c0201",
+      "type": "detect",
+      "kind": "detect",
+      "layer_pair": "L-3->L-4",
+      "cost": 1,
+      "srp_intent": "DETECT SHEET_INVENTORY BY ACROSS_FILE",
+      "skeleton_hook": "A1 axis evaluation",
+      "requires_detection_by": null,
+      "ref": "c_units.c0201"
+    },
+    {
+      "id": "c0202",
+      "type": "detect",
+      "kind": "detect",
+      "layer_pair": "L-3->L-4",
+      "cost": 3,
+      "srp_intent": "CLASSIFY REGIMEN_DESCRIPTOR",
+      "skeleton_hook": "A2 axis evaluation",
+      "requires_detection_by": null,
+      "ref": "c_units.c0202"
+    },
+    {
+      "id": "c0204",
+      "type": "verify",
+      "kind": "verify",
+      "layer_pair": "L-3->L-4",
+      "cost": 1,
+      "srp_intent": "VERIFY AMT",
+      "skeleton_hook": "N3 (dose completion) + A4 axis evaluation",
+      "requires_detection_by": null,
+      "ref": "c_units.c0204"
+    },
+    {
+      "id": "c0206",
+      "type": "detect",
+      "kind": "detect",
+      "layer_pair": "L-3->L-4",
+      "cost": 3,
+      "srp_intent": "CLASSIFY ROW_ORDERING",
+      "skeleton_hook": "A6 axis evaluation",
+      "requires_detection_by": null,
+      "ref": "c_units.c0206"
+    },
+    {
+      "id": "c0208",
+      "type": "detect",
+      "kind": "detect",
+      "layer_pair": "L-3->L-4",
+      "cost": 3,
+      "srp_intent": "CLASSIFY ANALYTE_COLUMN",
+      "skeleton_hook": "N4 + A8 axis evaluation",
+      "requires_detection_by": null,
+      "ref": "c_units.c0208"
+    },
+    {
+      "id": "c0209",
+      "type": "verify",
+      "kind": "verify",
+      "layer_pair": "L-3->L-4",
+      "cost": 1,
+      "srp_intent": "VERIFY CROSS_COLUMN_INVARIANT",
+      "skeleton_hook": "A9 axis evaluation",
+      "requires_detection_by": null,
+      "ref": "c_units.c0209"
+    },
+    {
+      "id": "c0210",
+      "type": "detect",
+      "kind": "detect",
+      "layer_pair": "L-3->L-4",
+      "cost": 1,
+      "srp_intent": "DETECT FILE_FORMAT",
+      "skeleton_hook": "A10 axis evaluation",
+      "requires_detection_by": null,
+      "ref": "c_units.c0210"
+    },
+    {
+      "id": "c0001",
+      "type": "verify",
+      "kind": "verify",
+      "layer_pair": "L-1->L-2",
+      "cost": 1,
+      "srp_intent": "VERIFY COLUMN_SCHEMA",
+      "skeleton_hook": "L-1->L-2 boundary entry",
+      "requires_detection_by": null,
+      "ref": "c_units.c0001"
+    },
+    {
+      "id": "c0010",
+      "type": "transform",
+      "kind": "transform",
+      "layer_pair": "L-1->L-2",
+      "cost": 2,
+      "srp_intent": "ASSIGN EVID",
+      "skeleton_hook": "N3->N4 transition (dose/obs classification)",
+      "requires_detection_by": "c0001",
+      "ref": "c_units.c0010"
+    },
+    {
+      "id": "c0011",
+      "type": "transform",
+      "kind": "transform",
+      "layer_pair": "L-1->L-2",
+      "cost": 2,
+      "srp_intent": "ASSIGN MDV",
+      "skeleton_hook": "N5 (BLQ/missing/MDV processing)",
+      "requires_detection_by": "c0010",
+      "ref": "c_units.c0011"
+    },
+    {
+      "id": "c0012",
+      "type": "transform",
+      "kind": "transform",
+      "layer_pair": "L-1->L-2",
+      "cost": 2,
+      "srp_intent": "ASSIGN AMT",
+      "skeleton_hook": "N3 (dose record completion)",
+      "requires_detection_by": "c0010",
+      "ref": "c_units.c0012"
+    },
+    {
+      "id": "c0013",
+      "type": "transform",
+      "kind": "transform",
+      "layer_pair": "L-1->L-2",
+      "cost": 2,
+      "srp_intent": "ASSIGN CMT",
+      "skeleton_hook": "N4 (observation record completion) + A8 CMT policy",
+      "requires_detection_by": "c0208",
+      "ref": "c_units.c0013"
+    },
+    {
+      "id": "c0014",
+      "type": "transform",
+      "kind": "transform",
+      "layer_pair": "L-1->L-2",
+      "cost": 2,
+      "srp_intent": "ASSIGN RATE",
+      "skeleton_hook": "N3 (dose record completion) + A4 infusion states",
+      "requires_detection_by": "c0010",
+      "ref": "c_units.c0014"
+    },
+    {
+      "id": "c0015",
+      "type": "transform",
+      "kind": "transform",
+      "layer_pair": "L-1->L-2",
+      "cost": 2,
+      "srp_intent": "ASSIGN ADDL",
+      "skeleton_hook": "N3 (dose record completion) + A4 ADDL-II states",
+      "requires_detection_by": "c0010",
+      "ref": "c_units.c0015"
+    },
+    {
+      "id": "c0016",
+      "type": "transform",
+      "kind": "transform",
+      "layer_pair": "L-1->L-2",
+      "cost": 2,
+      "srp_intent": "ASSIGN II",
+      "skeleton_hook": "N3 (dose record completion) + A4 ADDL-II states",
+      "requires_detection_by": "c0015",
+      "ref": "c_units.c0016"
+    },
+    {
+      "id": "c0017",
+      "type": "transform",
+      "kind": "transform",
+      "layer_pair": "L-1->L-2",
+      "cost": 2,
+      "srp_intent": "ASSIGN DV",
+      "skeleton_hook": "N4 (observation record completion)",
+      "requires_detection_by": "c0011",
+      "ref": "c_units.c0017"
+    },
+    {
+      "id": "c0018",
+      "type": "transform",
+      "kind": "transform",
+      "layer_pair": "L-1->L-2",
+      "cost": 2,
+      "srp_intent": "ASSIGN ID",
+      "skeleton_hook": "N1 (subject-level ID construction)",
+      "requires_detection_by": "c0001",
+      "ref": "c_units.c0018"
+    },
+    {
+      "id": "c0019",
+      "type": "transform",
+      "kind": "transform",
+      "layer_pair": "L-1->L-2",
+      "cost": 2,
+      "srp_intent": "ASSIGN TIME",
+      "skeleton_hook": "N2 (time sequence construction) + A3 time derivation policy",
+      "requires_detection_by": "c0203",
+      "ref": "c_units.c0019"
+    },
+    {
+      "id": "c0022",
+      "type": "transform",
+      "kind": "transform",
+      "layer_pair": "L-1->L-2",
+      "cost": 2,
+      "srp_intent": "ASSIGN BASELINE_COVARIATE",
+      "skeleton_hook": "N6 (covariate attachment) + A7 baseline states",
+      "requires_detection_by": "c0207",
+      "ref": "c_units.c0022"
+    },
+    {
+      "id": "c0023",
+      "type": "transform",
+      "kind": "transform",
+      "layer_pair": "L-1->L-2",
+      "cost": 2,
+      "srp_intent": "ASSIGN TIME_VARYING_COVARIATE",
+      "skeleton_hook": "N6 (covariate attachment) + A7 TIME-VARYING",
+      "requires_detection_by": "c0207",
+      "ref": "c_units.c0023"
+    },
+    {
+      "id": "c0140",
+      "type": "transform",
+      "kind": "transform",
+      "layer_pair": "L-2->L-3",
+      "cost": 2,
+      "srp_intent": "ASSIGN BASELINE_COVARIATE",
+      "skeleton_hook": "N6 (covariate attachment) + A7 BASELINE states",
+      "requires_detection_by": "c0207",
+      "ref": "c_units.c0140"
+    },
+    {
+      "id": "c0141",
+      "type": "transform",
+      "kind": "transform",
+      "layer_pair": "L-2->L-3",
+      "cost": 2,
+      "srp_intent": "ASSIGN TIME_VARYING_COVARIATE",
+      "skeleton_hook": "N6 (covariate attachment) + A7 TIME-VARYING",
+      "requires_detection_by": "c0207",
+      "ref": "c_units.c0141"
+    },
+    {
+      "id": "c0250",
+      "type": "route",
+      "kind": "route",
+      "layer_pair": "L-3->L-4",
+      "cost": 0,
+      "srp_intent": "ROUTE COLUMN_SCHEMA",
+      "skeleton_hook": "N0→Q11",
+      "requires_detection_by": "c0200",
+      "ref": "c_units.c0250"
+    },
+    {
+      "id": "c0252",
+      "type": "route",
+      "kind": "route",
+      "layer_pair": "L-3->L-4",
+      "cost": 0,
+      "srp_intent": "ROUTE AMT",
+      "skeleton_hook": "N3→Q04/Q08/Q14/INVALID",
+      "requires_detection_by": "c0204",
+      "ref": "c_units.c0252"
+    },
+    {
+      "id": "c0254",
+      "type": "route",
+      "kind": "route",
+      "layer_pair": "L-3->L-4",
+      "cost": 0,
+      "srp_intent": "ROUTE COVARIATE_LAYOUT",
+      "skeleton_hook": "N6→Q07/Q13",
+      "requires_detection_by": "c0207",
+      "ref": "c_units.c0254"
+    },
+    {
+      "id": "c0255",
+      "type": "route",
+      "kind": "route",
+      "layer_pair": "L-3->L-4",
+      "cost": 0,
+      "srp_intent": "ROUTE ANALYTE_COLUMN",
+      "skeleton_hook": "N4→Q09",
+      "requires_detection_by": "c0208",
+      "ref": "c_units.c0255"
+    },
+    {
+      "id": "c0256",
+      "type": "route",
+      "kind": "route",
+      "layer_pair": "L-3->L-4",
+      "cost": 0,
+      "srp_intent": "ROUTE CROSS_COLUMN_INVARIANT",
+      "skeleton_hook": "A9→Q06/Q15D/INVALID",
+      "requires_detection_by": "c0209",
+      "ref": "c_units.c0256"
+    },
+    {
+      "id": "c0257",
+      "type": "route",
+      "kind": "route",
+      "layer_pair": "L-3->L-4",
+      "cost": 0,
+      "srp_intent": "ROUTE ROW_ORDERING",
+      "skeleton_hook": "A6→Q03/Q04",
+      "requires_detection_by": "c0206",
+      "ref": "c_units.c0257"
+    },
+    {
+      "id": "c0211",
+      "type": "detect",
+      "kind": "detect",
+      "layer_pair": "L-3->L-4",
+      "cost": 1,
+      "srp_intent": "DETECT ABOVE_ULOQ",
+      "skeleton_hook": "A5 P1 ABOVE-ULOQ sub-pattern",
+      "requires_detection_by": null,
+      "ref": "c_units.c0211"
+    },
+    {
+      "id": "c0212",
+      "type": "detect",
+      "kind": "detect",
+      "layer_pair": "L-3->L-4",
+      "cost": 1,
+      "srp_intent": "DETECT REPLICATE_OBS",
+      "skeleton_hook": "A5 P3 REPLICATE-SAME-TIME sub-pattern",
+      "requires_detection_by": null,
+      "ref": "c_units.c0212"
+    },
+    {
+      "id": "c0214",
+      "type": "verify",
+      "kind": "verify",
+      "layer_pair": "L-3->L-4",
+      "cost": 1,
+      "srp_intent": "VERIFY UNIT_DECLARATION",
+      "skeleton_hook": "A9 helper + Q10 trigger",
+      "requires_detection_by": null,
+      "ref": "c_units.c0214"
+    },
+    {
+      "id": "c0215",
+      "type": "detect",
+      "kind": "detect",
+      "layer_pair": "L-3->L-4",
+      "cost": 1,
+      "srp_intent": "DETECT DUPLICATE_ROW",
+      "skeleton_hook": "A9 DUPLICATE-EXACT helper",
+      "requires_detection_by": null,
+      "ref": "c_units.c0215"
+    },
+    {
+      "id": "c0216",
+      "type": "detect",
+      "kind": "detect",
+      "layer_pair": "L-3->L-4",
+      "cost": 1,
+      "srp_intent": "DETECT ENCODING",
+      "skeleton_hook": "A9 ENCODING-FIX helper",
+      "requires_detection_by": null,
+      "ref": "c_units.c0216"
+    }
+  ],
+  "edges": [
+    {
+      "from": "c0340",
+      "to": "L-4->L-5",
+      "type": "attach",
+      "via": "layer_stage",
+      "note": "mess 전처리 stage(D-S3); 다발 부착은 step2 압축(범위 밖)",
+      "mess": "mess:MERGED_CELL"
+    },
+    {
+      "from": "c0341",
+      "to": "L-4->L-5",
+      "type": "attach",
+      "via": "layer_stage",
+      "note": "mess 전처리 stage(D-S3); 다발 부착은 step2 압축(범위 밖)",
+      "mess": "mess:MERGED_CELL"
+    },
+    {
+      "from": "c0203",
+      "to": "A3",
+      "type": "attach",
+      "via": "skeleton_hook"
+    },
+    {
+      "from": "c0203",
+      "to": "N2",
+      "type": "attach",
+      "via": "skeleton_hook"
+    },
+    {
+      "from": "c0213",
+      "to": "A3",
+      "type": "attach",
+      "via": "skeleton_hook"
+    },
+    {
+      "from": "c0251",
+      "to": "N2",
+      "type": "attach",
+      "via": "skeleton_hook"
+    },
+    {
+      "from": "c0310",
+      "to": "L-4->L-5",
+      "type": "attach",
+      "via": "layer_stage",
+      "note": "mess 전처리 stage(D-S3); 다발 부착은 step2 압축(범위 밖)",
+      "mess": "mess:TIME_FORMAT"
+    },
+    {
+      "from": "c0311",
+      "to": "L-4->L-5",
+      "type": "attach",
+      "via": "layer_stage",
+      "note": "mess 전처리 stage(D-S3); 다발 부착은 step2 압축(범위 밖)",
+      "mess": "mess:TIME_FORMAT"
+    },
+    {
+      "from": "c0314",
+      "to": "L-4->L-5",
+      "type": "attach",
+      "via": "layer_stage",
+      "note": "mess 전처리 stage(D-S3); 다발 부착은 step2 압축(범위 밖)",
+      "mess": "mess:TIME_ANCHOR"
+    },
+    {
+      "from": "c0315",
+      "to": "L-4->L-5",
+      "type": "attach",
+      "via": "layer_stage",
+      "note": "mess 전처리 stage(D-S3); 다발 부착은 step2 압축(범위 밖)",
+      "mess": "mess:TIME_ANCHOR"
+    },
+    {
+      "from": "c0312",
+      "to": "L-4->L-5",
+      "type": "attach",
+      "via": "layer_stage",
+      "note": "mess 전처리 stage(D-S3); 다발 부착은 step2 압축(범위 밖)",
+      "mess": "mess:TIMEZONE"
+    },
+    {
+      "from": "c0313",
+      "to": "L-4->L-5",
+      "type": "attach",
+      "via": "layer_stage",
+      "note": "mess 전처리 stage(D-S3); 다발 부착은 step2 압축(범위 밖)",
+      "mess": "mess:TIMEZONE"
+    },
+    {
+      "from": "c0380",
+      "to": "L-4->L-5",
+      "type": "attach",
+      "via": "layer_stage",
+      "note": "mess 전처리 stage(D-S3); 다발 부착은 step2 압축(범위 밖)",
+      "mess": "mess:COVARIATE_LAYOUT"
+    },
+    {
+      "from": "c0381",
+      "to": "L-4->L-5",
+      "type": "attach",
+      "via": "layer_stage",
+      "note": "mess 전처리 stage(D-S3); 다발 부착은 step2 압축(범위 밖)",
+      "mess": "mess:COVARIATE_LAYOUT"
+    },
+    {
+      "from": "c0207",
+      "to": "A7",
+      "type": "attach",
+      "via": "skeleton_hook"
+    },
+    {
+      "from": "c0207",
+      "to": "N6",
+      "type": "attach",
+      "via": "skeleton_hook"
+    },
+    {
+      "from": "c0121",
+      "to": "A7",
+      "type": "attach",
+      "via": "skeleton_hook"
+    },
+    {
+      "from": "c0121",
+      "to": "N6",
+      "type": "attach",
+      "via": "skeleton_hook"
+    },
+    {
+      "from": "c0392",
+      "to": "L-4->L-5",
+      "type": "attach",
+      "via": "layer_stage",
+      "note": "mess 전처리 stage(D-S3); 다발 부착은 step2 압축(범위 밖)",
+      "mess": "mess:PLACEBO_SUBJECT"
+    },
+    {
+      "from": "c0393",
+      "to": "L-4->L-5",
+      "type": "attach",
+      "via": "layer_stage",
+      "note": "mess 전처리 stage(D-S3); 다발 부착은 step2 압축(범위 밖)",
+      "mess": "mess:PLACEBO_SUBJECT"
+    },
+    {
+      "from": "c0305",
+      "to": "L-4->L-5",
+      "type": "attach",
+      "via": "layer_stage",
+      "note": "mess 전처리 stage(D-S3); 다발 부착은 step2 압축(범위 밖)",
+      "mess": "mess:BLQ_TOKEN"
+    },
+    {
+      "from": "c0306",
+      "to": "L-4->L-5",
+      "type": "attach",
+      "via": "layer_stage",
+      "note": "mess 전처리 stage(D-S3); 다발 부착은 step2 압축(범위 밖)",
+      "mess": "mess:BLQ_TOKEN"
+    },
+    {
+      "from": "c0205",
+      "to": "A5",
+      "type": "attach",
+      "via": "skeleton_hook"
+    },
+    {
+      "from": "c0205",
+      "to": "N4",
+      "type": "attach",
+      "via": "skeleton_hook"
+    },
+    {
+      "from": "c0205",
+      "to": "N5",
+      "type": "attach",
+      "via": "skeleton_hook"
+    },
+    {
+      "from": "c0253",
+      "to": "N4",
+      "type": "attach",
+      "via": "skeleton_hook"
+    },
+    {
+      "from": "c0253",
+      "to": "N5",
+      "type": "attach",
+      "via": "skeleton_hook"
+    },
+    {
+      "from": "c0020",
+      "to": "A5",
+      "type": "attach",
+      "via": "skeleton_hook"
+    },
+    {
+      "from": "c0020",
+      "to": "N5",
+      "type": "attach",
+      "via": "skeleton_hook"
+    },
+    {
+      "from": "c0021",
+      "to": "A5",
+      "type": "attach",
+      "via": "skeleton_hook"
+    },
+    {
+      "from": "c0021",
+      "to": "N5",
+      "type": "attach",
+      "via": "skeleton_hook"
+    },
+    {
+      "from": "c0200",
+      "to": "N0",
+      "type": "attach",
+      "via": "skeleton_hook"
+    },
+    {
+      "from": "c0201",
+      "to": "A1",
+      "type": "attach",
+      "via": "skeleton_hook"
+    },
+    {
+      "from": "c0202",
+      "to": "A2",
+      "type": "attach",
+      "via": "skeleton_hook"
+    },
+    {
+      "from": "c0204",
+      "to": "A4",
+      "type": "attach",
+      "via": "skeleton_hook"
+    },
+    {
+      "from": "c0204",
+      "to": "N3",
+      "type": "attach",
+      "via": "skeleton_hook"
+    },
+    {
+      "from": "c0206",
+      "to": "A6",
+      "type": "attach",
+      "via": "skeleton_hook"
+    },
+    {
+      "from": "c0208",
+      "to": "A8",
+      "type": "attach",
+      "via": "skeleton_hook"
+    },
+    {
+      "from": "c0208",
+      "to": "N4",
+      "type": "attach",
+      "via": "skeleton_hook"
+    },
+    {
+      "from": "c0209",
+      "to": "A9",
+      "type": "attach",
+      "via": "skeleton_hook"
+    },
+    {
+      "from": "c0210",
+      "to": "A10",
+      "type": "attach",
+      "via": "skeleton_hook"
+    },
+    {
+      "from": "c0010",
+      "to": "N3",
+      "type": "attach",
+      "via": "skeleton_hook"
+    },
+    {
+      "from": "c0010",
+      "to": "N4",
+      "type": "attach",
+      "via": "skeleton_hook"
+    },
+    {
+      "from": "c0011",
+      "to": "N5",
+      "type": "attach",
+      "via": "skeleton_hook"
+    },
+    {
+      "from": "c0012",
+      "to": "N3",
+      "type": "attach",
+      "via": "skeleton_hook"
+    },
+    {
+      "from": "c0013",
+      "to": "A8",
+      "type": "attach",
+      "via": "skeleton_hook"
+    },
+    {
+      "from": "c0013",
+      "to": "N4",
+      "type": "attach",
+      "via": "skeleton_hook"
+    },
+    {
+      "from": "c0014",
+      "to": "A4",
+      "type": "attach",
+      "via": "skeleton_hook"
+    },
+    {
+      "from": "c0014",
+      "to": "N3",
+      "type": "attach",
+      "via": "skeleton_hook"
+    },
+    {
+      "from": "c0015",
+      "to": "A4",
+      "type": "attach",
+      "via": "skeleton_hook"
+    },
+    {
+      "from": "c0015",
+      "to": "N3",
+      "type": "attach",
+      "via": "skeleton_hook"
+    },
+    {
+      "from": "c0016",
+      "to": "A4",
+      "type": "attach",
+      "via": "skeleton_hook"
+    },
+    {
+      "from": "c0016",
+      "to": "N3",
+      "type": "attach",
+      "via": "skeleton_hook"
+    },
+    {
+      "from": "c0017",
+      "to": "N4",
+      "type": "attach",
+      "via": "skeleton_hook"
+    },
+    {
+      "from": "c0018",
+      "to": "N1",
+      "type": "attach",
+      "via": "skeleton_hook"
+    },
+    {
+      "from": "c0019",
+      "to": "A3",
+      "type": "attach",
+      "via": "skeleton_hook"
+    },
+    {
+      "from": "c0019",
+      "to": "N2",
+      "type": "attach",
+      "via": "skeleton_hook"
+    },
+    {
+      "from": "c0022",
+      "to": "A7",
+      "type": "attach",
+      "via": "skeleton_hook"
+    },
+    {
+      "from": "c0022",
+      "to": "N6",
+      "type": "attach",
+      "via": "skeleton_hook"
+    },
+    {
+      "from": "c0023",
+      "to": "A7",
+      "type": "attach",
+      "via": "skeleton_hook"
+    },
+    {
+      "from": "c0023",
+      "to": "N6",
+      "type": "attach",
+      "via": "skeleton_hook"
+    },
+    {
+      "from": "c0140",
+      "to": "A7",
+      "type": "attach",
+      "via": "skeleton_hook"
+    },
+    {
+      "from": "c0140",
+      "to": "N6",
+      "type": "attach",
+      "via": "skeleton_hook"
+    },
+    {
+      "from": "c0141",
+      "to": "A7",
+      "type": "attach",
+      "via": "skeleton_hook"
+    },
+    {
+      "from": "c0141",
+      "to": "N6",
+      "type": "attach",
+      "via": "skeleton_hook"
+    },
+    {
+      "from": "c0250",
+      "to": "N0",
+      "type": "attach",
+      "via": "skeleton_hook"
+    },
+    {
+      "from": "c0252",
+      "to": "N3",
+      "type": "attach",
+      "via": "skeleton_hook"
+    },
+    {
+      "from": "c0254",
+      "to": "N6",
+      "type": "attach",
+      "via": "skeleton_hook"
+    },
+    {
+      "from": "c0255",
+      "to": "N4",
+      "type": "attach",
+      "via": "skeleton_hook"
+    },
+    {
+      "from": "c0256",
+      "to": "A9",
+      "type": "attach",
+      "via": "skeleton_hook"
+    },
+    {
+      "from": "c0257",
+      "to": "A6",
+      "type": "attach",
+      "via": "skeleton_hook"
+    },
+    {
+      "from": "c0211",
+      "to": "A5",
+      "type": "attach",
+      "via": "skeleton_hook"
+    },
+    {
+      "from": "c0212",
+      "to": "A5",
+      "type": "attach",
+      "via": "skeleton_hook"
+    },
+    {
+      "from": "c0214",
+      "to": "A9",
+      "type": "attach",
+      "via": "skeleton_hook"
+    },
+    {
+      "from": "c0215",
+      "to": "A9",
+      "type": "attach",
+      "via": "skeleton_hook"
+    },
+    {
+      "from": "c0216",
+      "to": "A9",
+      "type": "attach",
+      "via": "skeleton_hook"
+    }
+  ],
+  "conditional_routing": [
+    {
+      "from": "c0203",
+      "to": "Q02",
+      "type": "conditional",
+      "source": "can_route_to_q",
+      "from_kind": "detect",
+      "q_status": "exercised",
+      "realizing_route_c": [
+        "c0251"
+      ],
+      "strand_count": 0,
+      "gap": [
+        "GAP-26"
+      ]
+    },
+    {
+      "from": "c0203",
+      "to": "Q12",
+      "type": "conditional",
+      "source": "can_route_to_q",
+      "from_kind": "detect",
+      "q_status": "exercised",
+      "realizing_route_c": [
+        "c0251"
+      ],
+      "strand_count": 0,
+      "gap": [
+        "GAP-26"
+      ]
+    },
+    {
+      "from": "c0213",
+      "to": "Q02",
+      "type": "conditional",
+      "source": "can_route_to_q",
+      "from_kind": "verify",
+      "q_status": "exercised",
+      "realizing_route_c": [
+        "c0251"
+      ],
+      "strand_count": 0,
+      "gap": []
+    },
+    {
+      "from": "c0251",
+      "to": "Q02",
+      "type": "conditional",
+      "source": "can_route_to_q",
+      "from_kind": "route",
+      "q_status": "exercised",
+      "realizing_route_c": [
+        "c0251"
+      ],
+      "strand_count": 388,
+      "gap": [
+        "GAP-26"
+      ]
+    },
+    {
+      "from": "c0251",
+      "to": "Q12",
+      "type": "conditional",
+      "source": "can_route_to_q",
+      "from_kind": "route",
+      "q_status": "exercised",
+      "realizing_route_c": [
+        "c0251"
+      ],
+      "strand_count": 397,
+      "gap": [
+        "GAP-26"
+      ]
+    },
+    {
+      "from": "c0311",
+      "to": "Q02",
+      "type": "conditional",
+      "source": "can_route_to_q",
+      "from_kind": "transform",
+      "q_status": "exercised",
+      "realizing_route_c": [
+        "c0251"
+      ],
+      "strand_count": 0,
+      "gap": [
+        "GAP-26"
+      ]
+    },
+    {
+      "from": "c0315",
+      "to": "Q02",
+      "type": "conditional",
+      "source": "can_route_to_q",
+      "from_kind": "transform",
+      "q_status": "exercised",
+      "realizing_route_c": [
+        "c0251"
+      ],
+      "strand_count": 0,
+      "gap": [
+        "GAP-26"
+      ]
+    },
+    {
+      "from": "c0207",
+      "to": "Q07",
+      "type": "conditional",
+      "source": "can_route_to_q",
+      "from_kind": "detect",
+      "q_status": "exercised",
+      "realizing_route_c": [
+        "c0254"
+      ],
+      "strand_count": 0,
+      "gap": []
+    },
+    {
+      "from": "c0207",
+      "to": "Q13",
+      "type": "conditional",
+      "source": "can_route_to_q",
+      "from_kind": "detect",
+      "q_status": "exercised",
+      "realizing_route_c": [
+        "c0254"
+      ],
+      "strand_count": 0,
+      "gap": []
+    },
+    {
+      "from": "c0306",
+      "to": "Q01",
+      "type": "conditional",
+      "source": "can_route_to_q",
+      "from_kind": "transform",
+      "q_status": "exercised",
+      "realizing_route_c": [
+        "c0253"
+      ],
+      "strand_count": 0,
+      "gap": [
+        "GAP-28"
+      ]
+    },
+    {
+      "from": "c0205",
+      "to": "Q01",
+      "type": "conditional",
+      "source": "can_route_to_q",
+      "from_kind": "detect",
+      "q_status": "exercised",
+      "realizing_route_c": [
+        "c0253"
+      ],
+      "strand_count": 0,
+      "gap": [
+        "GAP-28"
+      ]
+    },
+    {
+      "from": "c0205",
+      "to": "Q15D",
+      "type": "conditional",
+      "source": "can_route_to_q",
+      "from_kind": "detect",
+      "q_status": "exercised",
+      "realizing_route_c": [
+        "c0253",
+        "c0256"
+      ],
+      "strand_count": 0,
+      "gap": [
+        "GAP-28"
+      ]
+    },
+    {
+      "from": "c0253",
+      "to": "Q01",
+      "type": "conditional",
+      "source": "can_route_to_q",
+      "from_kind": "route",
+      "q_status": "exercised",
+      "realizing_route_c": [
+        "c0253"
+      ],
+      "strand_count": 445,
+      "gap": [
+        "GAP-28"
+      ]
+    },
+    {
+      "from": "c0253",
+      "to": "Q15D",
+      "type": "conditional",
+      "source": "can_route_to_q",
+      "from_kind": "route",
+      "q_status": "exercised",
+      "realizing_route_c": [
+        "c0253",
+        "c0256"
+      ],
+      "strand_count": 89,
+      "gap": [
+        "GAP-28"
+      ]
+    },
+    {
+      "from": "c0020",
+      "to": "Q01",
+      "type": "conditional",
+      "source": "can_route_to_q",
+      "from_kind": "transform",
+      "q_status": "exercised",
+      "realizing_route_c": [
+        "c0253"
+      ],
+      "strand_count": 0,
+      "gap": []
+    },
+    {
+      "from": "c0021",
+      "to": "Q01",
+      "type": "conditional",
+      "source": "can_route_to_q",
+      "from_kind": "transform",
+      "q_status": "exercised",
+      "realizing_route_c": [
+        "c0253"
+      ],
+      "strand_count": 0,
+      "gap": []
+    },
+    {
+      "from": "c0200",
+      "to": "Q11",
+      "type": "conditional",
+      "source": "can_route_to_q",
+      "from_kind": "verify",
+      "q_status": "exercised",
+      "realizing_route_c": [
+        "c0250"
+      ],
+      "strand_count": 0,
+      "gap": []
+    },
+    {
+      "from": "c0201",
+      "to": "Q05",
+      "type": "conditional",
+      "source": "can_route_to_q",
+      "from_kind": "detect",
+      "q_status": "static-no-strand",
+      "realizing_route_c": [],
+      "strand_count": 0,
+      "gap": []
+    },
+    {
+      "from": "c0204",
+      "to": "Q08",
+      "type": "conditional",
+      "source": "can_route_to_q",
+      "from_kind": "verify",
+      "q_status": "exercised",
+      "realizing_route_c": [
+        "c0252"
+      ],
+      "strand_count": 0,
+      "gap": []
+    },
+    {
+      "from": "c0204",
+      "to": "Q14",
+      "type": "conditional",
+      "source": "can_route_to_q",
+      "from_kind": "verify",
+      "q_status": "exercised",
+      "realizing_route_c": [
+        "c0252"
+      ],
+      "strand_count": 0,
+      "gap": []
+    },
+    {
+      "from": "c0204",
+      "to": "Q04",
+      "type": "conditional",
+      "source": "can_route_to_q",
+      "from_kind": "verify",
+      "q_status": "exercised",
+      "realizing_route_c": [
+        "c0252",
+        "c0257"
+      ],
+      "strand_count": 0,
+      "gap": []
+    },
+    {
+      "from": "c0206",
+      "to": "Q03",
+      "type": "conditional",
+      "source": "can_route_to_q",
+      "from_kind": "detect",
+      "q_status": "exercised",
+      "realizing_route_c": [
+        "c0257"
+      ],
+      "strand_count": 0,
+      "gap": [
+        "GAP-10"
+      ]
+    },
+    {
+      "from": "c0206",
+      "to": "Q04",
+      "type": "conditional",
+      "source": "can_route_to_q",
+      "from_kind": "detect",
+      "q_status": "exercised",
+      "realizing_route_c": [
+        "c0252",
+        "c0257"
+      ],
+      "strand_count": 0,
+      "gap": [
+        "GAP-10"
+      ]
+    },
+    {
+      "from": "c0208",
+      "to": "Q09",
+      "type": "conditional",
+      "source": "can_route_to_q",
+      "from_kind": "detect",
+      "q_status": "exercised",
+      "realizing_route_c": [
+        "c0255"
+      ],
+      "strand_count": 0,
+      "gap": []
+    },
+    {
+      "from": "c0209",
+      "to": "Q06",
+      "type": "conditional",
+      "source": "can_route_to_q",
+      "from_kind": "verify",
+      "q_status": "exercised",
+      "realizing_route_c": [
+        "c0256"
+      ],
+      "strand_count": 0,
+      "gap": []
+    },
+    {
+      "from": "c0209",
+      "to": "Q15D",
+      "type": "conditional",
+      "source": "can_route_to_q",
+      "from_kind": "verify",
+      "q_status": "exercised",
+      "realizing_route_c": [
+        "c0253",
+        "c0256"
+      ],
+      "strand_count": 0,
+      "gap": []
+    },
+    {
+      "from": "c0010",
+      "to": "Q04",
+      "type": "conditional",
+      "source": "can_route_to_q",
+      "from_kind": "transform",
+      "q_status": "exercised",
+      "realizing_route_c": [
+        "c0252",
+        "c0257"
+      ],
+      "strand_count": 0,
+      "gap": []
+    },
+    {
+      "from": "c0012",
+      "to": "Q08",
+      "type": "conditional",
+      "source": "can_route_to_q",
+      "from_kind": "transform",
+      "q_status": "exercised",
+      "realizing_route_c": [
+        "c0252"
+      ],
+      "strand_count": 0,
+      "gap": []
+    },
+    {
+      "from": "c0013",
+      "to": "Q09",
+      "type": "conditional",
+      "source": "can_route_to_q",
+      "from_kind": "transform",
+      "q_status": "exercised",
+      "realizing_route_c": [
+        "c0255"
+      ],
+      "strand_count": 0,
+      "gap": []
+    },
+    {
+      "from": "c0015",
+      "to": "Q14",
+      "type": "conditional",
+      "source": "can_route_to_q",
+      "from_kind": "transform",
+      "q_status": "exercised",
+      "realizing_route_c": [
+        "c0252"
+      ],
+      "strand_count": 0,
+      "gap": []
+    },
+    {
+      "from": "c0016",
+      "to": "Q14",
+      "type": "conditional",
+      "source": "can_route_to_q",
+      "from_kind": "transform",
+      "q_status": "exercised",
+      "realizing_route_c": [
+        "c0252"
+      ],
+      "strand_count": 0,
+      "gap": []
+    },
+    {
+      "from": "c0019",
+      "to": "Q02",
+      "type": "conditional",
+      "source": "can_route_to_q",
+      "from_kind": "transform",
+      "q_status": "exercised",
+      "realizing_route_c": [
+        "c0251"
+      ],
+      "strand_count": 0,
+      "gap": [
+        "GAP-26"
+      ]
+    },
+    {
+      "from": "c0019",
+      "to": "Q12",
+      "type": "conditional",
+      "source": "can_route_to_q",
+      "from_kind": "transform",
+      "q_status": "exercised",
+      "realizing_route_c": [
+        "c0251"
+      ],
+      "strand_count": 0,
+      "gap": [
+        "GAP-26"
+      ]
+    },
+    {
+      "from": "c0022",
+      "to": "Q07",
+      "type": "conditional",
+      "source": "can_route_to_q",
+      "from_kind": "transform",
+      "q_status": "exercised",
+      "realizing_route_c": [
+        "c0254"
+      ],
+      "strand_count": 0,
+      "gap": []
+    },
+    {
+      "from": "c0022",
+      "to": "Q13",
+      "type": "conditional",
+      "source": "can_route_to_q",
+      "from_kind": "transform",
+      "q_status": "exercised",
+      "realizing_route_c": [
+        "c0254"
+      ],
+      "strand_count": 0,
+      "gap": []
+    },
+    {
+      "from": "c0023",
+      "to": "Q07",
+      "type": "conditional",
+      "source": "can_route_to_q",
+      "from_kind": "transform",
+      "q_status": "exercised",
+      "realizing_route_c": [
+        "c0254"
+      ],
+      "strand_count": 0,
+      "gap": []
+    },
+    {
+      "from": "c0140",
+      "to": "Q07",
+      "type": "conditional",
+      "source": "can_route_to_q",
+      "from_kind": "transform",
+      "q_status": "exercised",
+      "realizing_route_c": [
+        "c0254"
+      ],
+      "strand_count": 0,
+      "gap": []
+    },
+    {
+      "from": "c0141",
+      "to": "Q07",
+      "type": "conditional",
+      "source": "can_route_to_q",
+      "from_kind": "transform",
+      "q_status": "exercised",
+      "realizing_route_c": [
+        "c0254"
+      ],
+      "strand_count": 0,
+      "gap": []
+    },
+    {
+      "from": "c0250",
+      "to": "Q11",
+      "type": "conditional",
+      "source": "can_route_to_q",
+      "from_kind": "route",
+      "q_status": "exercised",
+      "realizing_route_c": [
+        "c0250"
+      ],
+      "strand_count": 720,
+      "gap": []
+    },
+    {
+      "from": "c0252",
+      "to": "Q08",
+      "type": "conditional",
+      "source": "can_route_to_q",
+      "from_kind": "route",
+      "q_status": "exercised",
+      "realizing_route_c": [
+        "c0252"
+      ],
+      "strand_count": 203,
+      "gap": []
+    },
+    {
+      "from": "c0252",
+      "to": "Q14",
+      "type": "conditional",
+      "source": "can_route_to_q",
+      "from_kind": "route",
+      "q_status": "exercised",
+      "realizing_route_c": [
+        "c0252"
+      ],
+      "strand_count": 191,
+      "gap": []
+    },
+    {
+      "from": "c0252",
+      "to": "Q04",
+      "type": "conditional",
+      "source": "can_route_to_q",
+      "from_kind": "route",
+      "q_status": "exercised",
+      "realizing_route_c": [
+        "c0252",
+        "c0257"
+      ],
+      "strand_count": 168,
+      "gap": []
+    },
+    {
+      "from": "c0254",
+      "to": "Q07",
+      "type": "conditional",
+      "source": "can_route_to_q",
+      "from_kind": "route",
+      "q_status": "exercised",
+      "realizing_route_c": [
+        "c0254"
+      ],
+      "strand_count": 108,
+      "gap": []
+    },
+    {
+      "from": "c0254",
+      "to": "Q13",
+      "type": "conditional",
+      "source": "can_route_to_q",
+      "from_kind": "route",
+      "q_status": "exercised",
+      "realizing_route_c": [
+        "c0254"
+      ],
+      "strand_count": 98,
+      "gap": []
+    },
+    {
+      "from": "c0255",
+      "to": "Q09",
+      "type": "conditional",
+      "source": "can_route_to_q",
+      "from_kind": "route",
+      "q_status": "exercised",
+      "realizing_route_c": [
+        "c0255"
+      ],
+      "strand_count": 239,
+      "gap": []
+    },
+    {
+      "from": "c0256",
+      "to": "Q06",
+      "type": "conditional",
+      "source": "can_route_to_q",
+      "from_kind": "route",
+      "q_status": "exercised",
+      "realizing_route_c": [
+        "c0256"
+      ],
+      "strand_count": 26,
+      "gap": []
+    },
+    {
+      "from": "c0256",
+      "to": "Q15D",
+      "type": "conditional",
+      "source": "can_route_to_q",
+      "from_kind": "route",
+      "q_status": "exercised",
+      "realizing_route_c": [
+        "c0253",
+        "c0256"
+      ],
+      "strand_count": 22,
+      "gap": []
+    },
+    {
+      "from": "c0257",
+      "to": "Q03",
+      "type": "conditional",
+      "source": "can_route_to_q",
+      "from_kind": "route",
+      "q_status": "exercised",
+      "realizing_route_c": [
+        "c0257"
+      ],
+      "strand_count": 10,
+      "gap": []
+    },
+    {
+      "from": "c0257",
+      "to": "Q04",
+      "type": "conditional",
+      "source": "can_route_to_q",
+      "from_kind": "route",
+      "q_status": "exercised",
+      "realizing_route_c": [
+        "c0252",
+        "c0257"
+      ],
+      "strand_count": 124,
+      "gap": []
+    },
+    {
+      "from": "c0211",
+      "to": "Q01",
+      "type": "conditional",
+      "source": "can_route_to_q",
+      "from_kind": "detect",
+      "q_status": "exercised",
+      "realizing_route_c": [
+        "c0253"
+      ],
+      "strand_count": 0,
+      "gap": []
+    },
+    {
+      "from": "c0212",
+      "to": "Q01",
+      "type": "conditional",
+      "source": "can_route_to_q",
+      "from_kind": "detect",
+      "q_status": "exercised",
+      "realizing_route_c": [
+        "c0253"
+      ],
+      "strand_count": 0,
+      "gap": []
+    },
+    {
+      "from": "c0214",
+      "to": "Q10",
+      "type": "conditional",
+      "source": "can_route_to_q",
+      "from_kind": "verify",
+      "q_status": "static-no-strand",
+      "realizing_route_c": [],
+      "strand_count": 0,
+      "gap": []
+    }
+  ],
+  "terminal_routing": [
+    {
+      "from": "c0253",
+      "to": "INVALID",
+      "type": "terminal",
+      "terminal_class": "process",
+      "source": "postcond_routing_decision",
+      "strand_count": 111,
+      "gap": []
+    },
+    {
+      "from": "c0252",
+      "to": "INVALID",
+      "type": "terminal",
+      "terminal_class": "process",
+      "source": "postcond_routing_decision",
+      "strand_count": 174,
+      "gap": []
+    },
+    {
+      "from": "c0256",
+      "to": "INVALID",
+      "type": "terminal",
+      "terminal_class": "process",
+      "source": "postcond_routing_decision",
+      "strand_count": 30,
+      "gap": []
+    }
+  ],
+  "bundles": [],
+  "deferred": {
+    "spec_decisions": [
+      {
+        "id": "GAP-13",
+        "c": "c0210",
+        "missing_edge": "A10(NON-TABULAR→UNSUPPORTED / CORRUPTED→INVALID)",
+        "reason": "fail_route_to=UNSUPPORTED/INVALID(terminal, Q 아님) + A10 실행 위치(front vs chain 끝) 결정 필요."
+      },
+      {
+        "id": "GAP-27B",
+        "c": "c0313",
+        "missing_edge": "FORMAT↔TIMEZONE 정렬 상호작용 노드화",
+        "reason": "정규화 순서 상호작용의 tree 표현은 step2 bundle/설계 결정 대기."
+      },
+      {
+        "id": "c0040-placeholder",
+        "c": "c0040",
+        "missing_edge": "(미배선)",
+        "reason": "REGISTRY 미배선 c. node 부재 → 부착·라우팅 보류."
+      }
+    ],
+    "scope_out_edges": [],
+    "unreached_q": [
+      {
+        "q": "Q15A",
+        "trigger": "필수 deliverable(ISS, data dictionary, visit window 등) 부재",
+        "recover_to_c_id": "c0368",
+        "status": "isolated-deferred (wired c edge 0; source c 미배선)",
+        "note": "정적 placeholder. 검증 strand 없음. source c 배선 시 edge 생성(후속)."
+      },
+      {
+        "q": "Q15B",
+        "trigger": "legacy marker column(예: OLD_DATA=1) 의미 미정의",
+        "recover_to_c_id": "c0209",
+        "status": "isolated-deferred (wired c edge 0; source c 미배선)",
+        "note": "정적 placeholder. 검증 strand 없음. source c 배선 시 edge 생성(후속)."
+      },
+      {
+        "q": "Q15C",
+        "trigger": "A2 = TDM-RWD AND dose sourced from patient recall only",
+        "recover_to_c_id": "c0209",
+        "status": "isolated-deferred (wired c edge 0; source c 미배선)",
+        "note": "정적 placeholder. 검증 strand 없음. source c 배선 시 edge 생성(후속)."
+      },
+      {
+        "q": "Q15X",
+        "trigger": "Q01–Q15D 어디에도 매칭 안 되는 정체불명 결함",
+        "recover_to_c_id": "c0499",
+        "status": "isolated-deferred (wired c edge 0; source c 미배선)",
+        "note": "정적 placeholder. 검증 strand 없음. source c 배선 시 edge 생성(후속)."
+      }
+    ]
+  },
+  "stats": {
+    "nodes_total": 100,
+    "backbone_process_nodes": 8,
+    "axis_nodes": 11,
+    "axis_states_total": 101,
+    "process_terminals": 5,
+    "q_terminals": 19,
+    "c_nodes": 57,
+    "attach_edges": 76,
+    "conditional_edges": 52,
+    "terminal_edges": 3,
+    "terminal_strands": 315,
+    "terminal_declared_unexercised": [
+      {
+        "from": "c0251",
+        "to": "INVALID",
+        "strand_count": 0
+      }
+    ],
+    "bundles": 0,
+    "q_partition": {
+      "exercised": [
+        "Q01",
+        "Q02",
+        "Q03",
+        "Q04",
+        "Q06",
+        "Q07",
+        "Q08",
+        "Q09",
+        "Q11",
+        "Q12",
+        "Q13",
+        "Q14",
+        "Q15D"
+      ],
+      "static_no_strand": [
+        "Q05",
+        "Q10"
+      ],
+      "unreached": [
+        "Q15A",
+        "Q15B",
+        "Q15C",
+        "Q15X"
+      ]
+    },
+    "pure_realized_strands": 3228,
+    "scope_out_edges": 0,
+    "scope_out_strands": 0,
+    "gap25_remeasure": {
+      "collapsed_display_nodes": 100,
+      "expanded_worst_nodes": 190,
+      "replaces_synthetic": "spike 248/236",
+      "gate_10s": "PASS(노드 ~190 ≪ 5000; dagre sub-second)"
+    }
+  }
+}

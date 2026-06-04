@@ -1,0 +1,38 @@
+subject_id,event_type,time_value,dv_value,dose_amount
+SUBJ-001,dose,0.0,.,118 mg oral
+SUBJ-001,obs,0.5,1.9622E+01,.
+SUBJ-001,obs,1,7.1358E+00,.
+SUBJ-001,obs,2,1.0511E+01,.
+SUBJ-001,obs,4,7.2461E+00,.
+SUBJ-001,obs,8,5.3056E+00,.
+SUBJ-002,dose,0.0,.,91 mg oral
+SUBJ-002,obs,0.5,9.9686E+00,.
+SUBJ-002,obs,1,8.3931E+00,.
+SUBJ-002,obs,2,9.7397E+00,.
+SUBJ-002,obs,4,7.1495E+00,.
+SUBJ-002,obs,8,4.3100E+00,.
+SUBJ-003,dose,0.0,.,84 mg oral
+SUBJ-003,obs,0.5,6.4241E+00,.
+SUBJ-003,obs,1,7.0610E+00,.
+SUBJ-003,obs,2,5.9675E+00,.
+SUBJ-003,obs,4,6.2127E+00,.
+SUBJ-003,obs,8,3.8047E+00,.
+SUBJ-004,dose,0.0,.,105 mg oral
+SUBJ-004,obs,0.5,1.1250E+01,.
+SUBJ-004,obs,1,8.3174E+00,.
+SUBJ-004,obs,2,1.0027E+01,.
+SUBJ-004,obs,4,7.5060E+00,.
+SUBJ-004,obs,8,4.8147E+00,.
+SUBJ-005,dose,0.0,.,91 mg oral
+SUBJ-005,obs,0.5,8.0751E+00,.
+SUBJ-005,obs,1,7.8710E+00,.
+SUBJ-005,obs,2,9.0479E+00,.
+SUBJ-005,obs,4,4.8074E+00,.
+SUBJ-005,obs,8,4.4292E+00,.
+SUBJ-006,dose,0.0,.,106 mg oral
+SUBJ-006,obs,0.5,7.8898E+00,.
+SUBJ-006,obs,1,8.8807E+00,.
+SUBJ-006,obs,2,8.1407E+00,.
+SUBJ-006,obs,4,8.3566E+00,.
+SUBJ-006,obs,8,5.3370E+00,.
+SUBJ-001,obs,1,7.1358E+00,.

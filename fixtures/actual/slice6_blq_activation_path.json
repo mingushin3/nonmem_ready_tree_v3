@@ -1,0 +1,14 @@
+{
+  "sc_id": "slice6_blq_activation",
+  "actual_c_sequence": [
+    "c0305",
+    "c0306",
+    "c0205",
+    "c0020",
+    "c0021"
+  ],
+  "total_cost": 8,
+  "terminal": null,
+  "q_code": null,
+  "boundary_at": null
+}

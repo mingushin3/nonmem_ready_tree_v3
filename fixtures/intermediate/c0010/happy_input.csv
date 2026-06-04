@@ -1,0 +1,7 @@
+subject_id,event_type,time_value,dv_value,dose_amount
+1,dose,0.0,,100.0
+1,obs,1.0,5.2,
+1,reset,5.0,,
+1,reset_dose,6.0,,200.0
+1,ss_dose,24.0,,100.0
+2,obs,2.0,3.1,

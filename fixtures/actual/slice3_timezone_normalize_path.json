@@ -1,0 +1,11 @@
+{
+  "sc_id": "slice3_timezone_normalize",
+  "actual_c_sequence": [
+    "c0312",
+    "c0313"
+  ],
+  "total_cost": 3,
+  "terminal": null,
+  "q_code": null,
+  "boundary_at": null
+}

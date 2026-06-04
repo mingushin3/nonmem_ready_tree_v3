@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.1",
+  "source_of_truth": "refs/universe_sm.md",
+  "note": "모든 universe 인용은 이 JSON과 cite-verify 한다. 여기 없는 식별자를 인용하면 reject(=hallucination 의심). 식별자 추가는 universe_sm.md 수정 + 사용자 승인 후에만. [v1.1] endpoint_data_type/family scope는 본 JSON이 universe_sm 산문보다 우선(SSOT): CATEGORICAL_PD/COUNT_PD/TTE_EVENT 및 F15는 out of scope로 확정.",
+  "modality_scope": ["SMALL_MOLECULE"],
+  "endpoint_data_type_scope": ["PK_CONCENTRATION", "EXPOSURE_METRIC", "CONTINUOUS_PD"],
+  "terminals": ["AUTO", "REPAIR", "QUARANTINE", "UNSUPPORTED", "INVALID"],
+
+  "nodes": {
+    "N0": "Analysis intent action-resolving? + endpoint_data_type 기재",
+    "N1": "Subject-level ID 구성 가능?",
+    "N2": "시간순 event sequence 구성 가능?",
+    "N3": "Dose records 완성 가능?",
+    "N4": "Observation records 완성 가능? (P4: subject-level obs 부재 ≠ dataset INVALID)",
+    "N5": "BLQ/missing/MDV 처리 가능? (P1: ABOVE-ULOQ 포함)",
+    "N6": "공변량 attach 가능?",
+    "N7": "잔여 모호성 threshold 이하?"
+  },
+
+  "axes": {
+    "A0": ["AIC-MISSING", "AIC-PK", "AIC-POPPK", "AIC-PKPD", "AIC-ER", "AIC-DDI", "AIC-PEDS", "AIC-SPECIAL", "AIC-CUSTOM"],
+    "A1": ["SINGLE", "MULTI-HOMO", "MULTI-HETERO", "MULTI-SITE", "INTERIM"],
+    "A2": ["PARALLEL", "SAD-MAD", "CROSSOVER", "BE", "DDI", "FOOD-EFFECT", "SPECIAL-POP", "PEDIATRIC", "TDM-RWD", "PRECLINICAL"],
+    "A3": ["ACTUAL", "NOMINAL-ONLY", "ACTUAL-PREFERRED", "NOMINAL-PREFERRED", "ELAPSED", "INTERVAL", "AMBIGUOUS", "UNRECOVERABLE"],
+    "A4": ["COMPLETE", "WEIGHT-BASED", "BSA-BASED", "PLANNED-FALLBACK", "ADDL-II", "ADDL-ACTUAL-CONFLICT", "TITRATION-ADAPTIVE", "LOADING-MAINTENANCE", "INFUSION-STOP-RESTART", "PARTIAL-RECOVERY", "COMBINATION", "MISSING-NO-POLICY", "UNRECOVERABLE"],
+    "A5": ["CLEAN", "BLQ-FLAGGED", "BLQ-TEXT", "BLQ-ZERO", "MULTI-ANALYTE", "LLOQ-CHANGED", "MISSING-MDV1", "BIOANALYTICAL-FINAL-FLAG-MISSING", "ABOVE-ULOQ", "ABOVE-ULOQ-NO-POLICY", "REPLICATE-SAME-TIME", "REPLICATE-NO-POLICY", "BLQ-NO-POLICY", "LLOQ-MISSING", "ABSENT"],
+    "A6": ["SEPARABLE", "SAME-TIME-RESOLVABLE", "COVARIATE-CHANGE", "RESET-NEEDED", "URINE-INTERVAL", "AMBIGUOUS"],
+    "A7": ["NONE-REQUIRED", "BASELINE-CLEAN", "BASELINE-IMPUTABLE", "TIME-VARYING", "EXTERNAL-JOIN", "PEDIATRIC-MATURATION", "KEY-MISSING", "POLICY-MISSING"],
+    "A8": ["SINGLE-DRUG", "MULTI-CMT-DEFINED", "DDI-VICTIM-ONLY", "DDI-VICTIM-PERPETRATOR", "METABOLITE-DEFINED", "CMT-POLICY-MISSING"],
+    "A9": ["CLEAN", "DUPLICATE-EXACT", "UNSORTED", "COLUMN-SYNONYM", "UNIT-CONVERSION", "ENCODING-FIX", "PRE-DOSE-SAMPLE", "PLANNED-VS-ACTUAL", "PROTOCOL-DEVIATION", "REANALYSIS-FINAL-DEFINED", "REANALYSIS-FINAL-MISSING", "PROTOCOL-DEVIATION-NO-POLICY", "IRRECONCILABLE"],
+    "A10": ["SDTM-ADaM", "EDC-STRUCTURED", "CRO-VENDOR", "FLAT-TABULAR", "LEGACY-NM", "SEMI-STRUCTURED", "NON-TABULAR", "CORRUPTED"]
+  },
+
+  "a10_source_parser_subtype": ["MULTISHEET", "PDF-TABLE", "CRF-EXPORT", "VENDOR-CUSTOM"],
+
+  "q_codes": {
+    "Q01": {"name": "BLQ/LLOQ handling policy not specified", "subtypes": ["blq", "uloq", "replicate"]},
+    "Q02": {"name": "Time policy not specified / ELAPSED anchor 모호"},
+    "Q03": {"name": "Occasion definition not specified"},
+    "Q04": {"name": "Dose-sample linkage 또는 row 유형 모호"},
+    "Q05": {"name": "Multi-study ID conflict, harmonization rule 없음"},
+    "Q06": {"name": "Protocol deviation handling policy 없음"},
+    "Q07": {"name": "Missing covariate imputation policy 없음"},
+    "Q08": {"name": "Dose source conflict / 복원 정책 없음"},
+    "Q09": {"name": "Analyte/CMT assignment policy 없음 (CMT 번호 부재)"},
+    "Q10": {"name": "Unit dictionary incomplete (molar↔mass MW 부재 포함)"},
+    "Q11": {"name": "Analysis intent insufficient (endpoint_data_type 미기재 포함)"},
+    "Q12": {"name": "Time anchor irrecoverable"},
+    "Q13": {"name": "External covariate linkage key 모호"},
+    "Q14": {"name": "ADDL/II vs actual dose conflict, resolution policy 없음"},
+    "Q15A": {"name": "Data package incomplete"},
+    "Q15B": {"name": "Legacy flag undocumented"},
+    "Q15C": {"name": "Real-world adherence/administration unresolved"},
+    "Q15D": {"name": "Assay reanalysis/final-result adjudication missing"},
+    "Q15X": {"name": "catch-all unknown defect (강한 페널티)"}
+  },
+
+  "out_of_scope_identifiers": {
+    "q_codes": ["Q16", "Q17", "Q18", "Q19"],
+    "modalities": ["PEPTIDE", "MAB", "ADC", "BISPECIFIC", "CELL_THERAPY", "GENE_THERAPY", "MRNA", "VACCINE", "OLIGO_ASO_SIRNA", "RADIOPHARMACEUTICAL"],
+    "endpoint_data_types": ["CELLULAR_KINETICS", "IMMUNOGENICITY", "MILK_PK", "MATERNAL_INFANT_PK", "CATEGORICAL_PD", "COUNT_PD", "TTE_EVENT"],
+    "families": ["F24", "F25", "F26", "F27", "F28", "F29"],
+    "axis_states": ["PRODUCT-LEVEL-COVARIATE", "LIFE-STAGE-COVARIATE"]
+  },
+
+  "families_sm": ["F01","F02","F03","F04","F05","F06","F07","F08","F09","F10","F11","F12","F13","F14","F16","F19","F20","F21","F22","F23"],
+
+  "patches": {
+    "P1": "A5 ABOVE-ULOQ / ABOVE-ULOQ-NO-POLICY -> Q01.uloq",
+    "P2": "A8 route-differentiated CMT -> MULTI-CMT-DEFINED",
+    "P3": "A5 REPLICATE-SAME-TIME / REPLICATE-NO-POLICY -> Q01.replicate",
+    "P4": "N4 subject-level obs 부재 != dataset INVALID",
+    "P5": "Q10 molar<->mass 변환 MW 필요"
+  }
+}

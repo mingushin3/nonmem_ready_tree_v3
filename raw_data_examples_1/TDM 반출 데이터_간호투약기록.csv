@@ -1,0 +1,783 @@
+연구번호,처방일자,투약실시일자,투약실시시간,간호MIX여부,간호MIX번호,처방코드,처방명(영문),처방명(한글),1회용량,용량단위,1회수량,수량단위,용법(경로),투약간호Acting진행상태코드,투약간호Acting진행상태명,약품종류코드,약품종류명,약처방분류코드,약처방분류명,특별약품구분코드,특별약품구분명
+R000000001,20231231,20231231,1630,0,,DAAP1GJ,Profa infusion inj. 1g/100ml (Acetaminophen),프로파인퓨전주 1g/100ml,1,g,1,bag,IV dropping,2,정상투약,2,주사,3,주사,23,일반
+R000000001,20231231,20240101,600,0,,DAAP1GJ,Profa infusion inj. 1g/100ml (Acetaminophen),프로파인퓨전주 1g/100ml,1,g,1,bag,IV dropping,2,정상투약,2,주사,3,주사,23,일반
+R000000001,20240101,20240101,2330,0,,DAAP1GJ,Profa infusion inj. 1g/100ml (Acetaminophen),프로파인퓨전주 1g/100ml,1,g,1,bag,IV dropping,2,정상투약,2,주사,3,주사,23,일반
+R000000001,20240101,,,0,,DAAP1GJ,Profa infusion inj. 1g/100ml (Acetaminophen),프로파인퓨전주 1g/100ml,1,g,1,bag,IV dropping,1,미확인,2,주사,3,주사,23,일반
+R000000001,20240108,20240108,1530,0,,DA-2LDJ5,Lidocaine HCl 2% inj. 5ml(Lidocaine),대한리도카인2%주 5ml,100,mg,1,V,,2,정상투약,2,주사,3,주사,23,일반
+R000000001,20240108,20240108,1609,0,,DC-MTXD50J,*Methotrexate inj. 50mg (methotrexate),*메토트렉세이트주 50mg,12,mg,0.24,V,의사지시대로사용(타행위료로 대치),2,정상투약,4,항암제,3,주사,13,항암제(특조실)
+R000000001,20240108,,,0,,DA-2LDJ5,Lidocaine HCl 2% inj. 5ml(Lidocaine),대한리도카인2%주 5ml,100,mg,1,V,의사지시대로사용(타행위료로 대치),1,미확인,2,주사,3,주사,23,일반
+R000000001,20240112,20240112,1401,0,,DA-2LDJ5,Lidocaine HCl 2% inj. 5ml(Lidocaine),대한리도카인2%주 5ml,100,mg,1,V,의사지시대로사용(타행위료로 대치),2,정상투약,2,주사,3,주사,23,일반
+R000000001,20240112,20240112,1401,0,,DA-2LDJ5,Lidocaine HCl 2% inj. 5ml(Lidocaine),대한리도카인2%주 5ml,100,mg,1,V,,2,정상투약,2,주사,3,주사,23,일반
+R000000001,20240112,20240112,1417,0,,DC-MTXD50J,*Methotrexate inj. 50mg (methotrexate),*메토트렉세이트주 50mg,12,mg,0.24,V,의사지시대로사용(타행위료로 대치),2,정상투약,4,항암제,3,주사,13,항암제(특조실)
+R000000001,20240115,20240115,1527,1,3,DA-2LDJ5,Lidocaine HCl 2% inj. 5ml(Lidocaine),대한리도카인2%주 5ml,100,mg,1,V,,2,정상투약,2,주사,3,주사,23,일반
+R000000001,20240115,20240115,1527,1,3,DC-MTXD50J,*Methotrexate inj. 50mg (methotrexate),*메토트렉세이트주 50mg,12,mg,0.24,V,의사지시대로사용(타행위료로 대치),2,정상투약,4,항암제,3,주사,13,항암제(특조실)
+R000000001,20240115,,,0,,DA-2LDJ5,Lidocaine HCl 2% inj. 5ml(Lidocaine),대한리도카인2%주 5ml,100,mg,1,V,의사지시대로사용(타행위료로 대치),1,미확인,2,주사,3,주사,23,일반
+R000000001,20240118,20240118,1551,0,,DC-MTXD50J,*Methotrexate inj. 50mg (methotrexate),*메토트렉세이트주 50mg,12,mg,0.24,V,의사지시대로사용(타행위료로 대치),2,정상투약,4,항암제,3,주사,13,항암제(특조실)
+R000000001,20240118,,,0,,DA-2LDJ5,Lidocaine HCl 2% inj. 5ml(Lidocaine),대한리도카인2%주 5ml,100,mg,1,V,,1,미확인,2,주사,3,주사,23,일반
+R000000001,20240129,20240129,1130,0,,DAAP300,Acetaminophen tab. 300mg (Acetaminophen),삼남아세트아미노펜정300mg,600,mg,2,T,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240129,20240129,1400,0,,DAAP300,Acetaminophen tab. 300mg (Acetaminophen),삼남아세트아미노펜정300mg,600,mg,2,T,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240129,,,0,,DAAP300,Acetaminophen tab. 300mg (Acetaminophen),삼남아세트아미노펜정300mg,600,mg,2,T,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240129,,,0,,DAAP300,Acetaminophen tab. 300mg (Acetaminophen),삼남아세트아미노펜정300mg,600,mg,2,T,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240130,20240130,1230,0,,DAAP300,Acetaminophen tab. 300mg (Acetaminophen),삼남아세트아미노펜정300mg,600,mg,2,T,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240130,20240130,1300,1,37,DTCLM5J,*[적시]Prograf inj. 5mg (Tacrolimus),*[적시]프로그랍주사액5mg,1.9,mg,0.38,A,"수액내 Mix(일반, 항암)",2,정상투약,2,주사,3,주사,1,면역억제제
+R000000001,20240130,20240130,1500,0,,DAAP300,Acetaminophen tab. 300mg (Acetaminophen),삼남아세트아미노펜정300mg,600,mg,2,T,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240130,,,0,,DAAP300,Acetaminophen tab. 300mg (Acetaminophen),삼남아세트아미노펜정300mg,600,mg,2,T,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240130,,,0,,DAAP300,Acetaminophen tab. 300mg (Acetaminophen),삼남아세트아미노펜정300mg,600,mg,2,T,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240131,20240131,1300,1,45,DTCLM5J,*[적시]Prograf inj. 5mg (Tacrolimus),*[적시]프로그랍주사액5mg,1.9,mg,0.38,A,"수액내 Mix(일반, 항암)",2,정상투약,2,주사,3,주사,1,면역억제제
+R000000001,20240201,20240201,1300,1,37,DTCLM5J,*[적시]Prograf inj. 5mg (Tacrolimus),*[적시]프로그랍주사액5mg,1.9,mg,0.38,A,"수액내 Mix(일반, 항암)",2,정상투약,2,주사,3,주사,1,면역억제제
+R000000001,20240201,20240201,2105,1,1,DC-MTXD50J,*Methotrexate inj. 50mg (methotrexate),*메토트렉세이트주 50mg,8.75,mg,0.175,V,IV bolus(항암),2,정상투약,4,항암제,3,주사,13,항암제(특조실)
+R000000001,20240202,20240202,1300,1,42,DTCLM5J,*[적시]Prograf inj. 5mg (Tacrolimus),*[적시]프로그랍주사액5mg,1.8,mg,0.36,A,"수액내 Mix(일반, 항암)",2,정상투약,2,주사,3,주사,1,면역억제제
+R000000001,20240203,20240203,1300,1,45,DTCLM5J,*[적시]Prograf inj. 5mg (Tacrolimus),*[적시]프로그랍주사액5mg,2,mg,0.4,A,"수액내 Mix(일반, 항암)",2,정상투약,2,주사,3,주사,1,면역억제제
+R000000001,20240203,20240203,2105,1,1,DC-MTXD50J,*Methotrexate inj. 50mg (methotrexate),*메토트렉세이트주 50mg,8.75,mg,0.175,V,IV bolus(항암),2,정상투약,4,항암제,3,주사,13,항암제(특조실)
+R000000001,20240203,,,1,99,DTCLM5J,*[적시]Prograf inj. 5mg (Tacrolimus),*[적시]프로그랍주사액5mg,1.8,mg,0.36,A,"수액내 Mix(일반, 항암)",1,미확인,2,주사,3,주사,1,면역억제제
+R000000001,20240204,20240204,1300,1,45,DTCLM5J,*[적시]Prograf inj. 5mg (Tacrolimus),*[적시]프로그랍주사액5mg,2,mg,0.4,A,"수액내 Mix(일반, 항암)",2,정상투약,2,주사,3,주사,1,면역억제제
+R000000001,20240204,,,1,99,DTCLM5J,*[적시]Prograf inj. 5mg (Tacrolimus),*[적시]프로그랍주사액5mg,1.8,mg,0.36,A,"수액내 Mix(일반, 항암)",1,미확인,2,주사,3,주사,1,면역억제제
+R000000001,20240205,20240205,1300,1,45,DTCLM5J,*[적시]Prograf inj. 5mg (Tacrolimus),*[적시]프로그랍주사액5mg,2,mg,0.4,A,"수액내 Mix(일반, 항암)",2,정상투약,2,주사,3,주사,1,면역억제제
+R000000001,20240205,,,1,99,DTCLM5J,*[적시]Prograf inj. 5mg (Tacrolimus),*[적시]프로그랍주사액5mg,1.8,mg,0.36,A,"수액내 Mix(일반, 항암)",1,미확인,2,주사,3,주사,1,면역억제제
+R000000001,20240206,20240206,1300,1,40,DTCLM5J,*[적시]Prograf inj. 5mg (Tacrolimus),*[적시]프로그랍주사액5mg,1.6,mg,0.32,A,"수액내 Mix(일반, 항암)",2,정상투약,2,주사,3,주사,1,면역억제제
+R000000001,20240206,20240206,2108,1,1,DC-MTXD50J,*Methotrexate inj. 50mg (methotrexate),*메토트렉세이트주 50mg,8.75,mg,0.175,V,IV bolus(항암),2,정상투약,4,항암제,3,주사,13,항암제(특조실)
+R000000001,20240206,,,1,2,DTCLM5J,*[적시]Prograf inj. 5mg (Tacrolimus),*[적시]프로그랍주사액5mg,1.8,mg,0.36,A,"수액내 Mix(일반, 항암)",1,미확인,2,주사,3,주사,1,면역억제제
+R000000001,20240207,20240207,1300,1,40,DTCLM5J,*[적시]Prograf inj. 5mg (Tacrolimus),*[적시]프로그랍주사액5mg,1.6,mg,0.32,A,"수액내 Mix(일반, 항암)",2,정상투약,2,주사,3,주사,1,면역억제제
+R000000001,20240207,20240207,1700,0,,DAAP1GJ,Profa infusion inj. 1g/100ml (Acetaminophen),프로파인퓨전주 1g/100ml,1,g,1,bag,IV dropping,2,정상투약,2,주사,3,주사,23,일반
+R000000001,20240207,20240207,2100,0,,DW-TP400J,Teicocin inj. 400mg (Teicoplanin),테이코신주400mg,400,mg,1,V,IV side,2,정상투약,2,주사,3,주사,25,항생제프로그램용
+R000000001,20240207,20240207,2100,0,,DW-TP400J,Teicocin inj. 400mg (Teicoplanin),테이코신주400mg,400,mg,1,V,IV side,2,정상투약,2,주사,3,주사,25,항생제프로그램용
+R000000001,20240207,,,0,,DW-TP400J,Teicocin inj. 400mg (Teicoplanin),테이코신주400mg,400,mg,1,V,IV side,1,미확인,2,주사,3,주사,25,항생제프로그램용
+R000000001,20240207,,,1,99,DTCLM5J,*[적시]Prograf inj. 5mg (Tacrolimus),*[적시]프로그랍주사액5mg,1.8,mg,0.36,A,"수액내 Mix(일반, 항암)",1,미확인,2,주사,3,주사,1,면역억제제
+R000000001,20240207,,,0,,DW-TP400J,Teicocin inj. 400mg (Teicoplanin),테이코신주400mg,400,mg,1,V,IV side,1,미확인,2,주사,3,주사,25,항생제프로그램용
+R000000001,20240208,20240208,0,0,,DAAP1GJ,Profa infusion inj. 1g/100ml (Acetaminophen),프로파인퓨전주 1g/100ml,1,g,1,bag,IV dropping,2,정상투약,2,주사,3,주사,23,일반
+R000000001,20240208,20240208,700,1,5,DW-AMC250V,*[적시]Amikacin sulfate inj. 250mg (Amikacin),*[적시]아미카신황산염주사액250mg(V),750,mg,3,V,"수액내 Mix(일반, 항암)",2,정상투약,2,주사,3,주사,25,항생제프로그램용
+R000000001,20240208,20240208,1300,1,40,DTCLM5J,*[적시]Prograf inj. 5mg (Tacrolimus),*[적시]프로그랍주사액5mg,1.6,mg,0.32,A,"수액내 Mix(일반, 항암)",2,정상투약,2,주사,3,주사,1,면역억제제
+R000000001,20240208,,,1,99,DTCLM5J,*[적시]Prograf inj. 5mg (Tacrolimus),*[적시]프로그랍주사액5mg,1.8,mg,0.36,A,"수액내 Mix(일반, 항암)",1,미확인,2,주사,3,주사,1,면역억제제
+R000000001,20240208,,,0,,DW-TP400J,Teicocin inj. 400mg (Teicoplanin),테이코신주400mg,400,mg,1,V,IV side,1,미확인,2,주사,3,주사,25,항생제프로그램용
+R000000001,20240209,20240209,1300,1,40,DTCLM5J,*[적시]Prograf inj. 5mg (Tacrolimus),*[적시]프로그랍주사액5mg,1.2,mg,0.24,A,"수액내 Mix(일반, 항암)",2,정상투약,2,주사,3,주사,1,면역억제제
+R000000001,20240209,,,0,,DSP-LEVO,Laevan forte cream 2g/EA,래반포르테주입크림 2g/EA,2,g,1,ea,의사지시대로 항문 삽입,1,미확인,3,약,2,외용,23,일반
+R000000001,20240209,,,0,,DSP-LEVO,Laevan forte cream 2g/EA,래반포르테주입크림 2g/EA,2,g,1,ea,의사지시대로 항문 삽입,1,미확인,3,약,2,외용,23,일반
+R000000001,20240209,,,0,,DSP-LEVO,Laevan forte cream 2g/EA,래반포르테주입크림 2g/EA,2,g,1,ea,의사지시대로 항문 삽입,1,미확인,3,약,2,외용,23,일반
+R000000001,20240210,20240210,1300,1,40,DTCLM5J,*[적시]Prograf inj. 5mg (Tacrolimus),*[적시]프로그랍주사액5mg,1.2,mg,0.24,A,"수액내 Mix(일반, 항암)",2,정상투약,2,주사,3,주사,1,면역억제제
+R000000001,20240210,20240210,1600,0,,DSP-LEVO,Laevan forte cream 2g/EA,래반포르테주입크림 2g/EA,2,g,1,ea,의사지시대로 항문 삽입,2,정상투약,3,약,2,외용,23,일반
+R000000001,20240210,20240210,2100,0,,DSP-LEVO,Laevan forte cream 2g/EA,래반포르테주입크림 2g/EA,2,g,1,ea,의사지시대로 항문 삽입,2,정상투약,3,약,2,외용,23,일반
+R000000001,20240210,20240211,900,0,,DSP-LEVO,Laevan forte cream 2g/EA,래반포르테주입크림 2g/EA,2,g,1,ea,의사지시대로 항문 삽입,2,정상투약,3,약,2,외용,23,일반
+R000000001,20240211,20240211,1300,1,45,DTCLM5J,*[적시]Prograf inj. 5mg (Tacrolimus),*[적시]프로그랍주사액5mg,1.2,mg,0.24,A,"수액내 Mix(일반, 항암)",2,정상투약,2,주사,3,주사,1,면역억제제
+R000000001,20240211,20240211,1600,0,,DSP-LEVO,Laevan forte cream 2g/EA,래반포르테주입크림 2g/EA,2,g,1,ea,의사지시대로 항문 삽입,2,정상투약,3,약,2,외용,23,일반
+R000000001,20240211,20240211,2100,0,,DSP-LEVO,Laevan forte cream 2g/EA,래반포르테주입크림 2g/EA,2,g,1,ea,의사지시대로 항문 삽입,2,정상투약,3,약,2,외용,23,일반
+R000000001,20240211,20240211,2108,1,1,DC-MTXD50J,*Methotrexate inj. 50mg (methotrexate),*메토트렉세이트주 50mg,8.75,mg,0.175,V,IV bolus(항암),2,정상투약,4,항암제,3,주사,13,항암제(특조실)
+R000000001,20240211,20240212,800,0,,DSP-LEVO,Laevan forte cream 2g/EA,래반포르테주입크림 2g/EA,2,g,1,ea,의사지시대로 항문 삽입,2,정상투약,3,약,2,외용,23,일반
+R000000001,20240212,20240212,1300,0,,DSP-LEVO,Laevan forte cream 2g/EA,래반포르테주입크림 2g/EA,2,g,1,ea,의사지시대로 항문 삽입,2,정상투약,3,약,2,외용,23,일반
+R000000001,20240212,20240212,1300,1,41,DTCLM5J,*[적시]Prograf inj. 5mg (Tacrolimus),*[적시]프로그랍주사액5mg,1.2,mg,0.24,A,"수액내 Mix(일반, 항암)",2,정상투약,2,주사,3,주사,1,면역억제제
+R000000001,20240212,20240212,1800,0,,DSP-LEVO,Laevan forte cream 2g/EA,래반포르테주입크림 2g/EA,2,g,1,ea,의사지시대로 항문 삽입,2,정상투약,3,약,2,외용,23,일반
+R000000001,20240212,20240213,800,0,,DSP-LEVO,Laevan forte cream 2g/EA,래반포르테주입크림 2g/EA,2,g,1,ea,의사지시대로 항문 삽입,2,정상투약,3,약,2,외용,23,일반
+R000000001,20240213,20240213,1300,1,45,DTCLM5J,*[적시]Prograf inj. 5mg (Tacrolimus),*[적시]프로그랍주사액5mg,1.1,mg,0.22,A,"수액내 Mix(일반, 항암)",2,정상투약,2,주사,3,주사,1,면역억제제
+R000000001,20240213,20240213,1800,0,,DSP-LEVO,Laevan forte cream 2g/EA,래반포르테주입크림 2g/EA,2,g,1,ea,의사지시대로 항문 삽입,2,정상투약,3,약,2,외용,23,일반
+R000000001,20240213,20240213,2100,0,,DSP-LEVO,Laevan forte cream 2g/EA,래반포르테주입크림 2g/EA,2,g,1,ea,의사지시대로 항문 삽입,2,정상투약,3,약,2,외용,23,일반
+R000000001,20240213,20240214,800,0,,DSP-LEVO,Laevan forte cream 2g/EA,래반포르테주입크림 2g/EA,2,g,1,ea,의사지시대로 항문 삽입,2,정상투약,3,약,2,외용,23,일반
+R000000001,20240213,,,0,,DSP-LEVO,Laevan forte cream 2g/EA,래반포르테주입크림 2g/EA,2,g,1,ea,의사지시대로 항문 삽입,1,미확인,3,약,2,외용,23,일반
+R000000001,20240213,,,0,,DSP-LEVO,Laevan forte cream 2g/EA,래반포르테주입크림 2g/EA,2,g,1,ea,의사지시대로 항문 삽입,1,미확인,3,약,2,외용,23,일반
+R000000001,20240213,,,0,,DSP-LEVO,Laevan forte cream 2g/EA,래반포르테주입크림 2g/EA,2,g,1,ea,의사지시대로 항문 삽입,1,미확인,3,약,2,외용,23,일반
+R000000001,20240213,,,1,3,DTCLM5J,*[적시]Prograf inj. 5mg (Tacrolimus),*[적시]프로그랍주사액5mg,1.2,mg,0.24,A,"수액내 Mix(일반, 항암)",1,미확인,2,주사,3,주사,1,면역억제제
+R000000001,20240214,20240214,1300,1,40,DTCLM5J,*[적시]Prograf inj. 5mg (Tacrolimus),*[적시]프로그랍주사액5mg,1,mg,0.2,A,"수액내 Mix(일반, 항암)",2,정상투약,2,주사,3,주사,1,면역억제제
+R000000001,20240214,20240214,1800,0,,DSP-LEVO,Laevan forte cream 2g/EA,래반포르테주입크림 2g/EA,2,g,1,ea,의사지시대로 항문 삽입,2,정상투약,3,약,2,외용,23,일반
+R000000001,20240214,20240214,2100,0,,DSP-LEVO,Laevan forte cream 2g/EA,래반포르테주입크림 2g/EA,2,g,1,ea,의사지시대로 항문 삽입,2,정상투약,3,약,2,외용,23,일반
+R000000001,20240214,20240215,800,0,,DSP-LEVO,Laevan forte cream 2g/EA,래반포르테주입크림 2g/EA,2,g,1,ea,의사지시대로 항문 삽입,2,정상투약,3,약,2,외용,23,일반
+R000000001,20240214,,,1,99,DTCLM5J,*[적시]Prograf inj. 5mg (Tacrolimus),*[적시]프로그랍주사액5mg,1.1,mg,0.22,A,"수액내 Mix(일반, 항암)",1,미확인,2,주사,3,주사,1,면역억제제
+R000000001,20240215,20240215,1300,1,40,DTCLM5J,*[적시]Prograf inj. 5mg (Tacrolimus),*[적시]프로그랍주사액5mg,1,mg,0.2,A,"수액내 Mix(일반, 항암)",2,정상투약,2,주사,3,주사,1,면역억제제
+R000000001,20240215,20240215,1800,0,,DSP-LEVO,Laevan forte cream 2g/EA,래반포르테주입크림 2g/EA,2,g,1,ea,의사지시대로 항문 삽입,2,정상투약,3,약,2,외용,23,일반
+R000000001,20240215,20240215,2100,0,,DSP-LEVO,Laevan forte cream 2g/EA,래반포르테주입크림 2g/EA,2,g,1,ea,의사지시대로 항문 삽입,2,정상투약,3,약,2,외용,23,일반
+R000000001,20240215,20240216,800,0,,DSP-LEVO,Laevan forte cream 2g/EA,래반포르테주입크림 2g/EA,2,g,1,ea,의사지시대로 항문 삽입,2,정상투약,3,약,2,외용,23,일반
+R000000001,20240215,,,1,98,DTCLM5J,*[적시]Prograf inj. 5mg (Tacrolimus),*[적시]프로그랍주사액5mg,1.1,mg,0.22,A,"수액내 Mix(일반, 항암)",1,미확인,2,주사,3,주사,1,면역억제제
+R000000001,20240216,20240216,2200,0,,DTCLM0.5,*Prograf cap. 0.5mg (Tacrolimus),*프로그랍캅셀0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240216,20240216,2200,0,,DTCLM1,*Prograf cap. 1mg (Tacrolimus),*프로그랍캅셀 1mg,1,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240216,20240217,1000,0,,DTCLM1,*Prograf cap. 1mg (Tacrolimus),*프로그랍캅셀 1mg,1,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240216,20240217,1000,0,,DTCLM0.5,*Prograf cap. 0.5mg (Tacrolimus),*프로그랍캅셀0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240216,,,0,,DSP-LEVO,Laevan forte cream 2g/EA,래반포르테주입크림 2g/EA,2,g,1,ea,의사지시대로 항문 삽입,1,미확인,3,약,2,외용,23,일반
+R000000001,20240216,,,0,,DSP-LEVO,Laevan forte cream 2g/EA,래반포르테주입크림 2g/EA,2,g,1,ea,의사지시대로 항문 삽입,1,미확인,3,약,2,외용,23,일반
+R000000001,20240216,,,0,,DSP-LEVO,Laevan forte cream 2g/EA,래반포르테주입크림 2g/EA,2,g,1,ea,의사지시대로 항문 삽입,1,미확인,3,약,2,외용,23,일반
+R000000001,20240217,20240217,2200,0,,DTCLM1,*Prograf cap. 1mg (Tacrolimus),*프로그랍캅셀 1mg,1,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240217,20240217,2200,0,,DTCLM0.5,*Prograf cap. 0.5mg (Tacrolimus),*프로그랍캅셀0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240217,20240218,1000,0,,DTCLM0.5,*Prograf cap. 0.5mg (Tacrolimus),*프로그랍캅셀0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240217,20240218,1000,0,,DTCLM1,*Prograf cap. 1mg (Tacrolimus),*프로그랍캅셀 1mg,1,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240217,,,0,,DTCLM0.5,*Prograf cap. 0.5mg (Tacrolimus),*프로그랍캅셀0.5mg,0.5,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240217,,,0,,DTCLM1,*Prograf cap. 1mg (Tacrolimus),*프로그랍캅셀 1mg,1,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240217,,,0,,DTCLM1,*Prograf cap. 1mg (Tacrolimus),*프로그랍캅셀 1mg,1,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240217,,,0,,DSP-LEVO,Laevan forte cream 2g/EA,래반포르테주입크림 2g/EA,2,g,1,ea,의사지시대로 항문 삽입,1,미확인,3,약,2,외용,23,일반
+R000000001,20240217,,,0,,DSP-LEVO,Laevan forte cream 2g/EA,래반포르테주입크림 2g/EA,2,g,1,ea,의사지시대로 항문 삽입,1,미확인,3,약,2,외용,23,일반
+R000000001,20240217,,,0,,DTCLM0.5,*Prograf cap. 0.5mg (Tacrolimus),*프로그랍캅셀0.5mg,0.5,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240217,,,0,,DSP-LEVO,Laevan forte cream 2g/EA,래반포르테주입크림 2g/EA,2,g,1,ea,의사지시대로 항문 삽입,1,미확인,3,약,2,외용,23,일반
+R000000001,20240218,20240218,2200,0,,DTCLM0.5,*Prograf cap. 0.5mg (Tacrolimus),*프로그랍캅셀0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240218,20240218,2200,0,,DTCLM1,*Prograf cap. 1mg (Tacrolimus),*프로그랍캅셀 1mg,1,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240218,20240219,1000,0,,DTCLM1,*Prograf cap. 1mg (Tacrolimus),*프로그랍캅셀 1mg,1,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240218,20240219,1000,0,,DTCLM0.5,*Prograf cap. 0.5mg (Tacrolimus),*프로그랍캅셀0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240218,,,0,,DSP-LEVO,Laevan forte cream 2g/EA,래반포르테주입크림 2g/EA,2,g,1,ea,의사지시대로 항문 삽입,1,미확인,3,약,2,외용,23,일반
+R000000001,20240218,,,0,,DTCLM1,*Prograf cap. 1mg (Tacrolimus),*프로그랍캅셀 1mg,1,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240218,,,0,,DTCLM1,*Prograf cap. 1mg (Tacrolimus),*프로그랍캅셀 1mg,1,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240218,,,0,,DSP-LEVO,Laevan forte cream 2g/EA,래반포르테주입크림 2g/EA,2,g,1,ea,의사지시대로 항문 삽입,1,미확인,3,약,2,외용,23,일반
+R000000001,20240218,,,0,,DTCLM0.5,*Prograf cap. 0.5mg (Tacrolimus),*프로그랍캅셀0.5mg,0.5,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240218,,,0,,DTCLM0.5,*Prograf cap. 0.5mg (Tacrolimus),*프로그랍캅셀0.5mg,0.5,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240218,,,0,,DSP-LEVO,Laevan forte cream 2g/EA,래반포르테주입크림 2g/EA,2,g,1,ea,의사지시대로 항문 삽입,1,미확인,3,약,2,외용,23,일반
+R000000001,20240219,20240219,2200,0,,DTCLM1,*Prograf cap. 1mg (Tacrolimus),*프로그랍캅셀 1mg,1,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240219,20240219,2200,0,,DTCLM0.5,*Prograf cap. 0.5mg (Tacrolimus),*프로그랍캅셀0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240219,20240220,1000,0,,DTCLM0.5,*Prograf cap. 0.5mg (Tacrolimus),*프로그랍캅셀0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240219,20240220,1000,0,,DTCLM1,*Prograf cap. 1mg (Tacrolimus),*프로그랍캅셀 1mg,1,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240219,,,0,,DSP-LEVO,Laevan forte cream 2g/EA,래반포르테주입크림 2g/EA,2,g,1,ea,의사지시대로 항문 삽입,1,미확인,3,약,2,외용,23,일반
+R000000001,20240219,,,0,,DTCLM1,*Prograf cap. 1mg (Tacrolimus),*프로그랍캅셀 1mg,1,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240219,,,0,,DSP-LEVO,Laevan forte cream 2g/EA,래반포르테주입크림 2g/EA,2,g,1,ea,의사지시대로 항문 삽입,1,미확인,3,약,2,외용,23,일반
+R000000001,20240219,,,0,,DTCLM1,*Prograf cap. 1mg (Tacrolimus),*프로그랍캅셀 1mg,1,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240219,,,0,,DTCLM0.5,*Prograf cap. 0.5mg (Tacrolimus),*프로그랍캅셀0.5mg,0.5,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240219,,,0,,DSP-LEVO,Laevan forte cream 2g/EA,래반포르테주입크림 2g/EA,2,g,1,ea,의사지시대로 항문 삽입,1,미확인,3,약,2,외용,23,일반
+R000000001,20240219,,,0,,DTCLM0.5,*Prograf cap. 0.5mg (Tacrolimus),*프로그랍캅셀0.5mg,0.5,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240220,20240220,1203,0,,DAAP1GJ,Profa infusion inj. 1g/100ml (Acetaminophen),프로파인퓨전주 1g/100ml,1,g,1,bag,IV dropping,2,정상투약,2,주사,3,주사,23,일반
+R000000001,20240220,20240220,2046,0,,DAAP1GJ,Profa infusion inj. 1g/100ml (Acetaminophen),프로파인퓨전주 1g/100ml,1,g,1,bag,IV dropping,2,정상투약,2,주사,3,주사,23,일반
+R000000001,20240220,20240220,2200,0,,DTCLM0.5,*Prograf cap. 0.5mg (Tacrolimus),*프로그랍캅셀0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240220,20240220,2200,0,,DTCLM1,*Prograf cap. 1mg (Tacrolimus),*프로그랍캅셀 1mg,1,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240220,20240221,1000,0,,DTCLM0.5,*Prograf cap. 0.5mg (Tacrolimus),*프로그랍캅셀0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240220,20240221,1000,0,,DTCLM1,*Prograf cap. 1mg (Tacrolimus),*프로그랍캅셀 1mg,1,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240220,,,0,,DSP-LEVO,Laevan forte cream 2g/EA,래반포르테주입크림 2g/EA,2,g,1,ea,의사지시대로 항문 삽입,1,미확인,3,약,2,외용,23,일반
+R000000001,20240220,,,0,,DSP-LEVO,Laevan forte cream 2g/EA,래반포르테주입크림 2g/EA,2,g,1,ea,의사지시대로 항문 삽입,1,미확인,3,약,2,외용,23,일반
+R000000001,20240220,,,0,,DSP-LEVO,Laevan forte cream 2g/EA,래반포르테주입크림 2g/EA,2,g,1,ea,의사지시대로 항문 삽입,1,미확인,3,약,2,외용,23,일반
+R000000001,20240221,20240221,709,0,,DAAP1GJ,Profa infusion inj. 1g/100ml (Acetaminophen),프로파인퓨전주 1g/100ml,1,g,1,bag,IV dropping,2,정상투약,2,주사,3,주사,23,일반
+R000000001,20240221,20240221,1300,0,,DSP-LEVO,Laevan forte cream 2g/EA,래반포르테주입크림 2g/EA,2,g,1,ea,의사지시대로 항문 삽입,2,정상투약,3,약,2,외용,23,일반
+R000000001,20240221,20240221,1300,0,,DSP-LEVO,Laevan forte cream 2g/EA,래반포르테주입크림 2g/EA,2,g,1,ea,의사지시대로 항문 삽입,2,정상투약,3,약,2,외용,23,일반
+R000000001,20240221,20240221,2200,0,,DTCLM0.5,*Prograf cap. 0.5mg (Tacrolimus),*프로그랍캅셀0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240221,20240221,2200,0,,DTCLM1,*Prograf cap. 1mg (Tacrolimus),*프로그랍캅셀 1mg,1,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240221,20240222,1000,0,,DTCLM1,*Prograf cap. 1mg (Tacrolimus),*프로그랍캅셀 1mg,1,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240221,20240222,1000,0,,DTCLM0.5,*Prograf cap. 0.5mg (Tacrolimus),*프로그랍캅셀0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240222,20240222,1300,0,,DSP-LEVO,Laevan forte cream 2g/EA,래반포르테주입크림 2g/EA,2,g,1,ea,의사지시대로 항문 삽입,2,정상투약,3,약,2,외용,23,일반
+R000000001,20240222,20240222,1300,0,,DSP-LEVO,Laevan forte cream 2g/EA,래반포르테주입크림 2g/EA,2,g,1,ea,의사지시대로 항문 삽입,2,정상투약,3,약,2,외용,23,일반
+R000000001,20240222,20240222,1822,0,,DAAP1GJ,Profa infusion inj. 1g/100ml (Acetaminophen),프로파인퓨전주 1g/100ml,1,g,1,bag,IV dropping,2,정상투약,2,주사,3,주사,23,일반
+R000000001,20240222,20240222,2200,0,,DTCLM0.5,*Prograf cap. 0.5mg (Tacrolimus),*프로그랍캅셀0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240222,20240222,2200,0,,DTCLM1,*Prograf cap. 1mg (Tacrolimus),*프로그랍캅셀 1mg,1,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240222,20240223,1000,0,,DTCLM1,*Prograf cap. 1mg (Tacrolimus),*프로그랍캅셀 1mg,1,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240222,20240223,1000,0,,DTCLM0.5,*Prograf cap. 0.5mg (Tacrolimus),*프로그랍캅셀0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240223,20240223,520,0,,DAAP1GJ,Profa infusion inj. 1g/100ml (Acetaminophen),프로파인퓨전주 1g/100ml,1,g,1,bag,IV dropping,2,정상투약,2,주사,3,주사,23,일반
+R000000001,20240223,20240223,1300,0,,DSP-LEVO,Laevan forte cream 2g/EA,래반포르테주입크림 2g/EA,2,g,1,ea,의사지시대로 항문 삽입,2,정상투약,3,약,2,외용,23,일반
+R000000001,20240223,20240223,1300,0,,DSP-LEVO,Laevan forte cream 2g/EA,래반포르테주입크림 2g/EA,2,g,1,ea,의사지시대로 항문 삽입,2,정상투약,3,약,2,외용,23,일반
+R000000001,20240223,20240223,1810,0,,DAAP1GJ,Profa infusion inj. 1g/100ml (Acetaminophen),프로파인퓨전주 1g/100ml,1,g,1,bag,IV dropping,2,정상투약,2,주사,3,주사,23,일반
+R000000001,20240223,20240223,2200,0,,DTCLM0.5,*Prograf cap. 0.5mg (Tacrolimus),*프로그랍캅셀0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240223,20240223,2200,0,,DTCLM1,*Prograf cap. 1mg (Tacrolimus),*프로그랍캅셀 1mg,2,mg,2,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240223,20240224,1000,0,,DTCLM0.5,*Prograf cap. 0.5mg (Tacrolimus),*프로그랍캅셀0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240223,20240224,1000,0,,DTCLM1,*Prograf cap. 1mg (Tacrolimus),*프로그랍캅셀 1mg,2,mg,2,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240223,,,0,,DTCLM1,*Prograf cap. 1mg (Tacrolimus),*프로그랍캅셀 1mg,1,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240223,,,0,,DTCLM1,*Prograf cap. 1mg (Tacrolimus),*프로그랍캅셀 1mg,1,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240223,,,0,,DTCLM0.5,*Prograf cap. 0.5mg (Tacrolimus),*프로그랍캅셀0.5mg,0.5,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240223,,,0,,DTCLM0.5,*Prograf cap. 0.5mg (Tacrolimus),*프로그랍캅셀0.5mg,0.5,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240224,20240224,2200,0,,DTCLM0.5,*Prograf cap. 0.5mg (Tacrolimus),*프로그랍캅셀0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240224,20240224,2200,0,,DTCLM1,*Prograf cap. 1mg (Tacrolimus),*프로그랍캅셀 1mg,2,mg,2,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240224,20240225,1000,0,,DTCLM1,*Prograf cap. 1mg (Tacrolimus),*프로그랍캅셀 1mg,2,mg,2,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240224,20240225,1000,0,,DTCLM0.5,*Prograf cap. 0.5mg (Tacrolimus),*프로그랍캅셀0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240224,,,0,,DTCLM1,*Prograf cap. 1mg (Tacrolimus),*프로그랍캅셀 1mg,2,mg,2,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240224,,,0,,DTCLM1,*Prograf cap. 1mg (Tacrolimus),*프로그랍캅셀 1mg,2,mg,2,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240224,,,0,,DTCLM0.5,*Prograf cap. 0.5mg (Tacrolimus),*프로그랍캅셀0.5mg,0.5,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240224,,,0,,DTCLM0.5,*Prograf cap. 0.5mg (Tacrolimus),*프로그랍캅셀0.5mg,0.5,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240224,,,0,,DTCLM1,*Prograf cap. 1mg (Tacrolimus),*프로그랍캅셀 1mg,1,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240224,,,0,,DTCLM1,*Prograf cap. 1mg (Tacrolimus),*프로그랍캅셀 1mg,1,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240224,,,0,,DSP-LEVO,Laevan forte cream 2g/EA,래반포르테주입크림 2g/EA,2,g,1,ea,의사지시대로 항문 삽입,1,미확인,3,약,2,외용,23,일반
+R000000001,20240224,,,0,,DSP-LEVO,Laevan forte cream 2g/EA,래반포르테주입크림 2g/EA,2,g,1,ea,의사지시대로 항문 삽입,1,미확인,3,약,2,외용,23,일반
+R000000001,20240224,,,0,,DTCLM1,*Prograf cap. 1mg (Tacrolimus),*프로그랍캅셀 1mg,1,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240224,,,0,,DTCLM0.5,*Prograf cap. 0.5mg (Tacrolimus),*프로그랍캅셀0.5mg,0.5,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240224,,,0,,DTCLM0.5,*Prograf cap. 0.5mg (Tacrolimus),*프로그랍캅셀0.5mg,0.5,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240224,,,0,,DTCLM1,*Prograf cap. 1mg (Tacrolimus),*프로그랍캅셀 1mg,1,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240225,20240225,2200,0,,DTCLM0.5,*Prograf cap. 0.5mg (Tacrolimus),*프로그랍캅셀0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240225,20240225,2200,0,,DTCLM1,*Prograf cap. 1mg (Tacrolimus),*프로그랍캅셀 1mg,2,mg,2,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240225,20240226,1000,0,,DTCLM1,*Prograf cap. 1mg (Tacrolimus),*프로그랍캅셀 1mg,2,mg,2,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240225,20240226,1000,0,,DTCLM0.5,*Prograf cap. 0.5mg (Tacrolimus),*프로그랍캅셀0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240225,,,0,,DSP-LEVO,Laevan forte cream 2g/EA,래반포르테주입크림 2g/EA,2,g,1,ea,의사지시대로 항문 삽입,1,미확인,3,약,2,외용,23,일반
+R000000001,20240225,,,0,,DTCLM0.5,*Prograf cap. 0.5mg (Tacrolimus),*프로그랍캅셀0.5mg,0.5,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240225,,,0,,DTCLM0.5,*Prograf cap. 0.5mg (Tacrolimus),*프로그랍캅셀0.5mg,0.5,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240225,,,0,,DTCLM1,*Prograf cap. 1mg (Tacrolimus),*프로그랍캅셀 1mg,2,mg,2,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240225,,,0,,DSP-LEVO,Laevan forte cream 2g/EA,래반포르테주입크림 2g/EA,2,g,1,ea,의사지시대로 항문 삽입,1,미확인,3,약,2,외용,23,일반
+R000000001,20240225,,,0,,DTCLM1,*Prograf cap. 1mg (Tacrolimus),*프로그랍캅셀 1mg,1,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240225,,,0,,DTCLM1,*Prograf cap. 1mg (Tacrolimus),*프로그랍캅셀 1mg,1,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240225,,,0,,DTCLM1,*Prograf cap. 1mg (Tacrolimus),*프로그랍캅셀 1mg,2,mg,2,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240226,20240226,2200,0,,DTCLM1,*Prograf cap. 1mg (Tacrolimus),*프로그랍캅셀 1mg,2,mg,2,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240226,20240227,1000,0,,DTCLM1,*Prograf cap. 1mg (Tacrolimus),*프로그랍캅셀 1mg,2,mg,2,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240226,,,0,,DTCLM1,*Prograf cap. 1mg (Tacrolimus),*프로그랍캅셀 1mg,1,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240226,,,0,,DTCLM1,*Prograf cap. 1mg (Tacrolimus),*프로그랍캅셀 1mg,1,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240226,,,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,2,mg,2,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240226,,,0,,DTCLM0.5,*Prograf cap. 0.5mg (Tacrolimus),*프로그랍캅셀0.5mg,0.5,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240226,,,0,,DTCLM0.5,*Prograf cap. 0.5mg (Tacrolimus),*프로그랍캅셀0.5mg,0.5,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240226,,,0,,DTCLM0.5,*Prograf cap. 0.5mg (Tacrolimus),*프로그랍캅셀0.5mg,0.5,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240226,,,0,,DSP-LEVO,Laevan forte cream 2g/EA,래반포르테주입크림 2g/EA,2,g,1,ea,의사지시대로 항문 삽입,1,미확인,3,약,2,외용,23,일반
+R000000001,20240226,,,0,,DSP-LEVO,Laevan forte cream 2g/EA,래반포르테주입크림 2g/EA,2,g,1,ea,의사지시대로 항문 삽입,1,미확인,3,약,2,외용,23,일반
+R000000001,20240226,,,0,,DTCLM1,*Prograf cap. 1mg (Tacrolimus),*프로그랍캅셀 1mg,2,mg,2,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240226,,,0,,DTCLM1,*Prograf cap. 1mg (Tacrolimus),*프로그랍캅셀 1mg,2,mg,2,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240226,,,0,,DTCLM0.5,*Prograf cap. 0.5mg (Tacrolimus),*프로그랍캅셀0.5mg,0.5,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240227,20240227,2200,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,2,mg,2,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240227,20240228,1000,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240227,20240228,1000,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,2,mg,2,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240228,20240228,2200,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,2,mg,2,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240228,20240229,1000,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,2,mg,2,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240228,20240229,1000,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240229,20240229,2200,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,2,mg,2,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240229,20240301,1000,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240229,20240301,1000,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,2,mg,2,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240301,20240301,2200,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,2,mg,2,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240301,20240302,1000,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,2,mg,2,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240301,20240302,1000,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240302,20240302,2200,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,2,mg,2,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240302,20240303,1000,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,2,mg,2,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240302,20240303,1000,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240303,,,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,2,mg,2,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240303,,,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,2,mg,2,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240303,,,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240304,20240304,2200,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,2,mg,2,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240304,20240305,1000,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,2,mg,2,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240304,,,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240305,20240305,2200,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,2,mg,2,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240305,20240306,1000,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,2,mg,2,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240305,,,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240306,20240306,2200,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,2,mg,2,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240306,20240307,1000,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,2,mg,2,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240307,20240307,2200,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,2,mg,2,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240307,20240308,1000,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,2,mg,2,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240307,20240308,1000,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240308,20240308,2200,0,,DJTCLM0.25,*Tacrobell cap. 0.25mg (Tacrolimus),*타크로벨캡슐0.25mg,0.25,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240308,20240308,2200,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,2,mg,2,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240308,20240309,1000,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,2,mg,2,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240308,20240309,1000,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240308,,,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,2,mg,2,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240308,,,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,2,mg,2,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240309,20240309,2200,0,,DJTCLM0.25,*Tacrobell cap. 0.25mg (Tacrolimus),*타크로벨캡슐0.25mg,0.25,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240309,20240309,2200,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,2,mg,2,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240309,20240310,1000,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240309,20240310,1000,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,2,mg,2,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240310,20240310,2200,0,,DJTCLM0.25,*Tacrobell cap. 0.25mg (Tacrolimus),*타크로벨캡슐0.25mg,0.25,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240310,20240310,2200,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,2,mg,2,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240310,20240311,1000,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240310,20240311,1000,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,2,mg,2,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240311,20240311,2200,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,2,mg,2,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240311,20240312,1000,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,2,mg,2,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240311,,,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,2,mg,2,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240311,,,0,,DJTCLM0.25,*Tacrobell cap. 0.25mg (Tacrolimus),*타크로벨캡슐0.25mg,0.25,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240311,,,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,2,mg,2,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240311,,,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,2,mg,2,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240311,,,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240311,,,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,2,mg,2,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240312,20240312,2200,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,2,mg,2,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240312,20240313,1000,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,2,mg,2,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240313,20240313,2200,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,2,mg,2,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240313,20240314,1000,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,2,mg,2,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240314,20240314,2200,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,2,mg,2,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240314,20240315,1000,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,2,mg,2,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240315,20240315,2200,0,,DJTCLM0.25,*Tacrobell cap. 0.25mg (Tacrolimus),*타크로벨캡슐0.25mg,0.25,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240315,20240315,2200,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,1,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240315,20240316,1000,0,,DJTCLM0.25,*Tacrobell cap. 0.25mg (Tacrolimus),*타크로벨캡슐0.25mg,0.25,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240315,20240316,1000,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,1,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240315,,,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,2,mg,2,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240315,,,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,2,mg,2,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240316,20240316,2200,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,1,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240316,20240316,2200,0,,DJTCLM0.25,*Tacrobell cap. 0.25mg (Tacrolimus),*타크로벨캡슐0.25mg,0.25,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240316,20240317,1000,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,1,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240316,20240317,1000,0,,DJTCLM0.25,*Tacrobell cap. 0.25mg (Tacrolimus),*타크로벨캡슐0.25mg,0.25,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240317,20240317,2200,0,,DJTCLM0.25,*Tacrobell cap. 0.25mg (Tacrolimus),*타크로벨캡슐0.25mg,0.25,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240317,20240317,2200,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,1,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240317,20240318,1000,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,1,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240317,20240318,1000,0,,DJTCLM0.25,*Tacrobell cap. 0.25mg (Tacrolimus),*타크로벨캡슐0.25mg,0.25,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240318,20240318,1400,0,,DPCZ100,Noxafil enteric coated tab. 100mg (Posaconazole),녹사필장용정100mg,300,mg,3,T,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000001,20240318,20240318,1800,0,,DPCZ100,Noxafil enteric coated tab. 100mg (Posaconazole),녹사필장용정100mg,300,mg,3,T,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000001,20240318,20240318,2200,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,1,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240318,20240318,2200,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240318,20240319,800,0,,DPCZ100,Noxafil enteric coated tab. 100mg (Posaconazole),녹사필장용정100mg,300,mg,3,T,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000001,20240318,20240319,1000,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240318,20240319,1000,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,1,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240318,,,0,,DJTCLM0.25,*Tacrobell cap. 0.25mg (Tacrolimus),*타크로벨캡슐0.25mg,0.25,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240318,,,0,,DJTCLM0.25,*Tacrobell cap. 0.25mg (Tacrolimus),*타크로벨캡슐0.25mg,0.25,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240318,,,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,1,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240318,,,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,1,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240319,20240319,1400,0,,DA-2LDJ5,Lidocaine HCl 2% inj. 5ml(Lidocaine),대한리도카인2%주 5ml,100,mg,1,V,의사지시대로사용(타행위료로 대치),2,정상투약,2,주사,3,주사,23,일반
+R000000001,20240319,20240319,2200,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240319,20240319,2200,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,1,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240319,20240320,800,0,,DPCZ100,Noxafil enteric coated tab. 100mg (Posaconazole),녹사필장용정100mg,300,mg,3,T,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000001,20240319,20240320,1000,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,1,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240319,20240320,1000,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240320,20240320,2200,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,1,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240320,20240320,2200,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240320,20240321,800,0,,DPCZ100,Noxafil enteric coated tab. 100mg (Posaconazole),녹사필장용정100mg,300,mg,3,T,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000001,20240320,20240321,1000,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,1,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240320,20240321,1000,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240321,20240321,2200,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240321,20240321,2200,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,1,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240321,20240322,800,0,,DPCZ100,Noxafil enteric coated tab. 100mg (Posaconazole),녹사필장용정100mg,300,mg,3,T,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000001,20240321,20240322,1000,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240321,20240322,1000,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,1,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240322,20240322,2200,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,1,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240322,20240322,2200,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240322,20240323,800,0,,DPCZ100,Noxafil enteric coated tab. 100mg (Posaconazole),녹사필장용정100mg,300,mg,3,T,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000001,20240322,20240323,1000,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,1,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240322,20240323,1000,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240323,20240323,2200,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,1,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240323,20240323,2200,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240323,20240324,800,0,,DPCZ100,Noxafil enteric coated tab. 100mg (Posaconazole),녹사필장용정100mg,300,mg,3,T,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000001,20240323,20240324,1000,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240323,20240324,1000,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,1,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240324,20240324,2200,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,1,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240324,20240324,2200,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240324,20240325,800,0,,DPCZ100,Noxafil enteric coated tab. 100mg (Posaconazole),녹사필장용정100mg,300,mg,3,T,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000001,20240324,20240325,1000,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,1,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240324,20240325,1000,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240325,20240325,2200,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240325,20240325,2200,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,1,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240325,20240326,800,0,,DPCZ100,Noxafil enteric coated tab. 100mg (Posaconazole),녹사필장용정100mg,300,mg,3,T,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000001,20240325,20240326,1000,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,1,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240325,20240326,1000,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240326,20240326,2200,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240326,20240326,2200,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,1,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240326,20240327,800,0,,DPCZ100,Noxafil enteric coated tab. 100mg (Posaconazole),녹사필장용정100mg,300,mg,3,T,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000001,20240326,20240327,1000,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,1,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240326,20240327,1000,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240327,20240327,2200,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240327,20240327,2200,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,1,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240327,20240328,800,0,,DPCZ100,Noxafil enteric coated tab. 100mg (Posaconazole),녹사필장용정100mg,300,mg,3,T,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000001,20240327,20240328,1000,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240327,20240328,1000,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,1,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240328,20240328,2200,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240328,20240328,2200,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,1,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240328,20240329,800,0,,DPCZ100,Noxafil enteric coated tab. 100mg (Posaconazole),녹사필장용정100mg,300,mg,3,T,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000001,20240328,20240329,1000,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,1,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240328,20240329,1000,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240329,20240329,2200,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240329,20240329,2200,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,1,mg,1,C,PO,4,투약X-반환불가,3,약,1,경구,23,일반
+R000000001,20240329,20240329,2200,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,1,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240329,20240330,800,0,,DPCZ100,Noxafil enteric coated tab. 100mg (Posaconazole),녹사필장용정100mg,300,mg,3,T,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000001,20240329,20240330,1000,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240329,20240330,1000,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,1,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240330,20240330,2200,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,1,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240330,20240330,2200,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240330,20240331,800,0,,DPCZ100,Noxafil enteric coated tab. 100mg (Posaconazole),녹사필장용정100mg,300,mg,3,T,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000001,20240330,20240331,1000,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240330,20240331,1000,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,1,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240331,20240331,2200,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240331,20240331,2200,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,1,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240331,20240401,800,0,,DPCZ100,Noxafil enteric coated tab. 100mg (Posaconazole),녹사필장용정100mg,300,mg,3,T,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000001,20240331,20240401,1000,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240331,20240401,1000,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,1,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240401,20240401,2200,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240401,20240401,2200,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,1,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240401,20240402,800,0,,DPCZ100,Noxafil enteric coated tab. 100mg (Posaconazole),녹사필장용정100mg,300,mg,3,T,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000001,20240401,20240402,1000,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240401,20240402,1000,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,1,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240402,20240402,2200,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,1,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240402,20240402,2200,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240402,20240403,800,0,,DPCZ100,Noxafil enteric coated tab. 100mg (Posaconazole),녹사필장용정100mg,300,mg,3,T,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000001,20240402,20240403,1000,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,1,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240402,20240403,1000,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240403,20240403,2200,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,1,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240403,20240403,2200,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240403,20240404,800,0,,DPCZ100,Noxafil enteric coated tab. 100mg (Posaconazole),녹사필장용정100mg,300,mg,3,T,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000001,20240403,20240404,1000,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,1,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240403,20240404,1000,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240404,20240404,2200,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,1,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240404,20240405,800,0,,DPCZ100,Noxafil enteric coated tab. 100mg (Posaconazole),녹사필장용정100mg,300,mg,3,T,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000001,20240404,20240405,1000,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,1,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240404,,,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240404,,,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240405,20240405,2200,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,1,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240405,20240405,2200,0,,DJTCLM0.25,*Tacrobell cap. 0.25mg (Tacrolimus),*타크로벨캡슐0.25mg,0.25,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240405,20240406,800,0,,DPCZ100,Noxafil enteric coated tab. 100mg (Posaconazole),녹사필장용정100mg,300,mg,3,T,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000001,20240405,20240406,1300,0,,DJTCLM0.25,*Tacrobell cap. 0.25mg (Tacrolimus),*타크로벨캡슐0.25mg,0.25,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240405,20240406,1300,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,1,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240405,,,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240405,,,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,1,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240405,,,0,,DJTCLM0.25,*Tacrobell cap. 0.25mg (Tacrolimus),*타크로벨캡슐0.25mg,0.125,mg,0.5,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240405,,,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240405,,,0,,DJTCLM0.25,*Tacrobell cap. 0.25mg (Tacrolimus),*타크로벨캡슐0.25mg,0.125,mg,0.5,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240405,,,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,1,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240405,,,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,1,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240406,20240407,0,0,,DJTCLM0.25,*Tacrobell cap. 0.25mg (Tacrolimus),*타크로벨캡슐0.25mg,0.25,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240406,20240407,0,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,1,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240406,20240407,800,0,,DPCZ100,Noxafil enteric coated tab. 100mg (Posaconazole),녹사필장용정100mg,300,mg,3,T,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000001,20240406,20240407,1000,0,,DJTCLM0.25,*Tacrobell cap. 0.25mg (Tacrolimus),*타크로벨캡슐0.25mg,0.25,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240406,20240407,1000,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,1,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240407,20240407,2200,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,1,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240407,20240407,2200,0,,DJTCLM0.25,*Tacrobell cap. 0.25mg (Tacrolimus),*타크로벨캡슐0.25mg,0.25,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240407,20240408,800,0,,DPCZ100,Noxafil enteric coated tab. 100mg (Posaconazole),녹사필장용정100mg,300,mg,3,T,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000001,20240407,20240408,1000,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,1,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240407,20240408,1000,0,,DJTCLM0.25,*Tacrobell cap. 0.25mg (Tacrolimus),*타크로벨캡슐0.25mg,0.25,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240408,20240408,2200,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,1,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240408,20240408,2200,0,,DJTCLM0.25,*Tacrobell cap. 0.25mg (Tacrolimus),*타크로벨캡슐0.25mg,0.25,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240408,20240409,800,0,,DPCZ100,Noxafil enteric coated tab. 100mg (Posaconazole),녹사필장용정100mg,300,mg,3,T,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000001,20240408,20240409,1000,0,,DJTCLM0.25,*Tacrobell cap. 0.25mg (Tacrolimus),*타크로벨캡슐0.25mg,0.25,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240408,20240409,1000,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,1,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240409,20240409,2200,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,1,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240409,20240410,800,0,,DPCZ100,Noxafil enteric coated tab. 100mg (Posaconazole),녹사필장용정100mg,300,mg,3,T,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000001,20240409,20240410,1000,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,1,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240409,,,0,,DJTCLM0.25,*Tacrobell cap. 0.25mg (Tacrolimus),*타크로벨캡슐0.25mg,0.25,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240409,,,0,,DJTCLM0.25,*Tacrobell cap. 0.25mg (Tacrolimus),*타크로벨캡슐0.25mg,0.25,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240410,20240410,2200,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,1,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240410,20240411,800,0,,DPCZ100,Noxafil enteric coated tab. 100mg (Posaconazole),녹사필장용정100mg,300,mg,3,T,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000001,20240410,20240411,1000,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,1,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240410,,,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,1,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240410,,,0,,DJTCLM0.25,*Tacrobell cap. 0.25mg (Tacrolimus),*타크로벨캡슐0.25mg,0.25,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240410,,,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,1,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240410,,,0,,DJTCLM0.25,*Tacrobell cap. 0.25mg (Tacrolimus),*타크로벨캡슐0.25mg,0.25,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240411,20240411,2200,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,1,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240411,20240412,800,0,,DPCZ100,Noxafil enteric coated tab. 100mg (Posaconazole),녹사필장용정100mg,300,mg,3,T,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000001,20240411,20240412,1000,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,1,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240411,,,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,1,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240411,,,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,1,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240411,,,0,,DJTCLM0.25,*Tacrobell cap. 0.25mg (Tacrolimus),*타크로벨캡슐0.25mg,0.25,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240411,,,0,,DJTCLM0.25,*Tacrobell cap. 0.25mg (Tacrolimus),*타크로벨캡슐0.25mg,0.25,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240412,20240412,2200,0,,DJTCLM0.25,*Tacrobell cap. 0.25mg (Tacrolimus),*타크로벨캡슐0.25mg,0.25,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240412,20240412,2200,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240412,20240413,800,0,,DPCZ100,Noxafil enteric coated tab. 100mg (Posaconazole),녹사필장용정100mg,300,mg,3,T,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000001,20240412,20240413,1000,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,1,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240412,,,0,,DJTCLM0.25,*Tacrobell cap. 0.25mg (Tacrolimus),*타크로벨캡슐0.25mg,0.25,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240412,,,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,1,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240412,,,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,1,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240412,,,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,1,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240412,,,0,,DJTCLM0.25,*Tacrobell cap. 0.25mg (Tacrolimus),*타크로벨캡슐0.25mg,0.25,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240412,,,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,1,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240413,20240413,2200,0,,DJTCLM0.25,*Tacrobell cap. 0.25mg (Tacrolimus),*타크로벨캡슐0.25mg,0.25,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240413,20240413,2200,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240413,20240414,800,0,,DPCZ100,Noxafil enteric coated tab. 100mg (Posaconazole),녹사필장용정100mg,300,mg,3,T,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000001,20240413,20240414,1000,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,1,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240414,20240414,2200,0,,DJTCLM0.25,*Tacrobell cap. 0.25mg (Tacrolimus),*타크로벨캡슐0.25mg,0.25,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240414,20240414,2200,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240414,20240415,800,0,,DPCZ100,Noxafil enteric coated tab. 100mg (Posaconazole),녹사필장용정100mg,300,mg,3,T,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000001,20240414,20240415,1000,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,1,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240415,20240415,2200,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240415,20240415,2200,0,,DJTCLM0.25,*Tacrobell cap. 0.25mg (Tacrolimus),*타크로벨캡슐0.25mg,0.25,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240415,20240416,800,0,,DPCZ100,Noxafil enteric coated tab. 100mg (Posaconazole),녹사필장용정100mg,300,mg,3,T,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000001,20240415,20240416,1000,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,1,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240416,20240416,2200,0,,DJTCLM0.25,*Tacrobell cap. 0.25mg (Tacrolimus),*타크로벨캡슐0.25mg,0.25,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240416,20240416,2200,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240416,20240417,800,0,,DPCZ100,Noxafil enteric coated tab. 100mg (Posaconazole),녹사필장용정100mg,300,mg,3,T,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000001,20240416,20240417,1000,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,1,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240417,20240417,2200,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240417,20240417,2200,0,,DJTCLM0.25,*Tacrobell cap. 0.25mg (Tacrolimus),*타크로벨캡슐0.25mg,0.25,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240417,20240418,800,0,,DPCZ100,Noxafil enteric coated tab. 100mg (Posaconazole),녹사필장용정100mg,300,mg,3,T,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000001,20240417,20240418,1000,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,1,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240418,20240418,2200,0,,DJTCLM0.25,*Tacrobell cap. 0.25mg (Tacrolimus),*타크로벨캡슐0.25mg,0.25,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240418,20240418,2200,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240418,20240419,800,0,,DPCZ100,Noxafil enteric coated tab. 100mg (Posaconazole),녹사필장용정100mg,300,mg,3,T,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000001,20240418,20240419,1000,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,1,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240419,20240419,2200,0,,DJTCLM0.25,*Tacrobell cap. 0.25mg (Tacrolimus),*타크로벨캡슐0.25mg,0.25,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240419,20240419,2200,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240419,20240420,800,0,,DPCZ100,Noxafil enteric coated tab. 100mg (Posaconazole),녹사필장용정100mg,300,mg,3,T,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000001,20240419,20240420,1000,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,1,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240420,20240420,2200,0,,DJTCLM0.25,*Tacrobell cap. 0.25mg (Tacrolimus),*타크로벨캡슐0.25mg,0.25,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240420,20240420,2200,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240420,20240421,800,0,,DPCZ100,Noxafil enteric coated tab. 100mg (Posaconazole),녹사필장용정100mg,300,mg,3,T,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000001,20240420,20240421,1000,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,1,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240421,20240421,2200,0,,DJTCLM0.25,*Tacrobell cap. 0.25mg (Tacrolimus),*타크로벨캡슐0.25mg,0.25,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240421,20240421,2200,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240421,20240422,800,0,,DPCZ100,Noxafil enteric coated tab. 100mg (Posaconazole),녹사필장용정100mg,300,mg,3,T,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000001,20240421,20240422,1200,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,1,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240422,20240422,2300,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240422,20240423,800,0,,DPCZ100,Noxafil enteric coated tab. 100mg (Posaconazole),녹사필장용정100mg,300,mg,3,T,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000001,20240422,20240423,1000,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240422,20240423,1000,0,,DJTCLM0.25,*Tacrobell cap. 0.25mg (Tacrolimus),*타크로벨캡슐0.25mg,0.25,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240422,,,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240422,,,0,,DJTCLM0.25,*Tacrobell cap. 0.25mg (Tacrolimus),*타크로벨캡슐0.25mg,0.25,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240422,,,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,1,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240423,20240423,2200,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240423,20240424,800,0,,DPCZ100,Noxafil enteric coated tab. 100mg (Posaconazole),녹사필장용정100mg,300,mg,3,T,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000001,20240423,20240424,1000,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240423,20240424,1000,0,,DJTCLM0.25,*Tacrobell cap. 0.25mg (Tacrolimus),*타크로벨캡슐0.25mg,0.25,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240423,,,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240423,,,0,,DJTCLM0.25,*Tacrobell cap. 0.25mg (Tacrolimus),*타크로벨캡슐0.25mg,0.25,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240423,,,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,1,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240424,20240424,2200,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240424,20240425,800,0,,DPCZ100,Noxafil enteric coated tab. 100mg (Posaconazole),녹사필장용정100mg,300,mg,3,T,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000001,20240424,20240425,1000,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240424,20240425,1000,0,,DJTCLM0.25,*Tacrobell cap. 0.25mg (Tacrolimus),*타크로벨캡슐0.25mg,0.25,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240424,,,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240424,,,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,1,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240424,,,0,,DJTCLM0.25,*Tacrobell cap. 0.25mg (Tacrolimus),*타크로벨캡슐0.25mg,0.25,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240425,20240425,2200,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240425,20240426,800,0,,DPCZ100,Noxafil enteric coated tab. 100mg (Posaconazole),녹사필장용정100mg,300,mg,3,T,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000001,20240425,20240426,1000,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240425,20240426,1000,0,,DJTCLM0.25,*Tacrobell cap. 0.25mg (Tacrolimus),*타크로벨캡슐0.25mg,0.25,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240426,20240426,2200,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240426,20240427,800,0,,DPCZ100,Noxafil enteric coated tab. 100mg (Posaconazole),녹사필장용정100mg,300,mg,3,T,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000001,20240426,20240427,1000,0,,DJTCLM0.25,*Tacrobell cap. 0.25mg (Tacrolimus),*타크로벨캡슐0.25mg,0.25,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240426,20240427,1000,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240427,20240427,2200,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240427,20240428,800,0,,DPCZ100,Noxafil enteric coated tab. 100mg (Posaconazole),녹사필장용정100mg,300,mg,3,T,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000001,20240427,20240428,1000,0,,DJTCLM0.25,*Tacrobell cap. 0.25mg (Tacrolimus),*타크로벨캡슐0.25mg,0.25,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240427,20240428,1000,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240428,20240428,2200,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240428,20240429,800,0,,DPCZ100,Noxafil enteric coated tab. 100mg (Posaconazole),녹사필장용정100mg,300,mg,3,T,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000001,20240428,20240429,1000,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240428,20240429,1000,0,,DJTCLM0.25,*Tacrobell cap. 0.25mg (Tacrolimus),*타크로벨캡슐0.25mg,0.25,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240429,20240429,2200,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240429,20240430,800,0,,DPCZ100,Noxafil enteric coated tab. 100mg (Posaconazole),녹사필장용정100mg,300,mg,3,T,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000001,20240429,20240430,1000,0,,DJTCLM0.25,*Tacrobell cap. 0.25mg (Tacrolimus),*타크로벨캡슐0.25mg,0.25,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240429,20240430,1000,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240430,20240430,2200,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240430,20240430,2230,0,,DSP-LEVO,Laevan forte cream 2g/EA,래반포르테주입크림 2g/EA,2,g,1,ea,의사지시대로 항문 삽입,2,정상투약,3,약,2,외용,23,일반
+R000000001,20240430,20240501,800,0,,DPCZ100,Noxafil enteric coated tab. 100mg (Posaconazole),녹사필장용정100mg,300,mg,3,T,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000001,20240430,20240501,1000,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240430,20240501,1000,0,,DJTCLM0.25,*Tacrobell cap. 0.25mg (Tacrolimus),*타크로벨캡슐0.25mg,0.25,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240501,20240501,1300,0,,DSP-LEVO,Laevan forte cream 2g/EA,래반포르테주입크림 2g/EA,2,g,1,ea,의사지시대로 항문 삽입,2,정상투약,3,약,2,외용,23,일반
+R000000001,20240501,20240501,2200,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240501,20240502,800,0,,DPCZ100,Noxafil enteric coated tab. 100mg (Posaconazole),녹사필장용정100mg,300,mg,3,T,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000001,20240501,20240502,1000,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240501,20240502,1000,0,,DJTCLM0.25,*Tacrobell cap. 0.25mg (Tacrolimus),*타크로벨캡슐0.25mg,0.25,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240502,20240502,1300,0,,DSP-LEVO,Laevan forte cream 2g/EA,래반포르테주입크림 2g/EA,2,g,1,ea,의사지시대로 항문 삽입,2,정상투약,3,약,2,외용,23,일반
+R000000001,20240502,20240502,2200,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240502,20240503,800,0,,DPCZ100,Noxafil enteric coated tab. 100mg (Posaconazole),녹사필장용정100mg,300,mg,3,T,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000001,20240502,20240503,1000,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240502,,,0,,DJTCLM0.25,*Tacrobell cap. 0.25mg (Tacrolimus),*타크로벨캡슐0.25mg,0.25,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240503,20240503,1300,0,,DSP-LEVO,Laevan forte cream 2g/EA,래반포르테주입크림 2g/EA,2,g,1,ea,의사지시대로 항문 삽입,2,정상투약,3,약,2,외용,23,일반
+R000000001,20240503,20240503,2200,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240503,20240504,800,0,,DPCZ100,Noxafil enteric coated tab. 100mg (Posaconazole),녹사필장용정100mg,300,mg,3,T,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000001,20240503,20240504,1000,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240503,,,0,,DJTCLM0.25,*Tacrobell cap. 0.25mg (Tacrolimus),*타크로벨캡슐0.25mg,0.25,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240503,,,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240503,,,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240504,20240504,1300,0,,DSP-LEVO,Laevan forte cream 2g/EA,래반포르테주입크림 2g/EA,2,g,1,ea,의사지시대로 항문 삽입,2,정상투약,3,약,2,외용,23,일반
+R000000001,20240504,20240504,2200,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240504,20240505,800,0,,DPCZ100,Noxafil enteric coated tab. 100mg (Posaconazole),녹사필장용정100mg,300,mg,3,T,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000001,20240504,20240505,1000,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240505,20240505,1300,0,,DSP-LEVO,Laevan forte cream 2g/EA,래반포르테주입크림 2g/EA,2,g,1,ea,의사지시대로 항문 삽입,2,정상투약,3,약,2,외용,23,일반
+R000000001,20240505,20240505,2200,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240505,20240506,800,0,,DPCZ100,Noxafil enteric coated tab. 100mg (Posaconazole),녹사필장용정100mg,300,mg,3,T,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000001,20240505,20240506,1000,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240506,20240506,1300,0,,DSP-LEVO,Laevan forte cream 2g/EA,래반포르테주입크림 2g/EA,2,g,1,ea,의사지시대로 항문 삽입,2,정상투약,3,약,2,외용,23,일반
+R000000001,20240506,20240506,2200,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240506,20240507,800,0,,DPCZ100,Noxafil enteric coated tab. 100mg (Posaconazole),녹사필장용정100mg,300,mg,3,T,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000001,20240506,20240507,1000,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240507,20240507,1300,0,,DSP-LEVO,Laevan forte cream 2g/EA,래반포르테주입크림 2g/EA,2,g,1,ea,의사지시대로 항문 삽입,2,정상투약,3,약,2,외용,23,일반
+R000000001,20240507,20240507,2200,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240507,20240508,800,0,,DPCZ100,Noxafil enteric coated tab. 100mg (Posaconazole),녹사필장용정100mg,300,mg,3,T,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000001,20240507,20240508,1000,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240508,20240508,1300,0,,DSP-LEVO,Laevan forte cream 2g/EA,래반포르테주입크림 2g/EA,2,g,1,ea,의사지시대로 항문 삽입,2,정상투약,3,약,2,외용,23,일반
+R000000001,20240508,20240508,2200,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240508,20240509,800,0,,DPCZ100,Noxafil enteric coated tab. 100mg (Posaconazole),녹사필장용정100mg,300,mg,3,T,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000001,20240508,20240509,1000,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240509,20240509,1300,0,,DSP-LEVO,Laevan forte cream 2g/EA,래반포르테주입크림 2g/EA,2,g,1,ea,의사지시대로 항문 삽입,2,정상투약,3,약,2,외용,23,일반
+R000000001,20240509,20240509,2200,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240509,20240510,800,0,,DPCZ100,Noxafil enteric coated tab. 100mg (Posaconazole),녹사필장용정100mg,300,mg,3,T,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000001,20240509,20240510,1000,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000001,20240510,,,0,,DPCZ100,Noxafil enteric coated tab. 100mg (Posaconazole),녹사필장용정100mg,300,mg,3,T,PO,1,미확인,3,약,1,경구,25,항생제프로그램용
+R000000001,20240510,,,0,,DSP-LEVO,Laevan forte cream 2g/EA,래반포르테주입크림 2g/EA,2,g,1,ea,의사지시대로 항문 삽입,1,미확인,3,약,2,외용,23,일반
+R000000001,20240510,,,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000001,20240510,,,0,,DJTCLM0.5,*Tacrobell cap. 0.5mg (Tacrolimus),*타크로벨캡슐0.5mg,0.5,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000002,20231222,20231222,1315,0,,DA-2LDJ5,Lidocaine HCl 2% inj. 5ml(Lidocaine),대한리도카인2%주 5ml,200,mg,2,V,의사지시대로사용(타행위료로 대치),2,정상투약,2,주사,3,주사,23,일반
+R000000002,20231222,20231222,1910,0,,DAAP1GJ,Profa infusion inj. 1g/100ml (Acetaminophen),프로파인퓨전주 1g/100ml,1,g,1,bag,IV dropping,2,정상투약,2,주사,3,주사,23,일반
+R000000002,20231222,,,0,,DAAP1GJ,Profa infusion inj. 1g/100ml (Acetaminophen),프로파인퓨전주 1g/100ml,1,g,1,bag,IV dropping,1,미확인,2,주사,3,주사,23,일반
+R000000002,20231222,,,0,,DAAP1GJ,Profa infusion inj. 1g/100ml (Acetaminophen),프로파인퓨전주 1g/100ml,1,g,1,bag,IV dropping,1,미확인,2,주사,3,주사,23,일반
+R000000002,20231222,,,0,,DAAP1GJ,Profa infusion inj. 1g/100ml (Acetaminophen),프로파인퓨전주 1g/100ml,1,g,1,bag,IV dropping,1,미확인,2,주사,3,주사,23,일반
+R000000002,20231223,20231223,658,0,,DAAPER650,Tylenol 8hr ER Extended Relief 650mg (Acetaminophen),타이레놀8시간이알서방정650mg,650,mg,1,T,PO,2,정상투약,3,약,1,경구,23,일반
+R000000002,20231223,20231224,430,0,,DAAPER650,Tylenol 8hr ER Extended Relief 650mg (Acetaminophen),타이레놀8시간이알서방정650mg,650,mg,1,T,PO,2,정상투약,3,약,1,경구,23,일반
+R000000002,20231223,,,0,,DAAP1GJ,Profa infusion inj. 1g/100ml (Acetaminophen),프로파인퓨전주 1g/100ml,11,g,11,bag,IV dropping,1,미확인,2,주사,3,주사,23,일반
+R000000002,20231223,,,0,,DAAP1GJ,Profa infusion inj. 1g/100ml (Acetaminophen),프로파인퓨전주 1g/100ml,11,g,11,bag,IV dropping,1,미확인,2,주사,3,주사,23,일반
+R000000002,20231223,,,0,,DAAP1GJ,Profa infusion inj. 1g/100ml (Acetaminophen),프로파인퓨전주 1g/100ml,11,g,11,bag,IV dropping,1,미확인,2,주사,3,주사,23,일반
+R000000002,20231223,,,0,,DAAP1GJ,Profa infusion inj. 1g/100ml (Acetaminophen),프로파인퓨전주 1g/100ml,11,g,11,bag,IV dropping,1,미확인,2,주사,3,주사,23,일반
+R000000002,20231223,,,0,,DAAP1GJ,Profa infusion inj. 1g/100ml (Acetaminophen),프로파인퓨전주 1g/100ml,11,g,11,bag,IV dropping,1,미확인,2,주사,3,주사,23,일반
+R000000002,20231223,,,0,,DAAP1GJ,Profa infusion inj. 1g/100ml (Acetaminophen),프로파인퓨전주 1g/100ml,11,g,11,bag,IV dropping,1,미확인,2,주사,3,주사,23,일반
+R000000002,20231223,,,0,,DAAP1GJ,Profa infusion inj. 1g/100ml (Acetaminophen),프로파인퓨전주 1g/100ml,11,g,11,bag,IV dropping,1,미확인,2,주사,3,주사,23,일반
+R000000002,20231223,,,0,,DAAP1GJ,Profa infusion inj. 1g/100ml (Acetaminophen),프로파인퓨전주 1g/100ml,11,g,11,bag,IV dropping,1,미확인,2,주사,3,주사,23,일반
+R000000002,20231223,,,0,,DAAP1GJ,Profa infusion inj. 1g/100ml (Acetaminophen),프로파인퓨전주 1g/100ml,1,g,1,bag,IV dropping,1,미확인,2,주사,3,주사,23,일반
+R000000002,20231223,,,0,,DAAP1GJ,Profa infusion inj. 1g/100ml (Acetaminophen),프로파인퓨전주 1g/100ml,11,g,11,bag,IV dropping,1,미확인,2,주사,3,주사,23,일반
+R000000002,20231223,,,0,,DAAPER650,Tylenol 8hr ER Extended Relief 650mg (Acetaminophen),타이레놀8시간이알서방정650mg,650,mg,1,T,PO,1,미확인,3,약,1,경구,23,일반
+R000000002,20231223,,,0,,DAAP1GJ,Profa infusion inj. 1g/100ml (Acetaminophen),프로파인퓨전주 1g/100ml,1,g,1,bag,IV dropping,1,미확인,2,주사,3,주사,23,일반
+R000000002,20231223,,,0,,DAAPER650,Tylenol 8hr ER Extended Relief 650mg (Acetaminophen),타이레놀8시간이알서방정650mg,650,mg,1,T,PO,1,미확인,3,약,1,경구,23,일반
+R000000002,20231223,,,0,,DAAP1GJ,Profa infusion inj. 1g/100ml (Acetaminophen),프로파인퓨전주 1g/100ml,11,g,11,bag,IV dropping,1,미확인,2,주사,3,주사,23,일반
+R000000002,20231224,20231224,1425,0,,DAAPER650,Tylenol 8hr ER Extended Relief 650mg (Acetaminophen),타이레놀8시간이알서방정650mg,650,mg,1,T,PO,2,정상투약,3,약,1,경구,23,일반
+R000000002,20231224,20231225,0,0,,DAAP1GJ,Profa infusion inj. 1g/100ml (Acetaminophen),프로파인퓨전주 1g/100ml,1,g,1,bag,IV dropping,2,정상투약,2,주사,3,주사,23,일반
+R000000002,20231224,20231225,1020,0,,DAAP1GJ,Profa infusion inj. 1g/100ml (Acetaminophen),프로파인퓨전주 1g/100ml,1,g,1,bag,IV dropping,2,정상투약,2,주사,3,주사,23,일반
+R000000002,20231224,,,0,,DAAPER650,Tylenol 8hr ER Extended Relief 650mg (Acetaminophen),타이레놀8시간이알서방정650mg,650,mg,1,T,PO,1,미확인,3,약,1,경구,23,일반
+R000000002,20231224,,,0,,DAAP1GJ,Profa infusion inj. 1g/100ml (Acetaminophen),프로파인퓨전주 1g/100ml,11,g,11,bag,IV dropping,1,미확인,2,주사,3,주사,23,일반
+R000000002,20231224,,,0,,DAAPER650,Tylenol 8hr ER Extended Relief 650mg (Acetaminophen),타이레놀8시간이알서방정650mg,650,mg,1,T,PO,1,미확인,3,약,1,경구,23,일반
+R000000002,20231224,,,0,,DAAP1GJ,Profa infusion inj. 1g/100ml (Acetaminophen),프로파인퓨전주 1g/100ml,11,g,11,bag,IV dropping,1,미확인,2,주사,3,주사,23,일반
+R000000002,20231224,,,0,,DAAP1GJ,Profa infusion inj. 1g/100ml (Acetaminophen),프로파인퓨전주 1g/100ml,11,g,11,bag,IV dropping,1,미확인,2,주사,3,주사,23,일반
+R000000002,20231224,,,0,,DAAP1GJ,Profa infusion inj. 1g/100ml (Acetaminophen),프로파인퓨전주 1g/100ml,11,g,11,bag,IV dropping,1,미확인,2,주사,3,주사,23,일반
+R000000002,20231224,,,0,,DAAP1GJ,Profa infusion inj. 1g/100ml (Acetaminophen),프로파인퓨전주 1g/100ml,11,g,11,bag,IV dropping,1,미확인,2,주사,3,주사,23,일반
+R000000002,20231224,,,0,,DAAP1GJ,Profa infusion inj. 1g/100ml (Acetaminophen),프로파인퓨전주 1g/100ml,11,g,11,bag,IV dropping,1,미확인,2,주사,3,주사,23,일반
+R000000002,20231224,,,0,,DAAP1GJ,Profa infusion inj. 1g/100ml (Acetaminophen),프로파인퓨전주 1g/100ml,11,g,11,bag,IV dropping,1,미확인,2,주사,3,주사,23,일반
+R000000002,20231224,,,0,,DAAP1GJ,Profa infusion inj. 1g/100ml (Acetaminophen),프로파인퓨전주 1g/100ml,11,g,11,bag,IV dropping,1,미확인,2,주사,3,주사,23,일반
+R000000002,20231224,,,0,,DAAP1GJ,Profa infusion inj. 1g/100ml (Acetaminophen),프로파인퓨전주 1g/100ml,11,g,11,bag,IV dropping,1,미확인,2,주사,3,주사,23,일반
+R000000002,20231224,,,0,,DAAP1GJ,Profa infusion inj. 1g/100ml (Acetaminophen),프로파인퓨전주 1g/100ml,11,g,11,bag,IV dropping,1,미확인,2,주사,3,주사,23,일반
+R000000002,20231225,20231226,1800,0,,DAAPER650,Tylenol 8hr ER Extended Relief 650mg (Acetaminophen),타이레놀8시간이알서방정650mg,650,mg,1,T,PO,2,정상투약,3,약,1,경구,23,일반
+R000000002,20231225,20231227,650,0,,DAAPER650,Tylenol 8hr ER Extended Relief 650mg (Acetaminophen),타이레놀8시간이알서방정650mg,650,mg,1,T,PO,2,정상투약,3,약,1,경구,23,일반
+R000000002,20231225,20231227,1920,0,,DAAPER650,Tylenol 8hr ER Extended Relief 650mg (Acetaminophen),타이레놀8시간이알서방정650mg,650,mg,1,T,PO,2,정상투약,3,약,1,경구,23,일반
+R000000002,20231225,,,0,,DAAP1GJ,Profa infusion inj. 1g/100ml (Acetaminophen),프로파인퓨전주 1g/100ml,11,g,11,bag,IV dropping,1,미확인,2,주사,3,주사,23,일반
+R000000002,20231225,,,0,,DAAP1GJ,Profa infusion inj. 1g/100ml (Acetaminophen),프로파인퓨전주 1g/100ml,11,g,11,bag,IV dropping,1,미확인,2,주사,3,주사,23,일반
+R000000002,20231225,,,0,,DAAP1GJ,Profa infusion inj. 1g/100ml (Acetaminophen),프로파인퓨전주 1g/100ml,11,g,11,bag,IV dropping,1,미확인,2,주사,3,주사,23,일반
+R000000002,20231225,,,0,,DAAP1GJ,Profa infusion inj. 1g/100ml (Acetaminophen),프로파인퓨전주 1g/100ml,11,g,11,bag,IV dropping,1,미확인,2,주사,3,주사,23,일반
+R000000002,20231225,,,0,,DAAP1GJ,Profa infusion inj. 1g/100ml (Acetaminophen),프로파인퓨전주 1g/100ml,11,g,11,bag,IV dropping,1,미확인,2,주사,3,주사,23,일반
+R000000002,20231225,,,0,,DAAP1GJ,Profa infusion inj. 1g/100ml (Acetaminophen),프로파인퓨전주 1g/100ml,11,g,11,bag,IV dropping,1,미확인,2,주사,3,주사,23,일반
+R000000002,20231225,,,0,,DAAP1GJ,Profa infusion inj. 1g/100ml (Acetaminophen),프로파인퓨전주 1g/100ml,11,g,11,bag,IV dropping,1,미확인,2,주사,3,주사,23,일반
+R000000002,20231225,,,0,,DAAP1GJ,Profa infusion inj. 1g/100ml (Acetaminophen),프로파인퓨전주 1g/100ml,11,g,11,bag,IV dropping,1,미확인,2,주사,3,주사,23,일반
+R000000002,20231225,,,0,,DAAP1GJ,Profa infusion inj. 1g/100ml (Acetaminophen),프로파인퓨전주 1g/100ml,11,g,11,bag,IV dropping,1,미확인,2,주사,3,주사,23,일반
+R000000002,20231225,,,0,,DAAP1GJ,Profa infusion inj. 1g/100ml (Acetaminophen),프로파인퓨전주 1g/100ml,1,g,1,bag,IV dropping,1,미확인,2,주사,3,주사,23,일반
+R000000002,20231225,,,0,,DAAP1GJ,Profa infusion inj. 1g/100ml (Acetaminophen),프로파인퓨전주 1g/100ml,11,g,11,bag,IV dropping,1,미확인,2,주사,3,주사,23,일반
+R000000002,20231225,,,0,,DAAP1GJ,Profa infusion inj. 1g/100ml (Acetaminophen),프로파인퓨전주 1g/100ml,1,g,1,bag,IV dropping,1,미확인,2,주사,3,주사,23,일반
+R000000002,20231226,20231226,520,0,,DAAP1GJ,Profa infusion inj. 1g/100ml (Acetaminophen),프로파인퓨전주 1g/100ml,1,g,1,bag,IV dropping,2,정상투약,2,주사,3,주사,23,일반
+R000000002,20231226,,,0,,DAAP1GJ,Profa infusion inj. 1g/100ml (Acetaminophen),프로파인퓨전주 1g/100ml,11,g,11,bag,IV dropping,1,미확인,2,주사,3,주사,23,일반
+R000000002,20231226,,,0,,DAAPER650,Tylenol 8hr ER Extended Relief 650mg (Acetaminophen),타이레놀8시간이알서방정650mg,650,mg,1,T,PO,1,미확인,3,약,1,경구,23,일반
+R000000002,20231226,,,0,,DAAP1GJ,Profa infusion inj. 1g/100ml (Acetaminophen),프로파인퓨전주 1g/100ml,11,g,11,bag,IV dropping,1,미확인,2,주사,3,주사,23,일반
+R000000002,20231226,,,0,,DAAP1GJ,Profa infusion inj. 1g/100ml (Acetaminophen),프로파인퓨전주 1g/100ml,1,g,1,bag,IV dropping,1,미확인,2,주사,3,주사,23,일반
+R000000002,20231226,,,0,,DAAP1GJ,Profa infusion inj. 1g/100ml (Acetaminophen),프로파인퓨전주 1g/100ml,11,g,11,bag,IV dropping,1,미확인,2,주사,3,주사,23,일반
+R000000002,20231226,,,0,,DAAP1GJ,Profa infusion inj. 1g/100ml (Acetaminophen),프로파인퓨전주 1g/100ml,11,g,11,bag,IV dropping,1,미확인,2,주사,3,주사,23,일반
+R000000002,20231226,,,0,,DAAP1GJ,Profa infusion inj. 1g/100ml (Acetaminophen),프로파인퓨전주 1g/100ml,1,g,1,bag,IV dropping,1,미확인,2,주사,3,주사,23,일반
+R000000002,20231226,,,0,,DAAP1GJ,Profa infusion inj. 1g/100ml (Acetaminophen),프로파인퓨전주 1g/100ml,11,g,11,bag,IV dropping,1,미확인,2,주사,3,주사,23,일반
+R000000002,20231226,,,0,,DAAP1GJ,Profa infusion inj. 1g/100ml (Acetaminophen),프로파인퓨전주 1g/100ml,11,g,11,bag,IV dropping,1,미확인,2,주사,3,주사,23,일반
+R000000002,20231226,,,0,,DAAP1GJ,Profa infusion inj. 1g/100ml (Acetaminophen),프로파인퓨전주 1g/100ml,11,g,11,bag,IV dropping,1,미확인,2,주사,3,주사,23,일반
+R000000002,20231226,,,0,,DAAP1GJ,Profa infusion inj. 1g/100ml (Acetaminophen),프로파인퓨전주 1g/100ml,11,g,11,bag,IV dropping,1,미확인,2,주사,3,주사,23,일반
+R000000002,20231226,,,0,,DAAPER650,Tylenol 8hr ER Extended Relief 650mg (Acetaminophen),타이레놀8시간이알서방정650mg,650,mg,1,T,PO,1,미확인,3,약,1,경구,23,일반
+R000000002,20231226,,,0,,DAAP1GJ,Profa infusion inj. 1g/100ml (Acetaminophen),프로파인퓨전주 1g/100ml,11,g,11,bag,IV dropping,1,미확인,2,주사,3,주사,23,일반
+R000000002,20231226,,,0,,DAAP1GJ,Profa infusion inj. 1g/100ml (Acetaminophen),프로파인퓨전주 1g/100ml,11,g,11,bag,IV dropping,1,미확인,2,주사,3,주사,23,일반
+R000000002,20231226,,,0,,DAAP1GJ,Profa infusion inj. 1g/100ml (Acetaminophen),프로파인퓨전주 1g/100ml,1,g,1,bag,IV dropping,1,미확인,2,주사,3,주사,23,일반
+R000000002,20231226,,,0,,DAAPER650,Tylenol 8hr ER Extended Relief 650mg (Acetaminophen),타이레놀8시간이알서방정650mg,650,mg,1,T,PO,1,미확인,3,약,1,경구,23,일반
+R000000002,20231227,,,0,,DAAP300,Acetaminophen tab. 300mg (Acetaminophen),삼남아세트아미노펜정300mg,300,mg,1,T,PO,1,미확인,3,약,1,경구,23,일반
+R000000002,20231227,,,0,,DAAPER650,Tylenol 8hr ER Extended Relief 650mg (Acetaminophen),타이레놀8시간이알서방정650mg,650,mg,1,T,PO,1,미확인,3,약,1,경구,23,일반
+R000000002,20231228,20231228,1400,0,,DAAP300,Acetaminophen tab. 300mg (Acetaminophen),삼남아세트아미노펜정300mg,600,mg,2,T,PO,2,정상투약,3,약,1,경구,23,일반
+R000000002,20231228,,,0,,DAAP300,Acetaminophen tab. 300mg (Acetaminophen),삼남아세트아미노펜정300mg,600,mg,2,T,PO,1,미확인,3,약,1,경구,23,일반
+R000000002,20231230,20231230,1300,0,,DPCZ100,Noxafil enteric coated tab. 100mg (Posaconazole),녹사필장용정100mg,300,mg,3,T,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000002,20231230,20231230,1800,0,,DPCZ100,Noxafil enteric coated tab. 100mg (Posaconazole),녹사필장용정100mg,300,mg,3,T,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000002,20231230,20231231,800,0,,DPCZ100,Noxafil enteric coated tab. 100mg (Posaconazole),녹사필장용정100mg,300,mg,3,T,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000002,20231231,20240101,800,0,,DPCZ100,Noxafil enteric coated tab. 100mg (Posaconazole),녹사필장용정100mg,300,mg,3,T,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000002,20240101,20240102,800,0,,DPCZ100,Noxafil enteric coated tab. 100mg (Posaconazole),녹사필장용정100mg,300,mg,3,T,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000002,20240102,20240103,800,0,,DPCZ100,Noxafil enteric coated tab. 100mg (Posaconazole),녹사필장용정100mg,300,mg,3,T,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000002,20240103,20240104,800,0,,DPCZ100,Noxafil enteric coated tab. 100mg (Posaconazole),녹사필장용정100mg,300,mg,3,T,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000002,20240104,20240104,1401,0,,DA-2LDJ5,Lidocaine HCl 2% inj. 5ml(Lidocaine),대한리도카인2%주 5ml,200,mg,2,V,의사지시대로사용(타행위료로 대치),2,정상투약,2,주사,3,주사,23,일반
+R000000002,20240104,20240105,1400,0,,DPCZ100,Noxafil enteric coated tab. 100mg (Posaconazole),녹사필장용정100mg,300,mg,3,T,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000002,20240105,20240106,800,0,,DPCZ100,Noxafil enteric coated tab. 100mg (Posaconazole),녹사필장용정100mg,300,mg,3,T,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000002,20240106,20240107,800,0,,DPCZ100,Noxafil enteric coated tab. 100mg (Posaconazole),녹사필장용정100mg,300,mg,3,T,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000002,20240107,20240108,800,0,,DPCZ100,Noxafil enteric coated tab. 100mg (Posaconazole),녹사필장용정100mg,300,mg,3,T,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000002,20240108,20240109,800,0,,DPCZ100,Noxafil enteric coated tab. 100mg (Posaconazole),녹사필장용정100mg,300,mg,3,T,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000002,20240109,20240110,800,0,,DPCZ100,Noxafil enteric coated tab. 100mg (Posaconazole),녹사필장용정100mg,300,mg,3,T,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000002,20240110,20240111,800,0,,DPCZ100,Noxafil enteric coated tab. 100mg (Posaconazole),녹사필장용정100mg,300,mg,3,T,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000002,20240111,20240112,800,0,,DPCZ100,Noxafil enteric coated tab. 100mg (Posaconazole),녹사필장용정100mg,300,mg,3,T,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000002,20240112,20240113,800,0,,DPCZ100,Noxafil enteric coated tab. 100mg (Posaconazole),녹사필장용정100mg,300,mg,3,T,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000002,20240113,20240114,800,0,,DPCZ100,Noxafil enteric coated tab. 100mg (Posaconazole),녹사필장용정100mg,300,mg,3,T,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000002,20240114,20240114,1900,0,,DAAP300,Acetaminophen tab. 300mg (Acetaminophen),삼남아세트아미노펜정300mg,600,mg,2,T,PO,2,정상투약,3,약,1,경구,23,일반
+R000000002,20240114,20240115,210,0,,DAAP300,Acetaminophen tab. 300mg (Acetaminophen),삼남아세트아미노펜정300mg,600,mg,2,T,PO,2,정상투약,3,약,1,경구,23,일반
+R000000002,20240114,20240115,800,0,,DPCZ100,Noxafil enteric coated tab. 100mg (Posaconazole),녹사필장용정100mg,300,mg,3,T,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000002,20240114,20240115,1630,0,,DAAP300,Acetaminophen tab. 300mg (Acetaminophen),삼남아세트아미노펜정300mg,600,mg,2,T,PO,2,정상투약,3,약,1,경구,23,일반
+R000000002,20240114,,,0,,DAAP1GJ,Profa infusion inj. 1g/100ml (Acetaminophen),프로파인퓨전주 1g/100ml,1,g,1,bag,IV dropping,1,미확인,2,주사,3,주사,23,일반
+R000000002,20240114,,,0,,DAAP1GJ,Profa infusion inj. 1g/100ml (Acetaminophen),프로파인퓨전주 1g/100ml,1,g,1,bag,IV dropping,1,미확인,2,주사,3,주사,23,일반
+R000000002,20240115,20240115,1000,0,,DAAP300,Acetaminophen tab. 300mg (Acetaminophen),삼남아세트아미노펜정300mg,600,mg,2,T,PO,2,정상투약,3,약,1,경구,23,일반
+R000000002,20240115,20240115,1000,0,,DW-TP400J,Teicocin inj. 400mg (Teicoplanin),테이코신주400mg,400,mg,1,V,IV side,2,정상투약,2,주사,3,주사,25,항생제프로그램용
+R000000002,20240115,20240115,1000,0,,DW-TP400J,Teicocin inj. 400mg (Teicoplanin),테이코신주400mg,400,mg,1,V,IV side,2,정상투약,2,주사,3,주사,25,항생제프로그램용
+R000000002,20240115,20240115,1900,1,0,DW-AMC250V,*[적시]Amikacin sulfate inj. 250mg (Amikacin),*[적시]아미카신황산염주사액250mg(V),412.5,mg,1.65,V,"수액내 Mix(일반, 항암)",2,정상투약,2,주사,3,주사,25,항생제프로그램용
+R000000002,20240115,20240115,2200,0,,DW-TP400J,Teicocin inj. 400mg (Teicoplanin),테이코신주400mg,400,mg,1,V,IV side,2,정상투약,2,주사,3,주사,25,항생제프로그램용
+R000000002,20240115,20240116,800,0,,DPCZ100,Noxafil enteric coated tab. 100mg (Posaconazole),녹사필장용정100mg,300,mg,3,T,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000002,20240115,20240116,900,1,0,DW-AMC250V,*[적시]Amikacin sulfate inj. 250mg (Amikacin),*[적시]아미카신황산염주사액250mg(V),412.5,mg,1.65,V,"수액내 Mix(일반, 항암)",2,정상투약,2,주사,3,주사,25,항생제프로그램용
+R000000002,20240115,,,0,,DAAP300,Acetaminophen tab. 300mg (Acetaminophen),삼남아세트아미노펜정300mg,600,mg,2,T,PO,1,미확인,3,약,1,경구,23,일반
+R000000002,20240115,,,0,,DW-TP400J,Teicocin inj. 400mg (Teicoplanin),테이코신주400mg,400,mg,1,V,IV side,1,미확인,2,주사,3,주사,25,항생제프로그램용
+R000000002,20240116,20240117,800,0,,DPCZ100,Noxafil enteric coated tab. 100mg (Posaconazole),녹사필장용정100mg,300,mg,3,T,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000002,20240116,,,1,6,DW-AMC250V,*[적시]Amikacin sulfate inj. 250mg (Amikacin),*[적시]아미카신황산염주사액250mg(V),412.5,mg,1.65,V,"수액내 Mix(일반, 항암)",1,미확인,2,주사,3,주사,25,항생제프로그램용
+R000000002,20240116,,,0,,DW-TP400J,Teicocin inj. 400mg (Teicoplanin),테이코신주400mg,400,mg,1,V,IV side,1,미확인,2,주사,3,주사,25,항생제프로그램용
+R000000002,20240116,,,1,6,DW-AMC250V,*[적시]Amikacin sulfate inj. 250mg (Amikacin),*[적시]아미카신황산염주사액250mg(V),412.5,mg,1.65,V,"수액내 Mix(일반, 항암)",1,미확인,2,주사,3,주사,25,항생제프로그램용
+R000000002,20240117,20240118,800,0,,DPCZ100,Noxafil enteric coated tab. 100mg (Posaconazole),녹사필장용정100mg,300,mg,3,T,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000002,20240118,20240119,800,0,,DPCZ100,Noxafil enteric coated tab. 100mg (Posaconazole),녹사필장용정100mg,300,mg,3,T,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000002,20240119,20240119,1330,0,,DA-2LDJ5,Lidocaine HCl 2% inj. 5ml(Lidocaine),대한리도카인2%주 5ml,100,mg,1,V,의사지시대로사용(타행위료로 대치),2,정상투약,2,주사,3,주사,23,일반
+R000000002,20240119,,,0,,DPCZ100,Noxafil enteric coated tab. 100mg (Posaconazole),녹사필장용정100mg,300,mg,3,T,PO,1,미확인,3,약,1,경구,25,항생제프로그램용
+R000000002,20240120,,,0,,DPCZ100,Noxafil enteric coated tab. 100mg (Posaconazole),녹사필장용정100mg,300,mg,3,T,PO,1,미확인,3,약,1,경구,25,항생제프로그램용
+R000000002,20240121,,,0,,DPCZ100,Noxafil enteric coated tab. 100mg (Posaconazole),녹사필장용정100mg,300,mg,3,T,PO,1,미확인,3,약,1,경구,25,항생제프로그램용
+R000000002,20240122,,,0,,DPCZ100,Noxafil enteric coated tab. 100mg (Posaconazole),녹사필장용정100mg,300,mg,3,T,PO,1,미확인,3,약,1,경구,25,항생제프로그램용
+R000000003,20231218,,,0,,DAAP300,Acetaminophen tab. 300mg (Acetaminophen),삼남아세트아미노펜정300mg,600,mg,2,T,PO,1,미확인,3,약,1,경구,23,일반
+R000000003,20231219,20231219,850,0,,DAAP300,Acetaminophen tab. 300mg (Acetaminophen),삼남아세트아미노펜정300mg,600,mg,2,T,PO,2,정상투약,3,약,1,경구,23,일반
+R000000003,20231219,20231219,1630,0,,DAAP300,Acetaminophen tab. 300mg (Acetaminophen),삼남아세트아미노펜정300mg,600,mg,2,T,PO,2,정상투약,3,약,1,경구,23,일반
+R000000003,20231221,20231221,1830,0,,DAAPER650,Tylenol 8hr ER Extended Relief 650mg (Acetaminophen),타이레놀8시간이알서방정650mg,650,mg,1,T,PO,2,정상투약,3,약,1,경구,23,일반
+R000000003,20231222,20231222,1130,0,,DAAP300,Acetaminophen tab. 300mg (Acetaminophen),삼남아세트아미노펜정300mg,600,mg,2,T,PO,2,정상투약,3,약,1,경구,23,일반
+R000000003,20231222,20231222,1400,0,,DAAP300,Acetaminophen tab. 300mg (Acetaminophen),삼남아세트아미노펜정300mg,600,mg,2,T,PO,2,정상투약,3,약,1,경구,23,일반
+R000000003,20231223,20231223,1130,0,,DAAP300,Acetaminophen tab. 300mg (Acetaminophen),삼남아세트아미노펜정300mg,600,mg,2,T,PO,2,정상투약,3,약,1,경구,23,일반
+R000000003,20231223,20231223,1400,0,,DAAP300,Acetaminophen tab. 300mg (Acetaminophen),삼남아세트아미노펜정300mg,600,mg,2,T,PO,2,정상투약,3,약,1,경구,23,일반
+R000000003,20231224,20231224,1130,0,,DAAP300,Acetaminophen tab. 300mg (Acetaminophen),삼남아세트아미노펜정300mg,600,mg,2,T,PO,2,정상투약,3,약,1,경구,23,일반
+R000000003,20231224,20231224,1520,0,,DAAP300,Acetaminophen tab. 300mg (Acetaminophen),삼남아세트아미노펜정300mg,600,mg,2,T,PO,2,정상투약,3,약,1,경구,23,일반
+R000000003,20231227,20231227,250,0,,DAAP1GJ,Profa infusion inj. 1g/100ml (Acetaminophen),프로파인퓨전주 1g/100ml,1,g,1,bag,IV dropping,2,정상투약,2,주사,3,주사,23,일반
+R000000003,20231227,20231227,730,0,,DAAP1GJ,Profa infusion inj. 1g/100ml (Acetaminophen),프로파인퓨전주 1g/100ml,1,g,1,bag,IV side,2,정상투약,2,주사,3,주사,23,일반
+R000000003,20231227,,,1,90,DAAP1GJ,Profa infusion inj. 1g/100ml (Acetaminophen),프로파인퓨전주 1g/100ml,1,g,1,bag,IV side,1,미확인,2,주사,3,주사,23,일반
+R000000003,20231227,,,1,91,DAAP1GJ,Profa infusion inj. 1g/100ml (Acetaminophen),프로파인퓨전주 1g/100ml,1,g,1,bag,IV side,1,미확인,2,주사,3,주사,23,일반
+R000000003,20231228,20231228,225,0,,DAAP1GJ,Profa infusion inj. 1g/100ml (Acetaminophen),프로파인퓨전주 1g/100ml,1,g,1,bag,IV dropping,2,정상투약,2,주사,3,주사,23,일반
+R000000003,20231228,20231228,2100,0,,DAAP1GJ,Profa infusion inj. 1g/100ml (Acetaminophen),프로파인퓨전주 1g/100ml,1,g,1,bag,IV dropping,2,정상투약,2,주사,3,주사,23,일반
+R000000003,20231228,,,0,,DAAP1GJ,Profa infusion inj. 1g/100ml (Acetaminophen),프로파인퓨전주 1g/100ml,1,g,1,bag,IV dropping,1,미확인,2,주사,3,주사,23,일반
+R000000003,20231228,,,0,,DAAPER650,Tylenol 8hr ER Extended Relief 650mg (Acetaminophen),타이레놀8시간이알서방정650mg,650,mg,1,T,PO,1,미확인,3,약,1,경구,23,일반
+R000000003,20231228,,,0,,DAAP1GJ,Profa infusion inj. 1g/100ml (Acetaminophen),프로파인퓨전주 1g/100ml,1,g,1,bag,IV dropping,1,미확인,2,주사,3,주사,23,일반
+R000000003,20231228,,,0,,DAAPER650,Tylenol 8hr ER Extended Relief 650mg (Acetaminophen),타이레놀8시간이알서방정650mg,650,mg,1,T,PO,1,미확인,3,약,1,경구,23,일반
+R000000003,20231228,,,0,,DAAPER650,Tylenol 8hr ER Extended Relief 650mg (Acetaminophen),타이레놀8시간이알서방정650mg,650,mg,1,T,PO,1,미확인,3,약,1,경구,23,일반
+R000000003,20231231,20231231,1300,1,43,DJTCLM5J,*[적시]Tacrobell inj. 5mg/A (tacrolimus),*[적시]타크로벨주5mg/A,1.5,mg,0.3,A,"수액내 Mix(일반, 항암)",2,정상투약,2,주사,3,주사,1,면역억제제
+R000000003,20240101,20240101,1300,1,43,DJTCLM5J,*[적시]Tacrobell inj. 5mg/A (tacrolimus),*[적시]타크로벨주5mg/A,1.5,mg,0.3,A,"수액내 Mix(일반, 항암)",2,정상투약,2,주사,3,주사,1,면역억제제
+R000000003,20240102,20240102,1300,1,43,DJTCLM5J,*[적시]Tacrobell inj. 5mg/A (tacrolimus),*[적시]타크로벨주5mg/A,1.5,mg,0.3,A,"수액내 Mix(일반, 항암)",2,정상투약,2,주사,3,주사,1,면역억제제
+R000000003,20240103,20240103,1300,1,42,DJTCLM5J,*[적시]Tacrobell inj. 5mg/A (tacrolimus),*[적시]타크로벨주5mg/A,1.7,mg,0.34,A,"수액내 Mix(일반, 항암)",2,정상투약,2,주사,3,주사,1,면역억제제
+R000000003,20240103,,,0,,DW-VCM125,Vancozin cap. 125mg (Vancomycin) ,반코진캡슐125mg,125,mg,1,C,PO,1,미확인,3,약,1,경구,25,항생제프로그램용
+R000000003,20240103,,,0,,DW-VCM125,Vancozin cap. 125mg (Vancomycin) ,반코진캡슐125mg,125,mg,1,C,PO,1,미확인,3,약,1,경구,25,항생제프로그램용
+R000000003,20240103,,,0,,DW-VCM125,Vancozin cap. 125mg (Vancomycin) ,반코진캡슐125mg,125,mg,1,C,PO,1,미확인,3,약,1,경구,25,항생제프로그램용
+R000000003,20240103,,,0,,DW-VCM125,Vancozin cap. 125mg (Vancomycin) ,반코진캡슐125mg,125,mg,1,C,PO,1,미확인,3,약,1,경구,25,항생제프로그램용
+R000000003,20240104,20240104,1300,1,42,DJTCLM5J,*[적시]Tacrobell inj. 5mg/A (tacrolimus),*[적시]타크로벨주5mg/A,1.7,mg,0.34,A,"수액내 Mix(일반, 항암)",2,정상투약,2,주사,3,주사,1,면역억제제
+R000000003,20240104,20240104,1300,0,,DW-VCM125,Vancozin cap. 125mg (Vancomycin) ,반코진캡슐125mg,125,mg,1,C,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000003,20240104,20240104,1800,0,,DW-VCM125,Vancozin cap. 125mg (Vancomycin) ,반코진캡슐125mg,125,mg,1,C,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000003,20240104,20240104,2100,0,,DW-VCM125,Vancozin cap. 125mg (Vancomycin) ,반코진캡슐125mg,125,mg,1,C,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000003,20240104,20240105,800,0,,DW-VCM125,Vancozin cap. 125mg (Vancomycin) ,반코진캡슐125mg,125,mg,1,C,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000003,20240105,20240105,1300,1,42,DJTCLM5J,*[적시]Tacrobell inj. 5mg/A (tacrolimus),*[적시]타크로벨주5mg/A,1.7,mg,0.34,A,"수액내 Mix(일반, 항암)",2,정상투약,2,주사,3,주사,1,면역억제제
+R000000003,20240105,20240105,1300,0,,DW-VCM125,Vancozin cap. 125mg (Vancomycin) ,반코진캡슐125mg,125,mg,1,C,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000003,20240105,20240105,1800,0,,DW-VCM125,Vancozin cap. 125mg (Vancomycin) ,반코진캡슐125mg,125,mg,1,C,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000003,20240105,20240105,2100,0,,DW-VCM125,Vancozin cap. 125mg (Vancomycin) ,반코진캡슐125mg,125,mg,1,C,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000003,20240105,20240106,800,0,,DW-VCM125,Vancozin cap. 125mg (Vancomycin) ,반코진캡슐125mg,125,mg,1,C,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000003,20240106,20240106,1300,1,41,DJTCLM5J,*[적시]Tacrobell inj. 5mg/A (tacrolimus),*[적시]타크로벨주5mg/A,1.7,mg,0.34,A,"수액내 Mix(일반, 항암)",2,정상투약,2,주사,3,주사,1,면역억제제
+R000000003,20240106,,,0,,DW-VCM125,Vancozin cap. 125mg (Vancomycin) ,반코진캡슐125mg,125,mg,1,C,PO,1,미확인,3,약,1,경구,25,항생제프로그램용
+R000000003,20240106,,,0,,DW-VCM125,Vancozin cap. 125mg (Vancomycin) ,반코진캡슐125mg,125,mg,1,C,PO,1,미확인,3,약,1,경구,25,항생제프로그램용
+R000000003,20240106,,,0,,DW-VCM125,Vancozin cap. 125mg (Vancomycin) ,반코진캡슐125mg,125,mg,1,C,PO,1,미확인,3,약,1,경구,25,항생제프로그램용
+R000000003,20240106,,,0,,DW-VCM125,Vancozin cap. 125mg (Vancomycin) ,반코진캡슐125mg,125,mg,1,C,PO,1,미확인,3,약,1,경구,25,항생제프로그램용
+R000000003,20240107,20240107,1300,0,,DW-VCM125,Vancozin cap. 125mg (Vancomycin) ,반코진캡슐125mg,125,mg,1,C,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000003,20240107,20240107,1300,1,41,DJTCLM5J,*[적시]Tacrobell inj. 5mg/A (tacrolimus),*[적시]타크로벨주5mg/A,1.7,mg,0.34,A,"수액내 Mix(일반, 항암)",2,정상투약,2,주사,3,주사,1,면역억제제
+R000000003,20240107,20240107,1800,0,,DW-VCM125,Vancozin cap. 125mg (Vancomycin) ,반코진캡슐125mg,125,mg,1,C,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000003,20240107,20240107,2100,0,,DW-VCM125,Vancozin cap. 125mg (Vancomycin) ,반코진캡슐125mg,125,mg,1,C,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000003,20240107,20240108,800,0,,DW-VCM125,Vancozin cap. 125mg (Vancomycin) ,반코진캡슐125mg,125,mg,1,C,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000003,20240108,20240108,1300,0,,DW-VCM125,Vancozin cap. 125mg (Vancomycin) ,반코진캡슐125mg,125,mg,1,C,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000003,20240108,20240108,1300,1,41,DJTCLM5J,*[적시]Tacrobell inj. 5mg/A (tacrolimus),*[적시]타크로벨주5mg/A,1.7,mg,0.34,A,"수액내 Mix(일반, 항암)",2,정상투약,2,주사,3,주사,1,면역억제제
+R000000003,20240108,20240108,1800,0,,DW-VCM125,Vancozin cap. 125mg (Vancomycin) ,반코진캡슐125mg,125,mg,1,C,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000003,20240108,20240108,2100,0,,DW-VCM125,Vancozin cap. 125mg (Vancomycin) ,반코진캡슐125mg,125,mg,1,C,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000003,20240108,20240109,800,0,,DW-VCM125,Vancozin cap. 125mg (Vancomycin) ,반코진캡슐125mg,125,mg,1,C,PO,2,정상투약,3,약,1,경구,25,항생제프로그램용
+R000000003,20240108,,,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,1,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000003,20240108,,,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,1,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000003,20240108,,,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,1,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000003,20240109,,,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,1,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000003,20240109,,,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,1,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000003,20240110,,,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,1,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000003,20240110,,,0,,DJTCLM1,*Tacrobell cap. 1mg (Tacrolimus),*타크로벨캡슐1mg,1,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000005,20231210,20231210,1317,0,,DAAP1GJ,Profa infusion inj. 1g/100ml (Acetaminophen),프로파인퓨전주 1g/100ml,1,g,1,bag,IV dropping,2,정상투약,2,주사,3,주사,23,일반
+R000000005,20231210,20231210,1944,0,,DAAP1GJ,Profa infusion inj. 1g/100ml (Acetaminophen),프로파인퓨전주 1g/100ml,1,g,1,bag,IV dropping,2,정상투약,2,주사,3,주사,23,일반
+R000000005,20231211,20231211,600,0,,DCSJ25,*Cipol-N soft cap. 25mg (Cyclosporine),*사이폴엔캅셀25mg,25,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000005,20231211,20231211,600,0,,DMMF250,Myrept cap. 250mg (Mycophenolate mofetil),마이렙트캡슐 250mg,250,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000005,20231211,20231211,600,0,,DMMF250,Myrept cap. 250mg (Mycophenolate mofetil),마이렙트캡슐 250mg,250,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000005,20231211,20231211,1504,0,,DULTC,"Paramacet tab. (Acetaminophen, Tramadol)",파라마셋정,1,T,1,T,PO,2,정상투약,3,약,1,경구,23,일반
+R000000005,20231211,20231211,1504,0,,DULTC,"Paramacet tab. (Acetaminophen, Tramadol)",파라마셋정,1,T,1,T,PO,2,정상투약,3,약,1,경구,23,일반
+R000000005,20231211,20231211,1504,0,,DULTC,"Paramacet tab. (Acetaminophen, Tramadol)",파라마셋정,1,T,1,T,PO,2,정상투약,3,약,1,경구,23,일반
+R000000005,20231221,20231221,2232,0,,DA-2LDJ5,Lidocaine HCl 2% inj. 5ml(Lidocaine),대한리도카인2%주 5ml,100,mg,1,V,Intramuscular,2,정상투약,2,주사,3,주사,23,일반
+R000000005,20231221,,,0,,DMMF250,Myrept cap. 250mg (Mycophenolate mofetil),마이렙트캡슐 250mg,250,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000005,20231221,,,0,,DCSJ25,*Cipol-N soft cap. 25mg (Cyclosporine),*사이폴엔캅셀25mg,25,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000005,20231221,,,0,,DMMF250,Myrept cap. 250mg (Mycophenolate mofetil),마이렙트캡슐 250mg,250,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000005,20231222,20231222,600,0,,DMMF250,Myrept cap. 250mg (Mycophenolate mofetil),마이렙트캡슐 250mg,250,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000005,20231222,20231222,600,0,,DCSJ25,*Cipol-N soft cap. 25mg (Cyclosporine),*사이폴엔캅셀25mg,25,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000005,20231222,20231222,600,0,,DMMF250,Myrept cap. 250mg (Mycophenolate mofetil),마이렙트캡슐 250mg,250,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000005,20231223,,,0,,DMMF250,Myrept cap. 250mg (Mycophenolate mofetil),마이렙트캡슐 250mg,250,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000005,20231223,,,0,,DMMF250,Myrept cap. 250mg (Mycophenolate mofetil),마이렙트캡슐 250mg,250,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000005,20231223,,,0,,DCSJ25,*Cipol-N soft cap. 25mg (Cyclosporine),*사이폴엔캅셀25mg,25,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000006,20231221,,,0,,DTCLM1,*Prograf cap. 1mg (Tacrolimus),*프로그랍캅셀 1mg,1,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000006,20231221,,,0,,DTCLM0.5,*Prograf cap. 0.5mg (Tacrolimus),*프로그랍캅셀0.5mg,0.5,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000006,20231221,,,0,,DULTC,"Paramacet tab. (Acetaminophen, Tramadol)",파라마셋정,2,T,2,T,PO,1,미확인,3,약,1,경구,23,일반
+R000000006,20231222,20231222,735,0,,DTCLM0.5,*Prograf cap. 0.5mg (Tacrolimus),*프로그랍캅셀0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000006,20231222,20231222,735,0,,DTCLM1,*Prograf cap. 1mg (Tacrolimus),*프로그랍캅셀 1mg,1,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000006,20231222,20231222,1500,0,,DULTC,"Paramacet tab. (Acetaminophen, Tramadol)",파라마셋정,1,T,1,T,PO,2,정상투약,3,약,1,경구,23,일반
+R000000006,20231222,20231222,2000,0,,DTCLM0.5,*Prograf cap. 0.5mg (Tacrolimus),*프로그랍캅셀0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000006,20231222,20231222,2000,0,,DTCLM1,*Prograf cap. 1mg (Tacrolimus),*프로그랍캅셀 1mg,1,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000006,20231222,20231223,100,0,,DULTC,"Paramacet tab. (Acetaminophen, Tramadol)",파라마셋정,1,T,1,T,PO,2,정상투약,3,약,1,경구,23,일반
+R000000006,20231223,20231223,1800,0,,DULTC,"Paramacet tab. (Acetaminophen, Tramadol)",파라마셋정,1,T,1,T,PO,2,정상투약,3,약,1,경구,23,일반
+R000000006,20231223,20231223,2000,0,,DTCLM0.5,*Prograf cap. 0.5mg (Tacrolimus),*프로그랍캅셀0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000006,20231223,20231223,2000,0,,DTCLM1,*Prograf cap. 1mg (Tacrolimus),*프로그랍캅셀 1mg,1,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000006,20231223,20231224,1615,0,,DULTC,"Paramacet tab. (Acetaminophen, Tramadol)",파라마셋정,1,T,1,T,PO,2,정상투약,3,약,1,경구,23,일반
+R000000006,20231223,,,0,,DTCLM0.5,*Prograf cap. 0.5mg (Tacrolimus),*프로그랍캅셀0.5mg,0.5,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000006,20231223,,,0,,DTCLM1,*Prograf cap. 1mg (Tacrolimus),*프로그랍캅셀 1mg,1,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000006,20231224,20231224,2000,0,,DTCLM0.5,*Prograf cap. 0.5mg (Tacrolimus),*프로그랍캅셀0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000006,20231224,20231224,2000,0,,DTCLM1,*Prograf cap. 1mg (Tacrolimus),*프로그랍캅셀 1mg,1,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000006,20231224,20231225,700,0,,DULTC,"Paramacet tab. (Acetaminophen, Tramadol)",파라마셋정,1,T,1,T,PO,2,정상투약,3,약,1,경구,23,일반
+R000000006,20231224,,,0,,DTCLM1,*Prograf cap. 1mg (Tacrolimus),*프로그랍캅셀 1mg,1,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000006,20231224,,,0,,DTCLM0.5,*Prograf cap. 0.5mg (Tacrolimus),*프로그랍캅셀0.5mg,0.5,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000006,20231225,20231225,1740,0,,DULTC,"Paramacet tab. (Acetaminophen, Tramadol)",파라마셋정,1,T,1,T,PO,2,정상투약,3,약,1,경구,23,일반
+R000000006,20231225,20231225,2000,0,,DTCLM0.5,*Prograf cap. 0.5mg (Tacrolimus),*프로그랍캅셀0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000006,20231225,20231225,2000,0,,DTCLM1,*Prograf cap. 1mg (Tacrolimus),*프로그랍캅셀 1mg,1,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000006,20231225,20231226,2220,0,,DULTC,"Paramacet tab. (Acetaminophen, Tramadol)",파라마셋정,1,T,1,T,PO,2,정상투약,3,약,1,경구,23,일반
+R000000006,20231225,,,0,,DTCLM1,*Prograf cap. 1mg (Tacrolimus),*프로그랍캅셀 1mg,1,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000006,20231225,,,0,,DTCLM0.5,*Prograf cap. 0.5mg (Tacrolimus),*프로그랍캅셀0.5mg,0.5,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000006,20231226,20231226,2000,0,,DTCLM0.5,*Prograf cap. 0.5mg (Tacrolimus),*프로그랍캅셀0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000006,20231226,20231226,2000,0,,DTCLM1,*Prograf cap. 1mg (Tacrolimus),*프로그랍캅셀 1mg,1,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000006,20231226,,,0,,DTCLM1,*Prograf cap. 1mg (Tacrolimus),*프로그랍캅셀 1mg,2,mg,2,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000006,20231226,,,0,,DTCLM0.5,*Prograf cap. 0.5mg (Tacrolimus),*프로그랍캅셀0.5mg,0.5,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000006,20231226,,,0,,DULTC,"Paramacet tab. (Acetaminophen, Tramadol)",파라마셋정,1,T,1,T,PO,1,미확인,3,약,1,경구,23,일반
+R000000006,20231226,,,0,,DTCLM1,*Prograf cap. 1mg (Tacrolimus),*프로그랍캅셀 1mg,1,mg,1,C,PO,1,미확인,3,약,1,경구,23,일반
+R000000006,20231227,20231227,2000,0,,DTCLM1,*Prograf cap. 1mg (Tacrolimus),*프로그랍캅셀 1mg,1,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반
+R000000006,20231227,20231227,2000,0,,DTCLM0.5,*Prograf cap. 0.5mg (Tacrolimus),*프로그랍캅셀0.5mg,0.5,mg,1,C,PO,2,정상투약,3,약,1,경구,23,일반

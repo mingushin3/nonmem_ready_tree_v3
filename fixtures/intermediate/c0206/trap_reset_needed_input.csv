@@ -1,0 +1,3 @@
+subject_id,time_value,event_type
+1,0.0,dose
+1,1.0,obs

@@ -1,0 +1,5 @@
+subject_id,event_type,time_value,dv_value,EVID,analyte_label,admin_route
+1,dose,0.0,,1,Midazolam,PO
+1,obs,1.0,5.2,0,Midazolam,PO
+1,dose,0.0,,1,Itraconazole,PO
+1,obs,1.0,2.8,0,Itraconazole,PO
