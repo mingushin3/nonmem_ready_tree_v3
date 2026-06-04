@@ -233,3 +233,62 @@ def test_v3_inline_scripts_node_check(tmp_path):
         f.write_text(b, encoding="utf-8")
         r = subprocess.run([node, "--check", str(f)], capture_output=True, text=True)
         assert r.returncode == 0, ("node --check 실패 block %d: %s" % (idx, r.stderr[:300]))
+
+
+# ===== (9) v3 표현 재설계: 블루프린트 레이아웃·collapse (표현층 전용·환경 비의존) =====
+def test_v3_spec_toggle_button_present():
+    # 런타임 DOM 삽입 토글 + 함수 일습
+    assert 'id="v3SpecToggle"' in HTML
+    assert "insertSpecToggle" in HTML
+    assert "applySpecOnlyVisibility" in HTML
+
+
+def test_v3_spec_collapse_default_hidden_logic():
+    # 기본 접힘: LS 키 null → hidden(true)
+    assert "pmx_dt_v3_specHidden" in HTML
+    assert "v3IsSpecHidden" in HTML
+    # cy.remove 아닌 display 토글(reversible·ELES 불변)
+    assert 'style("display"' in HTML or "style('display'" in HTML
+    # hide 대상에 spec_only 노드 + spec_attach + declared_cond 엣지 포함
+    assert "[?spec_only]" in HTML
+    assert 'ekind="spec_attach"' in HTML
+    assert 'ekind="declared_cond"' in HTML
+
+
+def test_v3_separate_ls_key_not_pmx_dt_state():
+    # v3 선호는 별도 키(frozen pmx_dt_state 비건드림)
+    assert "pmx_dt_v3_specHidden" in HTML
+    assert "pmx_dt_v3_specHidden" != "pmx_dt_state"
+
+
+def test_v3_layoutopts_override_present():
+    # 전역 layoutOpts 재대입 + 재튜닝 파라미터
+    assert "layoutOpts = function" in HTML or "layoutOpts=function" in HTML
+    assert "tight-tree" in HTML
+    assert "edgeSep" in HTML
+    assert 'rankDir:"LR"' in HTML  # 가로 배치 유지
+
+
+def test_v3_relayout_calls_drawminimap_and_perf_honest():
+    assert "relayoutV3" in HTML
+    assert "drawMinimap" in HTML
+    assert "layoutstop" in HTML
+    # perf 정직: 초기 t_total에 v3 재레이아웃 추가분 표기(날조 0)
+    assert "t_v3relayout" in HTML
+    assert "v3 +" in HTML
+
+
+def test_v3_blueprint_chrome_markers():
+    # 블루프린트 그리드 backdrop + Pretendard 우선 폰트(외부자산 아님)
+    assert "rgba(28,111,176" in HTML            # cyan 그리드 라인
+    assert "Pretendard" in HTML
+    assert "background-size:24px 24px" in HTML or "24px 24px" in HTML
+
+
+def test_v3_canonical_hues_preserved_after_redesign():
+    # 정본 색 의미 보존(앰버 실선·청록 점선·보라 미실현)
+    for hue in ("#E8820C", "#15B4C7", "#9C6ADE"):
+        assert hue in HTML, ("정본 hue 누락", hue)
+    # 금지 하이라이트 색 재유입 0(재설계 후에도)
+    for legacy in ("#FFD700", "#FFF8B0", "#c9920e"):
+        assert legacy not in HTML, ("legacy color 재유입", legacy)
