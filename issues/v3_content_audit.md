@@ -112,7 +112,11 @@
   내부 detect→transform 배선은 "다발 부착=step2 압축, 범위 밖"으로 스코프 아웃됨.
 - **판정:** backbone→🏁 선로 끊김 아님(정상). 단 **mess-layer의 detect→transform 관계를 그래프가 under-represent**하는
   표현 완전성 갭(같은 층에서 conditional 엣지는 그리고 linear pass 엣지는 안 그리는 비대칭). 사용자 혼동의 정당한 근거.
-- **보완 옵션(승인 시 별도 세션):** v3 **표현층에서만** `c_units.json`의 `verify_visualization.pass_route_to`를 읽어
-  mess-layer(같은 layer_pair) detect→transform pass 엣지를 점선 등으로 그릴 수 있음(spec/decision_tree 무수정).
-  단 그래프 topology 추가 → `flowNeighborhood` 솔리드 트랙·spec_only collapse 셋과의 상호작용 검토 필요(c0314→c0315는
-  🏁로 onward 없으므로 거짓 🏁 도달은 유발 안 함; c0315→Q02만 추가 점등). **자동 적용 안 함 — 사용자 결정 대기.**
+- **상태: ✅ 해소(표현층 mess_pass 시각화 — 사용자 승인 후 구현).** v3 **표현층에서만** `c_units.json`의
+  `verify_visualization.pass_route_to`를 읽어 mess-층(L-4→L-5) detect→transform pass 엣지 **26개**를 그래프에 추가
+  (`build_html_v3.py::v3_extra_elements`, ekind=`mess_pass`, 정본 무수정·읽기 전용). 스타일=taupe `#8d6e63` 점선(dash[3,3])·
+  vee 화살표 — 백본 앰버 실선/청록 Q점선/보라 미실현과 구별. **`flowNeighborhood`에서 제외**(recover·declared_cond·
+  spec_attach에 합류) → 노드클릭 실선 정본 선로 오염 0·거짓 🏁 도달 0(transform 타깃 24개·detect 소스 전수 🏁 onward 없음 실측).
+  collapse 정합: 양끝 real 5쌍(c0305→c0306·c0310→c0311·c0312→c0313·**c0314→c0315**·c0340→c0341)은 기본 뷰 표시,
+  양끝 spec_only 21쌍은 collapse 시 endpoint와 함께 자동 숨김(dangling 0). 범례 항목·테스트
+  (`test_v3_mess_pass_edges`/`_excluded_from_flow`/`_style_and_legend`) 추가. 1096 green·v1/v2/spec byte-불변.

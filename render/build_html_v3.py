@@ -89,6 +89,30 @@ def v3_extra_elements():
           declared=True, realized=False, csource=e.get("source", ""),
           from_kind=e.get("from_kind", ""), qstatus=e.get("q_status", ""))
 
+    # (e) R-12: mess-층(L-4->L-5) detect→transform pass edge — 정본 c_units의 pass_route_to를 v3 렌더에서만 읽어 시각화.
+    #     decision_tree는 D-S3로 mess 내부 배선을 stage 클러스터로 흡수해 pass edge를 안 그린다(같은 층 c→Q conditional은
+    #     그리면서 c→c linear pass는 미렌더하는 비대칭). 표현층에서 c.pass_route_to(=같은 층 transform)를 mess_pass 엣지로 보완.
+    #     ★ spec 무수정(읽기 전용). ★ flowNeighborhood 제외(실선 정본 선로 오염 0) + transform 타깃은 🏁 onward 없음(거짓 도달 0).
+    node_ids = existing | {n["id"] for n in SPEC_ONLY["nodes"]} | {"L0_group"}
+    drawn = {(d["data"]["source"], d["data"]["target"]) for d in els if "source" in d["data"]}
+    b_edges = {(e["data"]["source"], e["data"]["target"]) for e in B.ELES if "source" in e["data"]}
+    _mi = 0
+    for cid in sorted(V2._RAW):
+        c = V2._RAW[cid]
+        if c.get("kind") != "detect" or c.get("layer_pair") != "L-4->L-5":
+            continue
+        pr = (c.get("verify_visualization") or {}).get("pass_route_to")
+        tgt = V2._RAW.get(pr) if pr else None
+        if not (tgt and tgt.get("kind") == "transform" and tgt.get("layer_pair") == "L-4->L-5"):
+            continue
+        if cid not in node_ids or pr not in node_ids:        # 양끝이 실 노드일 때만
+            continue
+        if (cid, pr) in b_edges or (cid, pr) in drawn:       # 기존/중복 엣지 가드
+            continue
+        E("mp_%d" % _mi, cid, pr, "mess_pass", basis="pass_route_to",
+          src_intent=c.get("srp_intent", ""), tgt_intent=tgt.get("srp_intent", ""))
+        _mi += 1
+
     return els
 
 
@@ -202,6 +226,7 @@ _V3_OVERRIDE = r'''<script>
     {selector:'edge[ekind="axis_onward"]',style:{"line-style":"solid","line-color":"#E8820C","target-arrow-color":"#E8820C","width":3.2,"opacity":0.9}},
     {selector:'edge[ekind="spec_attach"]',style:{"line-style":"dotted","line-color":"#cbb8e0","target-arrow-color":"#cbb8e0","width":1.4,"opacity":0.5,"arrow-scale":0.7}},
     {selector:'edge[ekind="declared_cond"]',style:{"line-style":"dashed","line-dash-pattern":[6,6],"line-color":"#9C6ADE","target-arrow-color":"#9C6ADE","width":2.4,"opacity":0.7}},
+    {selector:'edge[ekind="mess_pass"]',style:{"line-style":"dashed","line-dash-pattern":[3,3],"line-color":"#8d6e63","target-arrow-color":"#8d6e63","target-arrow-shape":"vee","width":2,"opacity":0.8,"arrow-scale":0.85}},
     {selector:'node[?spec_only]',style:{"border-style":"dashed","border-color":"#9C6ADE","border-width":2,"opacity":0.7}},
     {selector:'node[?dead]',style:{"opacity":0.45,"border-color":"#b0a0c8"}},
     {selector:'node[?group]',style:{"shape":"round-rectangle","background-color":"#e8f5e9","background-opacity":0.5,"border-color":"#2e7d32","border-width":3,"border-style":"solid","text-valign":"top","text-halign":"center","font-size":13,"font-weight":"bold","color":"#1b5e20","padding":"18px","text-margin-y":-2}},
@@ -279,7 +304,7 @@ _V3_OVERRIDE = r'''<script>
       var frontier=node, guard=0;
       while(frontier.nonempty() && guard++<300){
         var og=(dir==="down")?frontier.outgoers():frontier.incomers();
-        var edges=og.edges('[ekind != "recover"][ekind != "declared_cond"][ekind != "spec_attach"]');
+        var edges=og.edges('[ekind != "recover"][ekind != "declared_cond"][ekind != "spec_attach"][ekind != "mess_pass"]');
         var nodes=(dir==="down")?edges.targets():edges.sources();
         var fresh=nodes.difference(seen);
         seen=seen.union(edges).union(nodes);
@@ -343,6 +368,7 @@ _V3_OVERRIDE = r'''<script>
         + v3lg("질문(Q)·축 갈림길 (청록 점선)", "background:#15B4C7;border-style:dashed")
         + v3lg("선언만 됨·미실현 (보라 점선)", "background:#9C6ADE;border-style:dashed")
         + v3lg("정의됨·미구현 노드 (spec_only 65)", "background:#fff;border:2px dashed #9C6ADE")
+        + v3lg("정규화 층 내부 detect→fix (taupe 점선)", "background:#8d6e63;border-style:dashed")
         + v3lg("🏁 nonmem-ready(L0) 그룹 (AUTO·REPAIR)", "background:#e8f5e9;border:2px solid #2e7d32", "goal")
         + '</div>');
     }

@@ -303,3 +303,30 @@ def test_v3_breadcrumb_layer_banding():
     assert "data-v3band" in HTML
     # layer 라벨 맵에 최하층 L-4↔L-5 표기 정규화 포함
     assert "L-4->L-5" in HTML and "표기 정규화" in HTML
+
+
+# ===== (10) R-12: mess-층 detect→transform pass edge 시각화 =====
+def test_v3_mess_pass_edges():
+    mp = [e for e in EDGES if e.get("ekind") == "mess_pass"]
+    assert len(mp) == 26, len(mp)                                  # 정본 pass_route_to detect→transform 쌍
+    # 모든 양끝이 실 그래프 노드
+    for e in mp:
+        assert e["source"] in NODE_IDS and e["target"] in NODE_IDS, e
+    # 사용자 적출 케이스 c0314→c0315 포함
+    assert any(e["source"] == "c0314" and e["target"] == "c0315" for e in mp)
+    # 기존 그래프 엣지와 중복 0(B.ELES 기준)
+    b_pairs = {(e["data"]["source"], e["data"]["target"]) for e in B.ELES if "source" in e["data"]}
+    assert not [(e["source"], e["target"]) for e in mp if (e["source"], e["target"]) in b_pairs]
+    # 노드 수 불변(엣지만 추가)
+    assert len(NODES) == 167
+
+
+def test_v3_mess_pass_excluded_from_flow():
+    # 실선 정본 선로 추적(flowNeighborhood)에서 제외 → 거짓 🏁 도달 0
+    assert 'ekind != "mess_pass"' in HTML
+
+
+def test_v3_mess_pass_style_and_legend():
+    assert 'ekind="mess_pass"' in HTML            # 스타일 셀렉터
+    assert "#8d6e63" in HTML                       # taupe(정본 색군과 구별)
+    assert "정규화 층 내부 detect→fix" in HTML       # 범례 문구
