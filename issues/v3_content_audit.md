@@ -86,3 +86,33 @@
 - `spec/c_units.json`: 122 entry(필드 `srp_intent·ref·input_schema_delta·output_schema_delta·postcondition_predicate·python_snippet·r_snippet·before_after_toy_example·precondition_checklist_ko·can_route_to_q·verify_visualization`).
 - `tests/test_simulation_realdata.py`: python compile/R parse/대표 transform 동치. `tests/test_c_units.py`: postcondition·IMPUTE-override(3196·3370·3548).
 - 정책 근거: `CLAUDE.md`(Hallucination 차단·Lock 3·Lock 4), `universe_sm.md`(IMPUTE 정책).
+
+---
+
+## 6. 추가 발견 (UAT 문답 중 — 마법사 c_sequence vs 그래프 layer 표현)
+
+### R-11 — 마법사 breadcrumb의 선형 화살표가 "순차 경로"로 오해됨 → **이번 세션에 해소(표현층)**
+- **증상:** 마법사 진단 결과의 `N0 → … → c0314 → 🏁` breadcrumb가 c0314를 "🏁 직전 단계"처럼 보이게 함.
+- **원인(정본):** `navigator._CANON_ORDER`는 **실행 순서가 아니라 D-S2 정규형 정렬**(≈c-id 오름차순)의 DETECT 체크리스트.
+  c0314는 c-id가 커서 마지막에 올 뿐, 실제로는 `kind=detect`·`layer_pair=L-4->L-5`·`trigger="L-5 로드 직후"`인
+  **최하층 검사**. navigable band 13개는 `requires_detection_by=None`(서로 독립·순서 무관).
+- **조치:** `build_html_v3.py`의 v3 override에 **DOM 후처리(MutationObserver)** 추가 — `.breadcrumb`의 `.cchip`을
+  `layer_pair`별 띠(L-4↔L-5 표기정규화[최하층] → L-3↔L-4 축 → …)로 재그룹(칩 이동 → V2 onclick 보존). c0314가 최상단
+  최하층 띠에 들어가 🏁(맨 아래)와 분리됨. "이 목록은 실행 순서가 아님" 주석 표기. **spec/V2 무수정**(pathBreadcrumb은
+  wizard IIFE private라 재대입 불가 → DOM 후처리). 테스트 `test_v3_breadcrumb_layer_banding`.
+
+### R-12 — decision tree 그래프가 mess-layer detect→transform pass edge(c0314→c0315)를 안 그림 (report-only)
+- **사실(정본):** `c0314.verify_visualization.pass_route_to = "c0315"`. c0315 = `CONVERT TIME_ANCHOR`(`kind=transform`,
+  `requires_detection_by="c0314"`, `trigger="c0314 완료"`, `can_route_to_q=["Q02"]`). 즉 **DETECT→CONVERT의 D-S1 detect→fix 쌍**.
+  이 관계는 c0314 detail 패널에 "pass → c0315"로 **텍스트 표시됨**(`build_html.py:739`).
+- **그래프 표현:** c0314·c0315 둘 다 실 c(CUNITS 57, spec_only 아님)이며 **각각 `stage:L-4→L-5`에 `attach`로 클러스터**됨.
+  `c0315→Q02`(conditional)는 그려지나, **`c0314→c0315` linear pass edge는 그래프에 없음**(직접 edge 0). `pass_route_to`는
+  엣지 생성에 쓰이지 않고(패널 텍스트에만 사용) — `grep pass_route_to`는 `build_html.py:739` 1곳뿐.
+- **이유:** D-S3 — Universe B(L-4→L-5 표기 정규화)는 거의 commutative라 **단일 stage 노드 클러스터**로 표현하고,
+  내부 detect→transform 배선은 "다발 부착=step2 압축, 범위 밖"으로 스코프 아웃됨.
+- **판정:** backbone→🏁 선로 끊김 아님(정상). 단 **mess-layer의 detect→transform 관계를 그래프가 under-represent**하는
+  표현 완전성 갭(같은 층에서 conditional 엣지는 그리고 linear pass 엣지는 안 그리는 비대칭). 사용자 혼동의 정당한 근거.
+- **보완 옵션(승인 시 별도 세션):** v3 **표현층에서만** `c_units.json`의 `verify_visualization.pass_route_to`를 읽어
+  mess-layer(같은 layer_pair) detect→transform pass 엣지를 점선 등으로 그릴 수 있음(spec/decision_tree 무수정).
+  단 그래프 topology 추가 → `flowNeighborhood` 솔리드 트랙·spec_only collapse 셋과의 상호작용 검토 필요(c0314→c0315는
+  🏁로 onward 없으므로 거짓 🏁 도달은 유발 안 함; c0315→Q02만 추가 점등). **자동 적용 안 함 — 사용자 결정 대기.**

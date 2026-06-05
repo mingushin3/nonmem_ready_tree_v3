@@ -162,6 +162,16 @@ _V3_CSS = """
   /* spec_only 토글 버튼(런타임 DOM 삽입) — .btn 계승 + 펼침 상태 tint */
   #v3SpecToggle{font-weight:600}
   #v3SpecToggle.on{background:#eef7ff;border-color:#9fc5e8;color:#1c6fb0}
+
+  /* (B) 마법사 진단 breadcrumb를 layer 띠로 그룹핑 — 최하층 검사(c0314 등)가 🏁 직전처럼 안 보이게 */
+  .breadcrumb.v3banded{line-height:1.5}
+  .breadcrumb.v3banded .pnode.start{display:inline-block;margin-bottom:4px}
+  .bcband{margin:5px 0;padding:5px 8px 6px;border-left:3px solid #9fc5e8;background:#eef4fb;border-radius:0 6px 6px 0}
+  .bcband.lowest{border-left-color:#e0a23c;background:#fbf4e8}   /* 최하층 강조 */
+  .bcband-lab{font-size:10px;font-weight:700;color:#2f6fb0;font-family:var(--bp-mono);margin-bottom:4px;letter-spacing:.01em}
+  .bcband.lowest .bcband-lab{color:#b3651a}
+  .bcband-chips{display:flex;flex-wrap:wrap;gap:5px;align-items:center}
+  .bcband-note{margin-top:6px;font-size:10px;color:#6b7785;line-height:1.5}
 """
 
 # 색: 앰버 #E8820C(자동 실선) · 청록 #15B4C7(질문 점선) · 보라 #9C6ADE(선언·미실현).
@@ -337,6 +347,64 @@ _V3_OVERRIDE = r'''<script>
         + '</div>');
     }
   }catch(e){}
+
+  /* ---- 2f. (B) 마법사 진단 breadcrumb를 layer 띠로 그룹핑 ----
+     c0314(DETECT TIME_ANCHOR, layer L-4→L-5)처럼 '최하층' 검사가 정규형 정렬상 마지막에 와서 🏁 직전처럼
+     보이는 오해를 없앤다. pathBreadcrumb은 wizard IIFE 내부(private)라 재대입 불가 → 렌더된 .breadcrumb를
+     DOM 후처리로 재구성. ★ 칩(.cchip)은 새로 만들지 않고 그대로 '이동'(appendChild) → V2가 붙인 onclick 보존
+     (V2는 innerHTML 직후 동기로 onclick 부착; 본 observer는 그 뒤 microtask에 돎). */
+  function v3LayerOf(cid){
+    var c=(window.CUNITS&&CUNITS[cid])||(window.CUNITS_EXTRA&&CUNITS_EXTRA[cid])||null;
+    return (c&&c.layer_pair)?c.layer_pair:"";
+  }
+  var V3_LAYER_LABEL={
+    "L-4->L-5":"L-4↔L-5 · 표기 정규화 (최하층 — 토큰 청소)",
+    "L-3->L-4":"L-3↔L-4 · 축(A0–A10) 평가 보조",
+    "L-2->L-3":"L-2↔L-3 · 구조 변형",
+    "L-1->L-2":"L-1↔L-2 · tidy 구성",
+    "L0->L-1":"L0↔L-1 · NONMEM 열 생성"
+  };
+  function v3LayerKey(lp){ var ns=(String(lp).match(/-?\d+/g)||[]).map(Number); return ns.length?Math.min.apply(null,ns):0; }
+  function v3RebandBreadcrumb(bc){
+    if(!bc || bc.getAttribute("data-v3band")) return;
+    var chips=[].slice.call(bc.querySelectorAll(".cchip"));
+    if(!chips.length){ bc.setAttribute("data-v3band","1"); return; }
+    var start=bc.querySelector(".pnode.start"), goal=bc.querySelector(".pnode.goal");
+    var order=[], groups={};
+    chips.forEach(function(ch){
+      var lp=v3LayerOf(ch.getAttribute("data-node"))||"기타";
+      if(!groups[lp]){ groups[lp]=[]; order.push(lp); }
+      groups[lp].push(ch);
+    });
+    order.sort(function(a,b){ return v3LayerKey(a)-v3LayerKey(b); });   // 최하층(더 음수) 먼저 = 데이터 흐름 L-5→…→L0
+    var lowest=order.length?order[0]:null;
+    bc.setAttribute("data-v3band","1"); bc.classList.add("v3banded");
+    bc.innerHTML="";                                                    // 칩 참조는 위에서 보유 → 이동(onclick 보존)
+    if(start) bc.appendChild(start);
+    order.forEach(function(lp){
+      var band=document.createElement("div"); band.className="bcband"+(lp===lowest?" lowest":"");
+      var lab=document.createElement("div"); lab.className="bcband-lab"; lab.textContent=(V3_LAYER_LABEL[lp]||lp);
+      band.appendChild(lab);
+      var row=document.createElement("div"); row.className="bcband-chips";
+      groups[lp].forEach(function(ch){ row.appendChild(ch); });        // 원본 칩 이동
+      band.appendChild(row); bc.appendChild(band);
+    });
+    if(goal) bc.appendChild(goal);
+    var note=document.createElement("div"); note.className="bcband-note";
+    note.textContent="※ 위는 실행 순서가 아니라 layer별 진단 체크리스트예요(같은 띠 안은 순서 무관). 🏁는 최종 목표. 예: TIME_ANCHOR 검사(c0314)는 최하층(L-4↔L-5)이라 맨 위 띠에 있어요.";
+    bc.appendChild(note);
+  }
+  function v3RebandAll(){
+    try{ [].forEach.call(document.querySelectorAll(".breadcrumb:not([data-v3band])"), v3RebandBreadcrumb); }
+    catch(e){ console.warn("[pmx-dt v3] breadcrumb 띠 재구성 실패:", e); }
+  }
+  try{
+    if(window.MutationObserver){
+      var v3mo=new MutationObserver(function(){ v3RebandAll(); });
+      v3mo.observe(document.body, {childList:true, subtree:true});
+    }
+    v3RebandAll();   // 이미 떠 있는 breadcrumb 즉시 처리
+  }catch(e){ console.warn("[pmx-dt v3] breadcrumb observer 실패:", e); }
 
   /* ---- 2e. 초기 적용(★): 토글 삽입 + 기본 접힘(spec_only 65 숨김) + 단일 재레이아웃 ---- */
   try{

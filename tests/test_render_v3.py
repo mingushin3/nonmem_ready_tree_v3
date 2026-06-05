@@ -292,3 +292,14 @@ def test_v3_canonical_hues_preserved_after_redesign():
     # 금지 하이라이트 색 재유입 0(재설계 후에도)
     for legacy in ("#FFD700", "#FFF8B0", "#c9920e"):
         assert legacy not in HTML, ("legacy color 재유입", legacy)
+
+
+def test_v3_breadcrumb_layer_banding():
+    # (B) 마법사 breadcrumb를 layer 띠로 재구성하는 DOM 후처리(칩 이동→onclick 보존)
+    assert "v3RebandBreadcrumb" in HTML
+    assert "v3LayerOf" in HTML
+    assert "MutationObserver" in HTML
+    assert "bcband" in HTML
+    assert "data-v3band" in HTML
+    # layer 라벨 맵에 최하층 L-4↔L-5 표기 정규화 포함
+    assert "L-4->L-5" in HTML and "표기 정규화" in HTML
